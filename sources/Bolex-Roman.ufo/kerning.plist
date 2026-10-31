@@ -23,16 +23,8 @@
       <integer>0</integer>
       <key>Ydieresis</key>
       <integer>0</integer>
-      <key>emdash</key>
-      <integer>-15</integer>
-      <key>hyphen</key>
-      <integer>-15</integer>
       <key>t.sc</key>
       <integer>0</integer>
-      <key>uni2010</key>
-      <integer>-15</integer>
-      <key>uni2011</key>
-      <integer>-15</integer>
       <key>v</key>
       <integer>0</integer>
       <key>v.sc</key>
@@ -413,8 +405,6 @@
       <integer>-15</integer>
       <key>colon</key>
       <integer>-20</integer>
-      <key>endash.case</key>
-      <integer>-55</integer>
       <key>public.kern2.A</key>
       <integer>-20</integer>
       <key>public.kern2.Z</key>
@@ -423,8 +413,6 @@
       <integer>-20</integer>
       <key>semicolon</key>
       <integer>-20</integer>
-      <key>uni2012</key>
-      <integer>-45</integer>
     </dict>
     <key>H</key>
     <dict>
@@ -583,14 +571,6 @@
       <integer>-50</integer>
       <key>dagger.csc</key>
       <integer>-40</integer>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>emdash.case</key>
-      <integer>-30</integer>
-      <key>endash</key>
-      <integer>-20</integer>
-      <key>endash.case</key>
-      <integer>-30</integer>
       <key>eth</key>
       <integer>-30</integer>
       <key>g.sc</key>
@@ -607,10 +587,6 @@
       <integer>-60</integer>
       <key>guilsinglright.case</key>
       <integer>-25</integer>
-      <key>hyphen</key>
-      <integer>-20</integer>
-      <key>hyphen.case</key>
-      <integer>-30</integer>
       <key>oe.sc</key>
       <integer>-20</integer>
       <key>parenright</key>
@@ -665,12 +641,6 @@
       <integer>-25</integer>
       <key>uni02BC</key>
       <integer>-20</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
-      <integer>-20</integer>
-      <key>uni2012</key>
-      <integer>-30</integer>
       <key>v</key>
       <integer>-70</integer>
       <key>v.sc</key>
@@ -704,22 +674,12 @@
       <integer>-50</integer>
       <key>dagger.csc</key>
       <integer>-35</integer>
-      <key>emdash</key>
-      <integer>-40</integer>
-      <key>emdash.case</key>
-      <integer>-40</integer>
-      <key>endash</key>
-      <integer>-40</integer>
-      <key>endash.case</key>
-      <integer>-40</integer>
       <key>guillemotleft.case</key>
       <integer>-30</integer>
       <key>guilsinglleft.case</key>
       <integer>-30</integer>
       <key>hyphen</key>
       <integer>-60</integer>
-      <key>hyphen.case</key>
-      <integer>-40</integer>
       <key>parenright</key>
       <integer>-30</integer>
       <key>parenright.case</key>
@@ -752,12 +712,6 @@
       <integer>-100</integer>
       <key>uni02BC</key>
       <integer>-95</integer>
-      <key>uni2010</key>
-      <integer>-40</integer>
-      <key>uni2011</key>
-      <integer>-40</integer>
-      <key>uni2012</key>
-      <integer>-40</integer>
       <key>v</key>
       <integer>-25</integer>
       <key>v.sc</key>
@@ -891,16 +845,8 @@
       <integer>0</integer>
       <key>Ydieresis</key>
       <integer>0</integer>
-      <key>emdash</key>
-      <integer>-15</integer>
-      <key>hyphen</key>
-      <integer>-15</integer>
       <key>t.sc</key>
       <integer>0</integer>
-      <key>uni2010</key>
-      <integer>-15</integer>
-      <key>uni2011</key>
-      <integer>-15</integer>
       <key>v</key>
       <integer>0</integer>
       <key>v.sc</key>
@@ -1186,10 +1132,6 @@
       <integer>-55</integer>
       <key>ellipsis</key>
       <integer>-120</integer>
-      <key>emdash</key>
-      <integer>-40</integer>
-      <key>endash</key>
-      <integer>-30</integer>
       <key>eth</key>
       <integer>-35</integer>
       <key>g</key>
@@ -1199,8 +1141,6 @@
       <key>guillemotleft</key>
       <integer>-35</integer>
       <key>guilsinglleft</key>
-      <integer>-35</integer>
-      <key>hyphen</key>
       <integer>-35</integer>
       <key>oe.sc</key>
       <integer>-20</integer>
@@ -1248,10 +1188,6 @@
       <integer>0</integer>
       <key>slash</key>
       <integer>-55</integer>
-      <key>uni2010</key>
-      <integer>-40</integer>
-      <key>uni2011</key>
-      <integer>-40</integer>
     </dict>
     <key>Q</key>
     <dict>
@@ -1368,14 +1304,6 @@
       <integer>-20</integer>
       <key>dagger.csc</key>
       <integer>-25</integer>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>emdash.case</key>
-      <integer>-20</integer>
-      <key>endash</key>
-      <integer>-20</integer>
-      <key>endash.case</key>
-      <integer>-15</integer>
       <key>eth</key>
       <integer>-35</integer>
       <key>g.sc</key>
@@ -1391,10 +1319,6 @@
       <key>guilsinglleft.case</key>
       <integer>-30</integer>
       <key>guilsinglright.case</key>
-      <integer>-20</integer>
-      <key>hyphen</key>
-      <integer>-20</integer>
-      <key>hyphen.case</key>
       <integer>-20</integer>
       <key>oacute</key>
       <integer>-45</integer>
@@ -1460,12 +1384,6 @@
       <integer>-25</integer>
       <key>uni02BC</key>
       <integer>-35</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
-      <integer>-20</integer>
-      <key>uni2012</key>
-      <integer>-15</integer>
       <key>v</key>
       <integer>-45</integer>
       <key>v.sc</key>
@@ -1498,7 +1416,7 @@
     <key>T</key>
     <dict>
       <key>AE</key>
-      <integer>-95</integer>
+      <integer>-100</integer>
       <key>Eth</key>
       <integer>-30</integer>
       <key>G</key>
@@ -1565,14 +1483,8 @@
       <integer>0</integer>
       <key>ellipsis</key>
       <integer>-95</integer>
-      <key>emdash</key>
-      <integer>-30</integer>
-      <key>emdash.case</key>
-      <integer>-30</integer>
       <key>endash</key>
       <integer>-50</integer>
-      <key>endash.case</key>
-      <integer>-30</integer>
       <key>eth</key>
       <integer>-45</integer>
       <key>eth.sc</key>
@@ -1603,8 +1515,6 @@
       <integer>-65</integer>
       <key>hyphen</key>
       <integer>-50</integer>
-      <key>hyphen.case</key>
-      <integer>-30</integer>
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex.sc</key>
@@ -1648,7 +1558,7 @@
       <key>period</key>
       <integer>-60</integer>
       <key>public.kern2.A</key>
-      <integer>-75</integer>
+      <integer>-80</integer>
       <key>public.kern2.C</key>
       <integer>-15</integer>
       <key>public.kern2.O</key>
@@ -1728,12 +1638,6 @@
       <key>udieresis.sc</key>
       <integer>-20</integer>
       <key>ugrave</key>
-      <integer>-30</integer>
-      <key>uni2010</key>
-      <integer>-30</integer>
-      <key>uni2011</key>
-      <integer>-30</integer>
-      <key>uni2012</key>
       <integer>-30</integer>
       <key>v</key>
       <integer>-70</integer>
@@ -2038,10 +1942,6 @@
       <integer>-40</integer>
       <key>ellipsis</key>
       <integer>-95</integer>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>endash</key>
-      <integer>-20</integer>
       <key>eth</key>
       <integer>-55</integer>
       <key>eth.sc</key>
@@ -2121,7 +2021,7 @@
       <key>period</key>
       <integer>-90</integer>
       <key>public.kern2.A</key>
-      <integer>-125</integer>
+      <integer>-140</integer>
       <key>public.kern2.C</key>
       <integer>-45</integer>
       <key>public.kern2.O</key>
@@ -2196,10 +2096,6 @@
       <integer>-55</integer>
       <key>thorn.sc</key>
       <integer>-20</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
-      <integer>-20</integer>
       <key>v</key>
       <integer>-45</integer>
       <key>v.sc</key>
@@ -2271,10 +2167,6 @@
       <integer>-65</integer>
       <key>ellipsis</key>
       <integer>-95</integer>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>endash</key>
-      <integer>-20</integer>
       <key>eth</key>
       <integer>-55</integer>
       <key>eth.sc</key>
@@ -2354,7 +2246,7 @@
       <key>period</key>
       <integer>-80</integer>
       <key>public.kern2.A</key>
-      <integer>-115</integer>
+      <integer>-130</integer>
       <key>public.kern2.C</key>
       <integer>-45</integer>
       <key>public.kern2.O</key>
@@ -2435,10 +2327,6 @@
       <integer>-35</integer>
       <key>ugrave</key>
       <integer>-35</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
-      <integer>-20</integer>
       <key>v</key>
       <integer>-50</integer>
       <key>v.sc</key>
@@ -2472,14 +2360,6 @@
       <integer>-45</integer>
       <key>dagger.csc</key>
       <integer>-40</integer>
-      <key>emdash</key>
-      <integer>-15</integer>
-      <key>emdash.case</key>
-      <integer>-25</integer>
-      <key>endash</key>
-      <integer>-20</integer>
-      <key>endash.case</key>
-      <integer>-30</integer>
       <key>eth</key>
       <integer>-30</integer>
       <key>g.sc</key>
@@ -2496,10 +2376,6 @@
       <integer>-55</integer>
       <key>guilsinglright.case</key>
       <integer>-20</integer>
-      <key>hyphen</key>
-      <integer>-15</integer>
-      <key>hyphen.case</key>
-      <integer>-25</integer>
       <key>oslash.sc</key>
       <integer>0</integer>
       <key>public.kern2.C</key>
@@ -2532,12 +2408,6 @@
       <integer>-15</integer>
       <key>ugrave.sc</key>
       <integer>-15</integer>
-      <key>uni2010</key>
-      <integer>-15</integer>
-      <key>uni2011</key>
-      <integer>-15</integer>
-      <key>uni2012</key>
-      <integer>-30</integer>
       <key>v</key>
       <integer>-45</integer>
       <key>v.sc</key>
@@ -2909,8 +2779,6 @@
       <integer>0</integer>
       <key>g</key>
       <integer>0</integer>
-      <key>hyphen</key>
-      <integer>0</integer>
       <key>l</key>
       <integer>0</integer>
       <key>o</key>
@@ -2930,10 +2798,6 @@
       <key>otilde</key>
       <integer>0</integer>
       <key>q</key>
-      <integer>0</integer>
-      <key>uni2010</key>
-      <integer>0</integer>
-      <key>uni2011</key>
       <integer>0</integer>
     </dict>
     <key>ae.sc</key>
@@ -3842,127 +3706,10 @@
       <key>zero.osf</key>
       <integer>-15</integer>
     </dict>
-    <key>emdash</key>
-    <dict>
-      <key>T</key>
-      <integer>-30</integer>
-      <key>V</key>
-      <integer>-15</integer>
-      <key>W</key>
-      <integer>-20</integer>
-      <key>X</key>
-      <integer>-15</integer>
-      <key>five</key>
-      <integer>-35</integer>
-      <key>nine</key>
-      <integer>-20</integer>
-      <key>public.kern2.S</key>
-      <integer>-35</integer>
-      <key>public.kern2.Y</key>
-      <integer>-30</integer>
-      <key>public.kern2.a</key>
-      <integer>-30</integer>
-      <key>public.kern2.z</key>
-      <integer>-20</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-15</integer>
-      <key>seven</key>
-      <integer>-20</integer>
-      <key>t.sc</key>
-      <integer>-20</integer>
-      <key>three</key>
-      <integer>-30</integer>
-      <key>two</key>
-      <integer>-20</integer>
-      <key>x.sc</key>
-      <integer>-15</integer>
-    </dict>
-    <key>emdash.case</key>
-    <dict>
-      <key>AE</key>
-      <integer>-20</integer>
-      <key>T</key>
-      <integer>-30</integer>
-      <key>X</key>
-      <integer>-25</integer>
-      <key>ae.sc</key>
-      <integer>-20</integer>
-      <key>public.kern2.S</key>
-      <integer>-20</integer>
-      <key>public.kern2.Y</key>
-      <integer>-20</integer>
-      <key>public.kern2.Z</key>
-      <integer>-25</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-25</integer>
-      <key>seven</key>
-      <integer>-25</integer>
-      <key>t.sc</key>
-      <integer>-20</integer>
-      <key>three</key>
-      <integer>-20</integer>
-      <key>two</key>
-      <integer>-30</integer>
-    </dict>
     <key>endash</key>
     <dict>
       <key>T</key>
       <integer>-50</integer>
-      <key>V</key>
-      <integer>-15</integer>
-      <key>W</key>
-      <integer>-15</integer>
-      <key>X</key>
-      <integer>-15</integer>
-      <key>five</key>
-      <integer>-35</integer>
-      <key>nine</key>
-      <integer>-15</integer>
-      <key>public.kern2.S</key>
-      <integer>-35</integer>
-      <key>public.kern2.Y</key>
-      <integer>-25</integer>
-      <key>public.kern2.Z</key>
-      <integer>-15</integer>
-      <key>public.kern2.a</key>
-      <integer>-30</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-15</integer>
-      <key>seven</key>
-      <integer>-20</integer>
-      <key>t.sc</key>
-      <integer>-20</integer>
-      <key>three</key>
-      <integer>-30</integer>
-      <key>two</key>
-      <integer>-25</integer>
-      <key>x.sc</key>
-      <integer>-20</integer>
-    </dict>
-    <key>endash.case</key>
-    <dict>
-      <key>AE</key>
-      <integer>-20</integer>
-      <key>T</key>
-      <integer>-30</integer>
-      <key>X</key>
-      <integer>-30</integer>
-      <key>ae.sc</key>
-      <integer>-20</integer>
-      <key>public.kern2.S</key>
-      <integer>-15</integer>
-      <key>public.kern2.Y</key>
-      <integer>-20</integer>
-      <key>public.kern2.Z</key>
-      <integer>-25</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-30</integer>
-      <key>seven</key>
-      <integer>-25</integer>
-      <key>three</key>
-      <integer>-20</integer>
-      <key>two</key>
-      <integer>-30</integer>
     </dict>
     <key>eth</key>
     <dict>
@@ -4546,8 +4293,6 @@
     <dict>
       <key>backslash</key>
       <integer>-20</integer>
-      <key>endash</key>
-      <integer>-45</integer>
       <key>eth.sc</key>
       <integer>-10</integer>
       <key>parenright</key>
@@ -4750,59 +4495,8 @@
       <integer>-30</integer>
       <key>W</key>
       <integer>-30</integer>
-      <key>X</key>
-      <integer>-15</integer>
-      <key>five</key>
-      <integer>-35</integer>
-      <key>nine</key>
-      <integer>-15</integer>
-      <key>public.kern2.S</key>
-      <integer>-30</integer>
       <key>public.kern2.Y</key>
       <integer>-50</integer>
-      <key>public.kern2.a</key>
-      <integer>-25</integer>
-      <key>public.kern2.z</key>
-      <integer>-20</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-15</integer>
-      <key>seven</key>
-      <integer>-20</integer>
-      <key>t.sc</key>
-      <integer>-20</integer>
-      <key>three</key>
-      <integer>-30</integer>
-      <key>two</key>
-      <integer>-20</integer>
-      <key>x.sc</key>
-      <integer>-15</integer>
-    </dict>
-    <key>hyphen.case</key>
-    <dict>
-      <key>AE</key>
-      <integer>-20</integer>
-      <key>T</key>
-      <integer>-30</integer>
-      <key>X</key>
-      <integer>-25</integer>
-      <key>ae.sc</key>
-      <integer>-20</integer>
-      <key>public.kern2.S</key>
-      <integer>-15</integer>
-      <key>public.kern2.Y</key>
-      <integer>-20</integer>
-      <key>public.kern2.Z</key>
-      <integer>-25</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-25</integer>
-      <key>seven</key>
-      <integer>-25</integer>
-      <key>t.sc</key>
-      <integer>-20</integer>
-      <key>three</key>
-      <integer>-20</integer>
-      <key>two</key>
-      <integer>-30</integer>
     </dict>
     <key>iacute.sc</key>
     <dict>
@@ -4903,12 +4597,6 @@
       <integer>-30</integer>
       <key>dagger.csc</key>
       <integer>-20</integer>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>emdash.case</key>
-      <integer>-15</integer>
-      <key>endash</key>
-      <integer>-20</integer>
       <key>eth.sc</key>
       <integer>-5</integer>
       <key>g.sc</key>
@@ -4921,10 +4609,6 @@
       <integer>-25</integer>
       <key>guilsinglleft.case</key>
       <integer>-20</integer>
-      <key>hyphen</key>
-      <integer>-20</integer>
-      <key>hyphen.case</key>
-      <integer>-15</integer>
       <key>parenright</key>
       <integer>-20</integer>
       <key>parenright.csc</key>
@@ -4955,10 +4639,6 @@
       <integer>-15</integer>
       <key>uni02BC</key>
       <integer>-20</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
-      <integer>-20</integer>
       <key>v.sc</key>
       <integer>-20</integer>
       <key>w.sc</key>
@@ -4976,14 +4656,6 @@
       <integer>-40</integer>
       <key>dagger.csc</key>
       <integer>-30</integer>
-      <key>emdash</key>
-      <integer>-30</integer>
-      <key>emdash.case</key>
-      <integer>-25</integer>
-      <key>endash</key>
-      <integer>-30</integer>
-      <key>endash.case</key>
-      <integer>-25</integer>
       <key>eth.sc</key>
       <integer>-20</integer>
       <key>g.sc</key>
@@ -4996,10 +4668,6 @@
       <integer>-50</integer>
       <key>guilsinglright.case</key>
       <integer>-25</integer>
-      <key>hyphen</key>
-      <integer>-30</integer>
-      <key>hyphen.case</key>
-      <integer>-30</integer>
       <key>parenright</key>
       <integer>-25</integer>
       <key>parenright.csc</key>
@@ -5030,12 +4698,6 @@
       <integer>-60</integer>
       <key>uni02BC</key>
       <integer>-60</integer>
-      <key>uni2010</key>
-      <integer>-30</integer>
-      <key>uni2011</key>
-      <integer>-30</integer>
-      <key>uni2012</key>
-      <integer>-25</integer>
       <key>v.sc</key>
       <integer>-60</integer>
       <key>w.sc</key>
@@ -5217,8 +4879,6 @@
       <integer>0</integer>
       <key>g</key>
       <integer>0</integer>
-      <key>hyphen</key>
-      <integer>0</integer>
       <key>l</key>
       <integer>0</integer>
       <key>o</key>
@@ -5238,10 +4898,6 @@
       <key>otilde</key>
       <integer>0</integer>
       <key>q</key>
-      <integer>0</integer>
-      <key>uni2010</key>
-      <integer>0</integer>
-      <key>uni2011</key>
       <integer>0</integer>
     </dict>
     <key>oe.sc</key>
@@ -5873,11 +5529,11 @@
       <key>Q</key>
       <integer>-45</integer>
       <key>T</key>
-      <integer>-70</integer>
+      <integer>-80</integer>
       <key>V</key>
-      <integer>-120</integer>
+      <integer>-140</integer>
       <key>W</key>
-      <integer>-110</integer>
+      <integer>-130</integer>
       <key>asterisk</key>
       <integer>-80</integer>
       <key>asterisk.csc</key>
@@ -5917,7 +5573,7 @@
       <key>public.kern2.U</key>
       <integer>-50</integer>
       <key>public.kern2.Y</key>
-      <integer>-100</integer>
+      <integer>-120</integer>
       <key>public.kern2.c.sc</key>
       <integer>-35</integer>
       <key>public.kern2.e</key>
@@ -5977,22 +5633,10 @@
       <integer>-50</integer>
       <key>dagger.csc</key>
       <integer>-40</integer>
-      <key>emdash</key>
-      <integer>-50</integer>
-      <key>emdash.case</key>
-      <integer>-50</integer>
-      <key>endash</key>
-      <integer>-50</integer>
-      <key>endash.case</key>
-      <integer>-50</integer>
       <key>guillemotleft.case</key>
       <integer>-30</integer>
       <key>guilsinglleft.case</key>
       <integer>-30</integer>
-      <key>hyphen</key>
-      <integer>-50</integer>
-      <key>hyphen.case</key>
-      <integer>-50</integer>
       <key>public.kern2.A</key>
       <integer>-20</integer>
       <key>public.kern2.Z</key>
@@ -6003,12 +5647,6 @@
       <integer>-30</integer>
       <key>public.kern2.z</key>
       <integer>-15</integer>
-      <key>uni2010</key>
-      <integer>-50</integer>
-      <key>uni2011</key>
-      <integer>-50</integer>
-      <key>uni2012</key>
-      <integer>-50</integer>
       <key>v</key>
       <integer>-30</integer>
       <key>w</key>
@@ -6393,14 +6031,6 @@
       <integer>-25</integer>
       <key>ellipsis</key>
       <integer>-85</integer>
-      <key>emdash</key>
-      <integer>-30</integer>
-      <key>emdash.case</key>
-      <integer>-20</integer>
-      <key>endash</key>
-      <integer>-30</integer>
-      <key>endash.case</key>
-      <integer>-20</integer>
       <key>eth</key>
       <integer>-55</integer>
       <key>eth.sc</key>
@@ -6435,8 +6065,6 @@
       <integer>-40</integer>
       <key>hyphen</key>
       <integer>-50</integer>
-      <key>hyphen.case</key>
-      <integer>-20</integer>
       <key>j.sc</key>
       <integer>-25</integer>
       <key>k.sc</key>
@@ -6464,7 +6092,7 @@
       <key>period</key>
       <integer>-80</integer>
       <key>public.kern2.A</key>
-      <integer>-100</integer>
+      <integer>-120</integer>
       <key>public.kern2.C</key>
       <integer>-55</integer>
       <key>public.kern2.O</key>
@@ -6545,12 +6173,6 @@
       <integer>10</integer>
       <key>thorn.sc</key>
       <integer>-25</integer>
-      <key>uni2010</key>
-      <integer>-30</integer>
-      <key>uni2011</key>
-      <integer>-30</integer>
-      <key>uni2012</key>
-      <integer>-20</integer>
       <key>v</key>
       <integer>-55</integer>
       <key>v.sc</key>
@@ -6582,22 +6204,10 @@
       <integer>-40</integer>
       <key>dagger.csc</key>
       <integer>-40</integer>
-      <key>emdash</key>
-      <integer>-40</integer>
-      <key>emdash.case</key>
-      <integer>-35</integer>
-      <key>endash</key>
-      <integer>-40</integer>
-      <key>endash.case</key>
-      <integer>-35</integer>
       <key>guillemotleft.case</key>
       <integer>-25</integer>
       <key>guilsinglleft.case</key>
       <integer>-25</integer>
-      <key>hyphen</key>
-      <integer>-40</integer>
-      <key>hyphen.case</key>
-      <integer>-35</integer>
       <key>public.kern2.A</key>
       <integer>-15</integer>
       <key>public.kern2.Y</key>
@@ -6614,12 +6224,6 @@
       <integer>-15</integer>
       <key>t.sc</key>
       <integer>-40</integer>
-      <key>uni2010</key>
-      <integer>-40</integer>
-      <key>uni2011</key>
-      <integer>-40</integer>
-      <key>uni2012</key>
-      <integer>-35</integer>
       <key>v</key>
       <integer>-25</integer>
       <key>v.sc</key>
@@ -6679,7 +6283,7 @@
       <key>public.kern2.u.sc</key>
       <integer>-35</integer>
       <key>public.kern2.y.sc</key>
-      <integer>-75</integer>
+      <integer>-90</integer>
       <key>q.sc</key>
       <integer>-35</integer>
       <key>quotedbl</key>
@@ -6695,15 +6299,15 @@
       <key>quotesingle</key>
       <integer>-45</integer>
       <key>t.sc</key>
-      <integer>-50</integer>
+      <integer>-60</integer>
       <key>uni02BB</key>
       <integer>-50</integer>
       <key>uni02BC</key>
       <integer>-55</integer>
       <key>v.sc</key>
-      <integer>-90</integer>
+      <integer>-100</integer>
       <key>w.sc</key>
-      <integer>-80</integer>
+      <integer>-95</integer>
     </dict>
     <key>public.kern1.b</key>
     <dict>
@@ -6758,12 +6362,6 @@
       <integer>-20</integer>
       <key>backslash</key>
       <integer>-30</integer>
-      <key>emdash</key>
-      <integer>-35</integer>
-      <key>endash</key>
-      <integer>-35</integer>
-      <key>hyphen</key>
-      <integer>-35</integer>
       <key>parenright</key>
       <integer>-30</integer>
       <key>parenright.case</key>
@@ -6772,25 +6370,15 @@
       <integer>-25</integer>
       <key>public.kern2.c</key>
       <integer>-15</integer>
-      <key>uni2010</key>
-      <integer>-35</integer>
-      <key>uni2011</key>
-      <integer>-35</integer>
     </dict>
     <key>public.kern1.c.sc</key>
     <dict>
       <key>backslash</key>
       <integer>-25</integer>
-      <key>emdash</key>
-      <integer>-45</integer>
-      <key>endash</key>
-      <integer>-45</integer>
       <key>eth.sc</key>
       <integer>-30</integer>
       <key>g.sc</key>
       <integer>-15</integer>
-      <key>hyphen</key>
-      <integer>-45</integer>
       <key>parenright</key>
       <integer>-25</integer>
       <key>parenright.csc</key>
@@ -6805,10 +6393,6 @@
       <integer>-10</integer>
       <key>q.sc</key>
       <integer>-15</integer>
-      <key>uni2010</key>
-      <integer>-45</integer>
-      <key>uni2011</key>
-      <integer>-45</integer>
     </dict>
     <key>public.kern1.e</key>
     <dict>
@@ -6818,12 +6402,8 @@
       <integer>-35</integer>
       <key>d</key>
       <integer>-25</integer>
-      <key>emdash</key>
-      <integer>-40</integer>
       <key>g</key>
       <integer>-20</integer>
-      <key>hyphen</key>
-      <integer>-40</integer>
       <key>l</key>
       <integer>-25</integer>
       <key>parenright</key>
@@ -6838,10 +6418,6 @@
       <integer>-25</integer>
       <key>q</key>
       <integer>-25</integer>
-      <key>uni2010</key>
-      <integer>-40</integer>
-      <key>uni2011</key>
-      <integer>-40</integer>
     </dict>
     <key>public.kern1.e.sc</key>
     <dict>
@@ -7142,10 +6718,6 @@
       <integer>-15</integer>
       <key>dagger.csc</key>
       <integer>-15</integer>
-      <key>emdash</key>
-      <integer>-25</integer>
-      <key>endash</key>
-      <integer>-25</integer>
       <key>eth</key>
       <integer>-20</integer>
       <key>guillemotleft</key>
@@ -7160,8 +6732,6 @@
       <integer>-20</integer>
       <key>guilsinglright.case</key>
       <integer>-20</integer>
-      <key>hyphen</key>
-      <integer>-20</integer>
       <key>parenleft.case</key>
       <integer>-15</integer>
       <key>parenright</key>
@@ -7169,10 +6739,6 @@
       <key>parenright.csc</key>
       <integer>-20</integer>
       <key>question</key>
-      <integer>-20</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
       <integer>-20</integer>
     </dict>
     <key>public.kern1.n</key>
@@ -7462,16 +7028,10 @@
       <integer>-25</integer>
       <key>dagger.csc</key>
       <integer>-20</integer>
-      <key>emdash.case</key>
-      <integer>-20</integer>
-      <key>endash.case</key>
-      <integer>-25</integer>
       <key>eth.sc</key>
       <integer>-15</integer>
       <key>g.sc</key>
       <integer>-10</integer>
-      <key>hyphen.case</key>
-      <integer>-20</integer>
       <key>parenright</key>
       <integer>-30</integer>
       <key>parenright.case</key>
@@ -7494,8 +7054,6 @@
       <integer>-15</integer>
       <key>uni02BC</key>
       <integer>-15</integer>
-      <key>uni2012</key>
-      <integer>-25</integer>
       <key>v.sc</key>
       <integer>-15</integer>
       <key>w.sc</key>
@@ -7625,7 +7183,7 @@
       <key>period</key>
       <integer>-45</integer>
       <key>public.kern2.a.sc</key>
-      <integer>-75</integer>
+      <integer>-90</integer>
       <key>public.kern2.c.sc</key>
       <integer>-40</integer>
       <key>public.kern2.o.sc</key>
@@ -7659,8 +7217,6 @@
     <dict>
       <key>backslash</key>
       <integer>-30</integer>
-      <key>emdash</key>
-      <integer>-15</integer>
       <key>parenright</key>
       <integer>-25</integer>
       <key>parenright.csc</key>
@@ -7672,18 +7228,12 @@
       <integer>-30</integer>
       <key>dagger.csc</key>
       <integer>-15</integer>
-      <key>emdash</key>
-      <integer>-25</integer>
-      <key>endash</key>
-      <integer>-25</integer>
       <key>eth.sc</key>
       <integer>-30</integer>
       <key>guillemotleft.case</key>
       <integer>-20</integer>
       <key>guilsinglleft.case</key>
       <integer>-20</integer>
-      <key>hyphen</key>
-      <integer>-25</integer>
       <key>parenright</key>
       <integer>-25</integer>
       <key>parenright.csc</key>
@@ -7694,10 +7244,6 @@
       <integer>-10</integer>
       <key>t.sc</key>
       <integer>-15</integer>
-      <key>uni2010</key>
-      <integer>-25</integer>
-      <key>uni2011</key>
-      <integer>-25</integer>
       <key>v.sc</key>
       <integer>-10</integer>
       <key>w.sc</key>
@@ -7977,7 +7523,7 @@
     <key>quotedblleft</key>
     <dict>
       <key>AE</key>
-      <integer>-70</integer>
+      <integer>-90</integer>
       <key>G</key>
       <integer>-15</integer>
       <key>Q</key>
@@ -7997,7 +7543,7 @@
       <key>otilde.sc</key>
       <integer>-25</integer>
       <key>public.kern2.A</key>
-      <integer>-100</integer>
+      <integer>-120</integer>
       <key>public.kern2.a.sc</key>
       <integer>-35</integer>
       <key>public.kern2.c</key>
@@ -8129,7 +7675,7 @@
     <key>quoteleft</key>
     <dict>
       <key>AE</key>
-      <integer>-70</integer>
+      <integer>-90</integer>
       <key>G</key>
       <integer>-15</integer>
       <key>acircumflex.sc</key>
@@ -8147,7 +7693,7 @@
       <key>otilde.sc</key>
       <integer>-25</integer>
       <key>public.kern2.A</key>
-      <integer>-100</integer>
+      <integer>-120</integer>
       <key>public.kern2.a.sc</key>
       <integer>-35</integer>
       <key>public.kern2.c</key>
@@ -8404,14 +7950,8 @@
       <integer>-25</integer>
       <key>ellipsis</key>
       <integer>-40</integer>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>endash</key>
-      <integer>-20</integer>
       <key>g</key>
       <integer>-25</integer>
-      <key>hyphen</key>
-      <integer>-20</integer>
       <key>parenright</key>
       <integer>-30</integer>
       <key>parenright.case</key>
@@ -8440,10 +7980,6 @@
       <integer>-35</integer>
       <key>slash</key>
       <integer>-25</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
-      <integer>-20</integer>
       <key>v</key>
       <integer>10</integer>
       <key>w</key>
@@ -8827,14 +8363,6 @@
       <integer>-15</integer>
       <key>dagger.csc</key>
       <integer>-25</integer>
-      <key>emdash</key>
-      <integer>-15</integer>
-      <key>emdash.case</key>
-      <integer>-15</integer>
-      <key>endash</key>
-      <integer>-15</integer>
-      <key>endash.case</key>
-      <integer>-15</integer>
       <key>guillemotleft</key>
       <integer>-15</integer>
       <key>guillemotleft.case</key>
@@ -8847,25 +8375,15 @@
       <integer>-25</integer>
       <key>guilsinglright.case</key>
       <integer>-25</integer>
-      <key>hyphen</key>
-      <integer>-15</integer>
-      <key>hyphen.case</key>
-      <integer>-15</integer>
       <key>parenright</key>
       <integer>-25</integer>
       <key>parenright.csc</key>
       <integer>-20</integer>
-      <key>uni2010</key>
-      <integer>-15</integer>
-      <key>uni2011</key>
-      <integer>-15</integer>
-      <key>uni2012</key>
-      <integer>-15</integer>
     </dict>
     <key>t.sc</key>
     <dict>
       <key>ae.sc</key>
-      <integer>-70</integer>
+      <integer>-75</integer>
       <key>ampersand</key>
       <integer>-20</integer>
       <key>ampersand.csc</key>
@@ -8876,20 +8394,10 @@
       <integer>-55</integer>
       <key>ellipsis</key>
       <integer>-55</integer>
-      <key>emdash</key>
-      <integer>-25</integer>
-      <key>emdash.case</key>
-      <integer>-20</integer>
-      <key>endash</key>
-      <integer>-25</integer>
       <key>eth.sc</key>
       <integer>-20</integer>
       <key>g.sc</key>
       <integer>-20</integer>
-      <key>hyphen</key>
-      <integer>-25</integer>
-      <key>hyphen.case</key>
-      <integer>-25</integer>
       <key>m.sc</key>
       <integer>-30</integer>
       <key>parenright</key>
@@ -8901,7 +8409,7 @@
       <key>period</key>
       <integer>-55</integer>
       <key>public.kern2.a.sc</key>
-      <integer>-55</integer>
+      <integer>-60</integer>
       <key>public.kern2.c.sc</key>
       <integer>-10</integer>
       <key>public.kern2.o.sc</key>
@@ -8916,10 +8424,6 @@
       <integer>-45</integer>
       <key>slash</key>
       <integer>-30</integer>
-      <key>uni2010</key>
-      <integer>-25</integer>
-      <key>uni2011</key>
-      <integer>-25</integer>
     </dict>
     <key>thorn</key>
     <dict>
@@ -8980,17 +8484,7 @@
     </dict>
     <key>two</key>
     <dict>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>endash</key>
-      <integer>-20</integer>
       <key>four</key>
-      <integer>-20</integer>
-      <key>hyphen</key>
-      <integer>-20</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
       <integer>-20</integer>
     </dict>
     <key>uacute.sc</key>
@@ -9235,101 +8729,6 @@
       <key>yacute.sc</key>
       <integer>-20</integer>
     </dict>
-    <key>uni2010</key>
-    <dict>
-      <key>T</key>
-      <integer>-30</integer>
-      <key>V</key>
-      <integer>-15</integer>
-      <key>W</key>
-      <integer>-15</integer>
-      <key>X</key>
-      <integer>-15</integer>
-      <key>five</key>
-      <integer>-35</integer>
-      <key>nine</key>
-      <integer>-15</integer>
-      <key>public.kern2.S</key>
-      <integer>-30</integer>
-      <key>public.kern2.Y</key>
-      <integer>-25</integer>
-      <key>public.kern2.a</key>
-      <integer>-25</integer>
-      <key>public.kern2.z</key>
-      <integer>-20</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-15</integer>
-      <key>seven</key>
-      <integer>-20</integer>
-      <key>t.sc</key>
-      <integer>-20</integer>
-      <key>three</key>
-      <integer>-30</integer>
-      <key>two</key>
-      <integer>-20</integer>
-      <key>x.sc</key>
-      <integer>-15</integer>
-    </dict>
-    <key>uni2011</key>
-    <dict>
-      <key>T</key>
-      <integer>-30</integer>
-      <key>V</key>
-      <integer>-15</integer>
-      <key>W</key>
-      <integer>-15</integer>
-      <key>X</key>
-      <integer>-15</integer>
-      <key>five</key>
-      <integer>-35</integer>
-      <key>nine</key>
-      <integer>-15</integer>
-      <key>public.kern2.S</key>
-      <integer>-30</integer>
-      <key>public.kern2.Y</key>
-      <integer>-25</integer>
-      <key>public.kern2.a</key>
-      <integer>-25</integer>
-      <key>public.kern2.z</key>
-      <integer>-20</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-15</integer>
-      <key>seven</key>
-      <integer>-20</integer>
-      <key>t.sc</key>
-      <integer>-20</integer>
-      <key>three</key>
-      <integer>-30</integer>
-      <key>two</key>
-      <integer>-20</integer>
-      <key>x.sc</key>
-      <integer>-15</integer>
-    </dict>
-    <key>uni2012</key>
-    <dict>
-      <key>AE</key>
-      <integer>-20</integer>
-      <key>T</key>
-      <integer>-30</integer>
-      <key>X</key>
-      <integer>-30</integer>
-      <key>ae.sc</key>
-      <integer>-20</integer>
-      <key>public.kern2.S</key>
-      <integer>-15</integer>
-      <key>public.kern2.Y</key>
-      <integer>-20</integer>
-      <key>public.kern2.Z</key>
-      <integer>-25</integer>
-      <key>public.kern2.z.sc</key>
-      <integer>-30</integer>
-      <key>seven</key>
-      <integer>-25</integer>
-      <key>three</key>
-      <integer>-20</integer>
-      <key>two</key>
-      <integer>-30</integer>
-    </dict>
     <key>v</key>
     <dict>
       <key>AE</key>
@@ -9400,7 +8799,7 @@
       <key>period</key>
       <integer>-50</integer>
       <key>public.kern2.a.sc</key>
-      <integer>-90</integer>
+      <integer>-100</integer>
       <key>public.kern2.c.sc</key>
       <integer>-35</integer>
       <key>public.kern2.o.sc</key>
@@ -9494,7 +8893,7 @@
       <key>period</key>
       <integer>-50</integer>
       <key>public.kern2.a.sc</key>
-      <integer>-85</integer>
+      <integer>-95</integer>
       <key>public.kern2.c.sc</key>
       <integer>-35</integer>
       <key>public.kern2.o.sc</key>
@@ -9524,15 +8923,9 @@
       <integer>10</integer>
       <key>backslash</key>
       <integer>-30</integer>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>endash</key>
-      <integer>-20</integer>
       <key>guillemotleft</key>
       <integer>-20</integer>
       <key>guilsinglleft</key>
-      <integer>-20</integer>
-      <key>hyphen</key>
       <integer>-20</integer>
       <key>parenright</key>
       <integer>-25</integer>
@@ -9540,10 +8933,6 @@
       <integer>-20</integer>
       <key>public.kern2.E</key>
       <integer>10</integer>
-      <key>uni2010</key>
-      <integer>-20</integer>
-      <key>uni2011</key>
-      <integer>-20</integer>
       <key>v</key>
       <integer>10</integer>
       <key>w</key>
@@ -9557,12 +8946,6 @@
       <integer>-25</integer>
       <key>dagger.csc</key>
       <integer>-15</integer>
-      <key>emdash</key>
-      <integer>-20</integer>
-      <key>emdash.case</key>
-      <integer>-15</integer>
-      <key>endash</key>
-      <integer>-20</integer>
       <key>g.sc</key>
       <integer>-25</integer>
       <key>guillemotleft</key>
@@ -9572,10 +8955,6 @@
       <key>guilsinglleft</key>
       <integer>-20</integer>
       <key>guilsinglleft.case</key>
-      <integer>-15</integer>
-      <key>hyphen</key>
-      <integer>-15</integer>
-      <key>hyphen.case</key>
       <integer>-15</integer>
       <key>parenright</key>
       <integer>-20</integer>
@@ -9587,10 +8966,6 @@
       <integer>-25</integer>
       <key>q.sc</key>
       <integer>-25</integer>
-      <key>uni2010</key>
-      <integer>-15</integer>
-      <key>uni2011</key>
-      <integer>-15</integer>
     </dict>
     <key>y</key>
     <dict>

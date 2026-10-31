@@ -66,11 +66,9 @@ SCALE = defaultdict(float, {
     (CAP, LOWPUNCT): 1.0, (CAP, PUNCT): 0.8, (CAP, QUOTE): 0.8,
     (LOWPUNCT, CAP): 0.4, (PUNCT, CAP): 0.8, (QUOTE, CAP): 0.8,
     # Dashes sit in the middle of open shapes (C, e, L): kerning them by
-    # the white they leave would pull them into the counter.  A light
-    # touch only; the open capitals (T Y V W L) are set by hand.
-    (CAP, DASH): 0.3, (DASH, CAP): 0.3, (LOWER, DASH): 0.3,
-    (DASH, LOWER): 0.3, (FIGURE, DASH): 0.3, (DASH, FIGURE): 0.3,
-    (SMALLCAP, DASH): 0.3, (DASH, SMALLCAP): 0.3,
+    # the white they leave would pull them into the counter.  The model
+    # leaves them alone (as ETbb and fbb do); the open capitals T Y V W L
+    # are set by hand in the overrides.
     # Quotes beside lowercase are left to the spacing (and the collision
     # guard): measured only where both have ink, a quote sees the stem of
     # an ascender (d b h k) rather than the bowl or shoulder below it.

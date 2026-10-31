@@ -21,14 +21,14 @@ Y period -80
 Y comma -80
 
 # Diagonal and open capitals (headings, acronyms, small runs of caps).
-A V -120
-A W -110
-A Y -100
-A T -70
-V A -125
-W A -115
-Y A -100
-T A -75
+A V -140
+A W -130
+A Y -120
+A T -80
+V A -140
+W A -130
+Y A -120
+T A -80
 L T -80
 L V -80
 L W -70
@@ -37,8 +37,8 @@ P A -60
 F A -50
 
 # Quotes beside A and L.
-quoteleft A -100
-quotedblleft A -100
+quoteleft A -120
+quotedblleft A -120
 A quoteright -60
 A quotedblright -60
 L quoteright -80
