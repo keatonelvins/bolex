@@ -34,14 +34,14 @@ import numpy as np
 import outline
 
 # Character categories, by the role a glyph plays in a pair.
-CAP, LOWER, SMALLCAP, FIGURE, OLDSTYLE, PUNCT, QUOTE, LOWPUNCT = (
+CAP, LOWER, SMALLCAP, FIGURE, OLDSTYLE, PUNCT, QUOTE, LOWPUNCT, DASH = (
     "cap", "lower", "smallcap", "figure", "oldstyle", "punct", "quote",
-    "lowpunct")
+    "lowpunct", "dash")
 
 # Neutral partner per category: (as the left glyph, as the right glyph).
 HOME = {
     CAP: "H", LOWER: "n", SMALLCAP: "h.sc", FIGURE: "zero",
-    OLDSTYLE: "zero.osf", LOWPUNCT: "n", PUNCT: "H", QUOTE: "H",
+    OLDSTYLE: "zero.osf", LOWPUNCT: "n", PUNCT: "H", QUOTE: "H", DASH: "n",
 }
 
 

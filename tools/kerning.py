@@ -4,14 +4,18 @@
 ET Book shipped with ~100 hand-made pairs in the Roman (capitals T V W Y
 A R U before lowercase) and 10 in the Italic.  This script measures every
 relevant pair with the geometric model in tools/kernmodel.py, blends in
-ET Book's own values where they exist, applies hand overrides, guards
-against collisions, and writes compact class kerning (base-letter groups
+the designers' values where they exist (ET Book's, and ETbb's: Michael
+Sharpe's thorough re-kerning of the same outlines), applies hand
+overrides, guards against collisions, and writes compact class kerning (base-letter groups
 plus exceptions where an accent or tail changes a pair) to each UFO's
 groups.plist and kerning.plist.
 
 Inputs (all under sources/kerning/):
-    etbook-<face>.txt     ET Book's original pairs (blended 50/50 with
-                          the model, which smooths the originals' noise)
+    etbook-<face>.txt     ET Book's original pairs
+    etbb-<face>.txt       Michael Sharpe's ETbb pairs, scaled to Bolex
+                          (tools/etbb_kerning.py); together the
+                          designers' opinion, blended 50/50 with the
+                          model, which also smooths their noise
     overrides-<face>.txt  final say: "LEFT RIGHT VALUE" per line.  The
                           named pair gets VALUE and every pair in the same
                           two kerning groups moves by the same amount
@@ -27,8 +31,8 @@ from pathlib import Path
 import ufoLib2
 
 import kernmodel as km
-from kernmodel import (CAP, FIGURE, LOWER, LOWPUNCT, OLDSTYLE, PUNCT, QUOTE,
-                       SMALLCAP)
+from kernmodel import (CAP, DASH, FIGURE, LOWER, LOWPUNCT, OLDSTYLE, PUNCT,
+                       QUOTE, SMALLCAP)
 
 ROOT = Path(__file__).resolve().parent.parent
 KERN_DIR = ROOT / "sources" / "kerning"
@@ -60,7 +64,13 @@ SCALE = defaultdict(float, {
     (CAP, CAP): 1.0, (CAP, LOWER): 1.0,
     (LOWER, LOWER): 0.5,
     (CAP, LOWPUNCT): 1.0, (CAP, PUNCT): 0.8, (CAP, QUOTE): 0.8,
-    (LOWPUNCT, CAP): 1.0, (PUNCT, CAP): 0.8, (QUOTE, CAP): 0.8,
+    (LOWPUNCT, CAP): 0.4, (PUNCT, CAP): 0.8, (QUOTE, CAP): 0.8,
+    # Dashes sit in the middle of open shapes (C, e, L): kerning them by
+    # the white they leave would pull them into the counter.  A light
+    # touch only; the open capitals (T Y V W L) are set by hand.
+    (CAP, DASH): 0.3, (DASH, CAP): 0.3, (LOWER, DASH): 0.3,
+    (DASH, LOWER): 0.3, (FIGURE, DASH): 0.3, (DASH, FIGURE): 0.3,
+    (SMALLCAP, DASH): 0.3, (DASH, SMALLCAP): 0.3,
     # Quotes beside lowercase are left to the spacing (and the collision
     # guard): measured only where both have ink, a quote sees the stem of
     # an ascender (d b h k) rather than the bowl or shoulder below it.
@@ -68,7 +78,7 @@ SCALE = defaultdict(float, {
     (LOWPUNCT, LOWER): 0.7, (PUNCT, LOWER): 0.6,
     (SMALLCAP, SMALLCAP): 1.0, (CAP, SMALLCAP): 0.8,
     (SMALLCAP, LOWPUNCT): 0.8, (SMALLCAP, PUNCT): 0.6,
-    (SMALLCAP, QUOTE): 0.6, (LOWPUNCT, SMALLCAP): 0.8,
+    (SMALLCAP, QUOTE): 0.6, (LOWPUNCT, SMALLCAP): 0.4,
     (PUNCT, SMALLCAP): 0.6, (QUOTE, SMALLCAP): 0.6,
     (FIGURE, FIGURE): 0.6, (FIGURE, LOWPUNCT): 0.6, (LOWPUNCT, FIGURE): 0.6,
     (FIGURE, PUNCT): 0.5, (PUNCT, FIGURE): 0.5,
@@ -76,8 +86,8 @@ SCALE = defaultdict(float, {
     (LOWPUNCT, OLDSTYLE): 0.6,
 })
 
-LOWPUNCT_NAMES = {"period", "comma", "colon", "semicolon", "ellipsis",
-                  "hyphen", "endash", "emdash"}
+LOWPUNCT_NAMES = {"period", "comma", "colon", "semicolon", "ellipsis"}
+DASH_NAMES = {"hyphen", "endash", "emdash"}
 QUOTE_NAMES = {"quoteleft", "quoteright", "quotedblleft", "quotedblright",
                "quotesingle", "quotedbl"}
 PUNCT_NAMES = {"parenleft", "parenright", "bracketleft", "bracketright",
@@ -114,8 +124,8 @@ def category(font, name):
         return SMALLCAP
     if name.endswith(".osf"):
         return OLDSTYLE
-    if name.endswith(".case"):
-        return PUNCT                # raised to capital/figure height
+    if name.endswith(".case"):                 # raised to capital height
+        return DASH if name[:-5] in DASH_NAMES else PUNCT
     if name.endswith(".csc"):
         return category(font, name[:-4])
     if name in ALIASES:
@@ -126,6 +136,8 @@ def category(font, name):
         return FIGURE
     if name in LOWPUNCT_NAMES:
         return LOWPUNCT
+    if name in DASH_NAMES:
+        return DASH
     if name in QUOTE_NAMES:
         return QUOTE
     if name in PUNCT_NAMES:
@@ -182,6 +194,18 @@ def capital_of(font, sc_name):
         if ord(up) in g.unicodes:
             return g.name
     return None
+
+
+def designer_pairs(face):
+    """ET Book's own pairs and Michael Sharpe's ETbb pairs (scaled to
+    Bolex); where both kern a pair, their mean."""
+    sources = [read_pairs(KERN_DIR / f"{name}-{face}.txt")
+               for name in ("etbook", "etbb")]
+    merged = {}
+    for pair in set().union(*sources):
+        values = [src[pair] for src in sources if pair in src]
+        merged[pair] = sum(values) / len(values)
+    return merged
 
 
 def read_pairs(path):
@@ -276,7 +300,7 @@ def kernable_pairs(kerner):
 def build(face):
     path = ROOT / "sources" / f"Bolex-{face.capitalize()}.ufo"
     font = ufoLib2.Font.open(path)
-    designer = read_pairs(KERN_DIR / f"etbook-{face}.txt")
+    designer = designer_pairs(face)
     overrides = read_pairs(KERN_DIR / f"overrides-{face}.txt")
     kerner = Kerner(font)
 

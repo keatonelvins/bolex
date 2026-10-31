@@ -42,8 +42,8 @@ A V -60
 A W -45
 A Y -70
 A T -60
-V A -125
-W A -110
+V A -150
+W A -140
 Y A -80
 T A -90
 P A -80
@@ -52,6 +52,10 @@ L T -90
 L V -45
 L W -30
 L Y -85
+
+# Opening quotes beside A (ETbb: -155).
+quoteleft A -110
+quotedblleft A -110
 
 # The lower loops of gg touch.
 g g 30
