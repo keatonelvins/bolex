@@ -70,6 +70,24 @@ def align_f_ligatures(font, log):
                 log(f"{name}: f stem aligned with f ({dx:+d})")
 
 
+def trim_foot_serif(font, log, name, like, top=45):
+    """Shorten ``name``'s right foot serif to ``like``'s reach past its
+    stem (measured at y=200), compressing the serif toward the stem."""
+    def reach(g):
+        _, right = outline.profile(font, g, ys=np.array([10.0, 200.0]))
+        return right[1], right[0] - right[1]
+    stem, ext = reach(name)
+    _, target = reach(like)
+    if ext - target < 5:
+        return
+    k = target / ext
+    for contour in font[name].contours:
+        for p in contour:
+            if p.y < top and p.x > stem:
+                p.x = round(stem + (p.x - stem) * k)
+    log(f"{name}: right foot serif {ext:.0f} -> {target:.0f} past the stem")
+
+
 def accent_clearance(font, log, names, gap):
     """Raise the accent of these accented letters (the contours above the
     base letter) so it clears the base's top by at least ``gap``."""
@@ -140,6 +158,10 @@ def roman(font, log):
         if abs(current - target) > 2:
             (set_lsb if side == "lsb" else set_rsb)(font, name, target)
             log(f"{name}: {side} {current:.0f} -> {target}")
+    # m's right foot serif reached 24 units further than n's, so matching
+    # m's stem spacing to n's (below) would push that serif into the next
+    # letter's.
+    trim_foot_serif(font, log, "m", like="n")
     d = round(mean_right(font, "n") - mean_right(font, "m"))
     if abs(d) >= 5:
         font["m"].width += d
@@ -199,6 +221,40 @@ def italic(font, log):
             log(f"{name}: sidebearings {lsb:.0f}/{rsb:.0f} -> 35/35")
 
 
+def accented_follow_base(font, log):
+    """Accented letters are separate outlines in ET Book, so their
+    spacing drifts from the base letter's (Ž 15 units looser than Z, Ý
+    13) and a fix to E or N doesn't reach É or Ñ.  Measure both over the
+    base letter's own rows and give the accented letter the base's
+    sidebearings."""
+    import unicodedata
+    by_codepoint = {u: g.name for g in font for u in g.unicodes}
+    for glyph in list(font):
+        stem, _, suffix = glyph.name.partition(".")
+        if suffix not in ("", "sc") or stem not in font \
+                or not font[stem].unicodes:
+            continue
+        parts = unicodedata.normalize("NFD", chr(font[stem].unicodes[0]))
+        if len(parts) < 2 or ord(parts[0]) not in by_codepoint:
+            continue
+        base = by_codepoint[ord(parts[0])] + (f".{suffix}" if suffix else "")
+        if base not in font or base == glyph.name:
+            continue
+        b = font[base].getBounds(font)
+        ys = np.arange(max(b.yMin, 0) + 10, b.yMax - 10, 5, dtype=float)
+        bl, br = outline.profile(font, base, ys=ys)
+        al, ar = outline.profile(font, glyph.name, ys=ys)
+        if np.all(np.isnan(al)):
+            continue
+        dx = round(np.nanmin(bl) - np.nanmin(al))
+        width = round(np.nanmax(ar) + dx + font[base].width - np.nanmax(br))
+        if abs(dx) >= 3 or abs(width - glyph.width) >= 3:
+            outline.shift_glyph(glyph, dx)
+            log(f"{glyph.name}: spaced like {base} "
+                f"(shift {dx:+d}, width {glyph.width} -> {width})")
+            glyph.width = width
+
+
 def sync_composites(font, log):
     """Composites that are a single unshifted component (fi = f_i) keep
     their base's advance."""
@@ -218,6 +274,7 @@ def main():
         font = ufoLib2.Font.open(path)
         log = lambda msg, face=face: print(f"  {face}: {msg}")
         fix(font, log)
+        accented_follow_base(font, log)
         sync_composites(font, log)
         font.save()
 

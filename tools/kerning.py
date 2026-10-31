@@ -49,6 +49,7 @@ THRESHOLD = 15       # smaller kerns are invisible at text sizes
 ROUND_TO = 5
 MAX_NEGATIVE = -150
 MIN_CLEARANCE = 25   # closest approach of the outlines after kerning
+CONTACT = 20         # closer than this unkerned counts as touching
 DESIGNER_WEIGHT = 0.5
 EXCEPTION_TOLERANCE = 10  # members within this of their group's value share it
 
@@ -60,8 +61,11 @@ SCALE = defaultdict(float, {
     (LOWER, LOWER): 0.5,
     (CAP, LOWPUNCT): 1.0, (CAP, PUNCT): 0.8, (CAP, QUOTE): 0.8,
     (LOWPUNCT, CAP): 1.0, (PUNCT, CAP): 0.8, (QUOTE, CAP): 0.8,
-    (LOWER, LOWPUNCT): 0.7, (LOWER, PUNCT): 0.6, (LOWER, QUOTE): 0.6,
-    (LOWPUNCT, LOWER): 0.7, (PUNCT, LOWER): 0.6, (QUOTE, LOWER): 0.6,
+    # Quotes beside lowercase are left to the spacing (and the collision
+    # guard): measured only where both have ink, a quote sees the stem of
+    # an ascender (d b h k) rather than the bowl or shoulder below it.
+    (LOWER, LOWPUNCT): 0.7, (LOWER, PUNCT): 0.6,
+    (LOWPUNCT, LOWER): 0.7, (PUNCT, LOWER): 0.6,
     (SMALLCAP, SMALLCAP): 1.0, (CAP, SMALLCAP): 0.8,
     (SMALLCAP, LOWPUNCT): 0.8, (SMALLCAP, PUNCT): 0.6,
     (SMALLCAP, QUOTE): 0.6, (LOWPUNCT, SMALLCAP): 0.8,
@@ -83,6 +87,9 @@ PUNCT_NAMES = {"parenleft", "parenright", "bracketleft", "bracketright",
                "guilsinglleft", "guilsinglright", "quotesinglbase",
                "quotedblbase", "dagger", "daggerdbl"}
 NOT_KERNED = {"mu"}   # a symbol that happens to be a letter
+# Code points that share another glyph's role.
+ALIASES = {"uni2010": "hyphen", "uni2011": "hyphen", "uni2012": "hyphen.case",
+           "uni02BB": "quoteleft", "uni02BC": "quoteright"}
 FIGURES = ["zero", "one", "two", "three", "four",
            "five", "six", "seven", "eight", "nine"]
 
@@ -107,8 +114,14 @@ def category(font, name):
         return SMALLCAP
     if name.endswith(".osf"):
         return OLDSTYLE
+    if name.endswith(".case"):
+        return PUNCT                # raised to capital/figure height
+    if name.endswith(".csc"):
+        return category(font, name[:-4])
+    if name in ALIASES:
+        return category(font, ALIASES[name])
     if "." in name:
-        return None                 # .tf, .num, .den, .csc, .frac ...
+        return None                 # .tf, .num, .den, .frac ...
     if name in FIGURES:
         return FIGURE
     if name in LOWPUNCT_NAMES:
@@ -222,7 +235,10 @@ class Kerner:
         if scale:
             raw = self.model(left, right)
             if raw is not None:
-                value = scale * raw
+                # The model only closes pairs up; opening is the collision
+                # guard's job (positive model values come from short
+                # glyphs measured against tall neighbours).
+                value = min(0.0, scale * raw)
         if designer is not None:
             value = DESIGNER_WEIGHT * designer + (1 - DESIGNER_WEIGHT) * value
         value = max(MAX_NEGATIVE, value)
@@ -231,9 +247,18 @@ class Kerner:
         return self.guard(left, right, int(ROUND_TO * round(value / ROUND_TO)))
 
     def guard(self, left, right, value):
-        """Open the pair (in 5-unit steps) until the outlines clear."""
+        """Keep the outlines apart.  A pair that touches or nearly touches
+        unkerned (closer than CONTACT) is opened to MIN_CLEARANCE; any
+        other pair may be kerned no closer than MIN_CLEARANCE or its own
+        unkerned clearance, whichever is smaller (serifs that sit close
+        by design are left alone).  Steps of 5 units."""
+        natural = km.clearance(self.sides, left, right, 0)
+        if natural is None:
+            return value
+        target = MIN_CLEARANCE if natural < CONTACT \
+            else min(MIN_CLEARANCE, natural)
         clear = km.clearance(self.sides, left, right, value)
-        while clear is not None and clear < MIN_CLEARANCE and value < 300:
+        while clear is not None and clear < target and value < 300:
             value += ROUND_TO
             clear = km.clearance(self.sides, left, right, value)
         return value

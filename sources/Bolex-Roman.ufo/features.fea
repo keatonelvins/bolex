@@ -6,6 +6,7 @@ languagesystem latn dflt;
 @lf = [zero one two three four five six seven eight nine];
 @osf = [zero.osf one.osf two.osf three.osf four.osf five.osf six.osf seven.osf eight.osf nine.osf];
 @tf = [zero.tf one.tf two.tf three.tf four.tf five.tf six.tf seven.tf eight.tf nine.tf];
+@tosf = [zero.tosf one.tosf two.tosf three.tosf four.tosf five.tosf six.tosf seven.tosf eight.tosf nine.tosf];
 @num = [zero.num one.num two.num three.num four.num five.num six.num seven.num eight.num nine.num];
 @den = [zero.den one.den two.den three.den four.den five.den six.den seven.den eight.den nine.den];
 
@@ -177,7 +178,27 @@ feature liga {
     sub f k by f_k;
 } liga;
 
-@f_short_after = [B D E Eacute Ecircumflex Edieresis Egrave Eth F H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde P R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron agrave aring atilde b backslash braceright bracketleft bracketright breve caron circumflex degree dieresis egrave eth exclam five grave greaterequal h hungarumlaut i iacute icircumflex igrave j k l onesuperior ordfeminine ordmasculine paragraph parenright question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle ring scaron seven thorn threequarters threesuperior tilde trademark twosuperior uni02BB uni02BC uni2032 uni2033 uni2070 uni2075 uni2077 uni2078 uni2079 yen zcaron];
+feature onum {
+    sub @lf by @osf;
+    sub @tf by @tosf;
+} onum;
+
+feature lnum {
+    sub @osf by @lf;
+    sub @tosf by @tf;
+} lnum;
+
+feature tnum {
+    sub @lf by @tf;
+    sub @osf by @tosf;
+} tnum;
+
+feature pnum {
+    sub @tf by @lf;
+    sub @tosf by @osf;
+} pnum;
+
+@f_short_after = [B D E Eacute Ecircumflex Edieresis Egrave Eth F H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde P R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron agrave aring atilde b backslash braceright bracketleft bracketright breve caron circumflex degree dieresis egrave eth exclam five grave greaterequal h hungarumlaut i iacute icircumflex idieresis igrave j k l onesuperior ordfeminine ordmasculine paragraph parenright question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle ring scaron seven thorn threequarters threesuperior tilde trademark twosuperior uni02BB uni02BC uni2032 uni2033 uni2070 uni2075 uni2077 uni2078 uni2079 yen zcaron];
 
 feature calt {
     sub f' @f_short_after by f.short;
@@ -201,46 +222,34 @@ feature case {
     sub parenright by parenright.case;
 } case;
 
-feature onum {
-    sub @lf by @osf;
-} onum;
-
-feature lnum {
-    sub @osf by @lf;
-} lnum;
-
-feature tnum {
-    sub @lf by @tf;
-} tnum;
-
-feature pnum {
-    sub @tf by @lf;
-} pnum;
-
 feature numr {
     sub @lf by @num;
     sub @osf by @num;
     sub @tf by @num;
+    sub @tosf by @num;
 } numr;
 
 feature dnom {
     sub @lf by @den;
     sub @osf by @den;
     sub @tf by @den;
+    sub @tosf by @den;
 } dnom;
 
 feature frac {
     lookup FRAC_SLASH {
-        sub [@lf @osf @tf @num] [slash fraction]' [@lf @osf @tf @den] by fraction.frac;
+        sub [@lf @osf @tf @tosf @num] [slash fraction]' [@lf @osf @tf @tosf @den] by fraction.frac;
     } FRAC_SLASH;
     lookup FRAC_NUMR {
         rsub @lf' [fraction.frac @num] by @num;
         rsub @osf' [fraction.frac @num] by @num;
         rsub @tf' [fraction.frac @num] by @num;
+        rsub @tosf' [fraction.frac @num] by @num;
     } FRAC_NUMR;
     lookup FRAC_DNOM {
         sub [fraction.frac @den] @lf' by @den;
         sub [fraction.frac @den] @osf' by @den;
         sub [fraction.frac @den] @tf' by @den;
+        sub [fraction.frac @den] @tosf' by @den;
     } FRAC_DNOM;
 } frac;

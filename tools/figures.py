@@ -100,6 +100,25 @@ def tabular_widths(font):
             glyph.width = width
 
 
+def tabular_oldstyle(font):
+    """zero.tosf ...: the oldstyle figures centred on the tabular width,
+    so tabular-nums still works where oldstyle figures are in force (an
+    all-small-caps run)."""
+    width = font["zero.tf"].width
+    for n in FIGURES:
+        name = f"{n}.tosf"
+        if name in font:
+            continue
+        glyph = font[f"{n}.osf"].copy()
+        glyph._name = name
+        font.layers.defaultLayer.insertGlyph(glyph, name, copy=False)
+        b = glyph.getBounds(font)
+        outline.shift_glyph(glyph, round((width - (b.xMax - b.xMin)) / 2
+                                         - b.xMin))
+        glyph.width = width
+        font.lib.setdefault("public.glyphOrder", []).append(name)
+
+
 def side_area(edge_offsets):
     """Mean depth-limited white on one side (NaN rows count as DEPTH)."""
     d = np.where(np.isnan(edge_offsets), DEPTH,
@@ -147,6 +166,7 @@ def main():
     lining_default(font)
     level_tops(font)
     tabular_widths(font)
+    tabular_oldstyle(font)
     proportional(font)
     font.save()
     for n in FIGURES:

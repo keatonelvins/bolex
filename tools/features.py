@@ -128,7 +128,30 @@ def build(font):
         lines += [f"    sub {seq} by {lig};" for seq, lig in ligs]
         lines += ["} liga;", ""]
 
-    # calt, after liga:
+    if has_osf:
+        lines.append("feature onum {")
+        lines.append("    sub @lf by @osf;")
+        if has_tf and has_tosf:
+            lines.append("    sub @tf by @tosf;")
+        lines += ["} onum;", ""]
+        lines.append("feature lnum {")
+        lines.append("    sub @osf by @lf;")
+        if has_tf and has_tosf:
+            lines.append("    sub @tosf by @tf;")
+        lines += ["} lnum;", ""]
+    if has_tf:
+        lines.append("feature tnum {")
+        lines.append("    sub @lf by @tf;")
+        if has_osf and has_tosf:
+            lines.append("    sub @osf by @tosf;")
+        lines += ["} tnum;", ""]
+        lines.append("feature pnum {")
+        lines.append("    sub @tf by @lf;")
+        if has_osf and has_tosf:
+            lines.append("    sub @tosf by @osf;")
+        lines += ["} pnum;", ""]
+
+    # calt, after liga and the figure features:
     # * f.short (tools/fshort.py) before whatever the full hook would hit
     #   (ff) becomes f_f.short ));
     # * a hyphen or en dash between lining figures is raised to the
@@ -163,29 +186,6 @@ def build(font):
         lines.append("feature case {")
         lines += [f"    sub {n[:-5]} by {n};" for n in case]
         lines += ["} case;", ""]
-
-    if has_osf:
-        lines.append("feature onum {")
-        lines.append("    sub @lf by @osf;")
-        if has_tf and has_tosf:
-            lines.append("    sub @tf by @tosf;")
-        lines += ["} onum;", ""]
-        lines.append("feature lnum {")
-        lines.append("    sub @osf by @lf;")
-        if has_tf and has_tosf:
-            lines.append("    sub @tosf by @tf;")
-        lines += ["} lnum;", ""]
-    if has_tf:
-        lines.append("feature tnum {")
-        lines.append("    sub @lf by @tf;")
-        if has_osf and has_tosf:
-            lines.append("    sub @osf by @tosf;")
-        lines += ["} tnum;", ""]
-        lines.append("feature pnum {")
-        lines.append("    sub @tf by @lf;")
-        if has_osf and has_tosf:
-            lines.append("    sub @tosf by @osf;")
-        lines += ["} pnum;", ""]
 
     if has_frac:
         figure_classes = ["@lf"] + (["@osf"] if has_osf else []) \

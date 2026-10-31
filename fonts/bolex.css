@@ -36,8 +36,11 @@
   font-weight: 400;
 }
 
-/* Footnote markers: the font's own superior figures, no line-height bump. */
-.bolex sup {
+/* Footnote markers made only of figures can use the font's own superior
+   figures (no line-height bump).  Opt in per element: in Chromium, any
+   character without a superior form (a bracket, a letter) would stay
+   full size. */
+.bolex sup.fn {
   font-variant-position: super;
   vertical-align: baseline;
   font-size: inherit;
@@ -47,4 +50,10 @@
    small caps are already spaced a little open, so no letter-spacing). */
 .bolex abbr {
   font-variant-caps: all-small-caps;
+}
+
+/* The Italic has no small capitals (nor did Bembo's); rather than let
+   the browser shrink capitals, set italic acronyms in full capitals. */
+.bolex :is(i, em, cite) abbr {
+  font-variant-caps: normal;
 }

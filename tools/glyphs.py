@@ -142,23 +142,22 @@ def spaces(font):
         add(font, name, cp, width=width)
 
 
-def components(font):
+def components(font, face):
     for name, (cp, base, dy) in COMPONENTS.items():
         if not has_codepoint(font, cp) and base in font:
             add(font, name, cp, width=font[base].width,
                 components=[(base, (1, 0, 0, 1, 0, dy))])
-    # Figure dash: the en dash on the figure width.
+    # Figure dash: the en dash drawn to the tabular figure width and
+    # raised, like the case dashes, to the figures' centre.
     if not has_codepoint(font, 0x2012) and "endash" in font:
         fig = font["zero.tf" if "zero.tf" in font else "zero"].width
-        w = font["endash"].width
-        add(font, "uni2012", 0x2012, width=fig,
-            components=[("endash", (1, 0, 0, 1, round((fig - w) / 2), 0))])
-        # The dash is drawn with its own sidebearings; scale it to fit.
         x0, _, x1, _ = bounds(font, font["endash"])
-        if x1 - x0 > fig - 40:
-            s = (fig - 60) / (x1 - x0)
-            font["uni2012"].components[0].transformation = (
-                s, 0, 0, 1, round(30 - x0 * s), 0)
+        s = min(1.0, (fig - 60) / (x1 - x0))
+        dy = CASE_SHIFT[face]["dash"]
+        path = pathops.Path()
+        font["endash"].draw(TransformPen(path.getPen(), (
+            s, 0, 0, 1, round(30 - x0 * s + dy * outline.slant(font)), dy)))
+        add(font, "uni2012", 0x2012, path=path, width=fig)
 
 
 def borrow_numerators(font, roman):
@@ -401,7 +400,7 @@ def main():
         before = len(font)
         log = lambda msg, face=face: print(f"  {face}: {msg}")
         spaces(font)
-        components(font)
+        components(font, face)
         if face == "Italic":
             borrow_numerators(font, ufoLib2.Font.open(
                 ROOT / "sources" / "Bolex-Roman.ufo"))
