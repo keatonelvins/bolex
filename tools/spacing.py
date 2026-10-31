@@ -29,6 +29,12 @@ def mean_right(font, name, ys=np.arange(50, 401, 10, dtype=float)):
     return float(np.nanmean(font[name].width - right))
 
 
+def mean_left(font, name, ys=np.arange(50, 401, 10, dtype=float)):
+    """Mean upright distance from origin to ink over the x-height rows."""
+    left, _ = outline.profile(font, name, ys=ys)
+    return float(np.nanmean(left))
+
+
 def stem_left(font, name, ys=(50, 150, 250, 350)):
     """Mean upright x of the first ink at a few heights (an f's stem)."""
     left, _ = outline.profile(font, name, ys=np.array(ys, dtype=float))
@@ -58,10 +64,53 @@ def align_f_ligatures(font, log):
     for name in ["f_i", "f_j", "f_l", "f_f", "f_f_i", "f_f_l"]:
         if name in font and not font[name].components:
             dx = round(target - stem_left(font, name))
-            if abs(dx) >= 10:
+            if abs(dx) >= 5:
                 outline.shift_glyph(font[name], dx)
                 font[name].width += dx
                 log(f"{name}: f stem aligned with f ({dx:+d})")
+
+
+def accent_clearance(font, log, names, gap):
+    """Raise the accent of these accented letters (the contours above the
+    base letter) so it clears the base's top by at least ``gap``."""
+    from fontTools.pens.boundsPen import BoundsPen
+    for name, base in names:
+        if name not in font or base not in font:
+            continue
+        pen = BoundsPen(font)
+        font[base].draw(pen)
+        top = pen.bounds[3]
+        marks = []
+        for contour in font[name].contours:
+            if min(p.y for p in contour) > top - 5:
+                marks.append(contour)
+        if not marks:
+            continue
+        bottom = min(p.y for c in marks for p in c)
+        dy = round(top + gap - bottom)
+        if dy > 0:
+            for contour in marks:
+                for p in contour:
+                    p.y += dy
+            log(f"{name}: accent raised {dy}")
+
+
+def lengthen_emdash(font, log, ink):
+    """ET Book's em dash was only 1.27x its en dash, so the two read as
+    the same mark in prose.  Stretch its middle to ``ink`` units (1.5x the
+    en dash), keeping the rounded ends and the sidebearings."""
+    glyph = font["emdash"]
+    b = glyph.getBounds(font)
+    d = round(ink - (b.xMax - b.xMin))
+    if abs(d) < 3:
+        return
+    cx = (b.xMin + b.xMax) / 2
+    for contour in glyph.contours:
+        for p in contour:
+            if p.x > cx:
+                p.x += d
+    glyph.width += d
+    log(f"emdash: {b.xMax - b.xMin:.0f} -> {ink} units long")
 
 
 def roman(font, log):
@@ -95,10 +144,21 @@ def roman(font, log):
     if abs(d) >= 5:
         font["m"].width += d
         log(f"m: right side matched to n ({d:+d})")
+    # Acute, grave and circumflex sat only 22-35 units above the serif tops
+    # of i, u and n (eacute and oacute have ~42), so í ú touched the stem
+    # once hinted.  The capital tildes were as close.
+    accent_clearance(font, log, [
+        ("iacute", "dotlessi"), ("igrave", "dotlessi"),
+        ("icircumflex", "dotlessi"), ("uacute", "u"), ("ugrave", "u"),
+        ("ucircumflex", "u"), ("ntilde", "n")], gap=45)
+    accent_clearance(font, log, [
+        ("Atilde", "A"), ("Ntilde", "N"), ("Otilde", "O")], gap=35)
+    lengthen_emdash(font, log, 820)
     align_f_ligatures(font, log)
 
 
 def italic(font, log):
+    lengthen_emdash(font, log, 800)
     align_f_ligatures(font, log)
     # m ends in the same exit stroke as n, but its right side was ~30
     # units looser at every height.
@@ -106,14 +166,27 @@ def italic(font, log):
     if abs(d) >= 5:
         font["m"].width += d
         log(f"m: right side matched to n ({d:+d})")
-    # Opening quotes sat ~60 units closer to a following capital than in
-    # the Roman (the slant tucks them into the cap's top-left serif);
-    # open them up by 40 on the right.
-    for name, target in [("quoteleft", 119), ("quotedblleft", 115)]:
-        _, rsb = sidebearings(font, name)
-        if rsb < target - 2:
-            set_rsb(font, name, target)
-            log(f"{name}: right sidebearing {rsb:.0f} -> {target}")
+    d = round(mean_left(font, "n") - mean_left(font, "m"))
+    if abs(d) >= 5:
+        outline.shift_glyph(font["m"], d)
+        font["m"].width += d
+        log(f"m: left side matched to n ({d:+d})")
+    # Opening quotes: the ink sat ~60 units too far right in the advance,
+    # into the top-left of a following capital.  Move it left, keeping the
+    # advance (lsb as drawn: 191 -> 131, 204 -> 144).
+    for name, target in [("quoteleft", 131), ("quotedblleft", 144)]:
+        lsb, _ = sidebearings(font, name, tan=0)
+        if abs(lsb - target) > 2:
+            outline.shift_glyph(font[name], round(target - lsb))
+            log(f"{name}: ink moved left {lsb:.0f} -> {target}")
+    # The period sat loose on both sides (81/74 vs the Roman's 65/20),
+    # which opened every sentence end.
+    lsb, rsb = sidebearings(font, "period", tan=0)
+    if lsb > 60:
+        set_lsb(font, "period", lsb - 25, tan=0)
+        set_rsb(font, "period", rsb - 30, tan=0)
+        log(f"period: sidebearings {lsb:.0f}/{rsb:.0f} -> "
+            f"{lsb - 25:.0f}/{rsb - 30:.0f}")
     # Guillemets: single ones had ~98-unit sidebearings, doubles were
     # lopsided.  Space them like the Roman's, 35 a side (measured on the
     # outline as drawn: a chevron has no upright stem to measure from).

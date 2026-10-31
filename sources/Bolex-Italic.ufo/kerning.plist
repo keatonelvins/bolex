@@ -150,6 +150,8 @@
       <integer>-25</integer>
       <key>f</key>
       <integer>-15</integer>
+      <key>f.short</key>
+      <integer>-15</integer>
       <key>f_b</key>
       <integer>-15</integer>
       <key>f_f_b</key>
@@ -1906,12 +1908,16 @@
       <integer>5</integer>
       <key>k</key>
       <integer>10</integer>
+      <key>m</key>
+      <integer>10</integer>
       <key>oe</key>
       <integer>0</integer>
       <key>oslash</key>
       <integer>35</integer>
       <key>parenright</key>
       <integer>-20</integer>
+      <key>period</key>
+      <integer>5</integer>
       <key>public.kern2.A</key>
       <integer>105</integer>
       <key>public.kern2.C</key>
@@ -2210,6 +2216,8 @@
       <integer>-15</integer>
       <key>hyphen</key>
       <integer>15</integer>
+      <key>m</key>
+      <integer>10</integer>
       <key>p</key>
       <integer>15</integer>
       <key>parenright</key>
@@ -4209,6 +4217,33 @@
       <key>thorn</key>
       <integer>40</integer>
     </dict>
+    <key>f_f.short</key>
+    <dict>
+      <key>C</key>
+      <integer>15</integer>
+      <key>Ccedilla</key>
+      <integer>15</integer>
+      <key>U</key>
+      <integer>15</integer>
+      <key>Uacute</key>
+      <integer>15</integer>
+      <key>Ucircumflex</key>
+      <integer>15</integer>
+      <key>Udieresis</key>
+      <integer>15</integer>
+      <key>Ugrave</key>
+      <integer>15</integer>
+      <key>V</key>
+      <integer>30</integer>
+      <key>W</key>
+      <integer>35</integer>
+      <key>backslash</key>
+      <integer>15</integer>
+      <key>braceright</key>
+      <integer>70</integer>
+      <key>germandbls</key>
+      <integer>40</integer>
+    </dict>
     <key>f_f_b</key>
     <dict>
       <key>AE</key>
@@ -4430,7 +4465,13 @@
       <integer>-20</integer>
       <key>f</key>
       <integer>15</integer>
+      <key>f.short</key>
+      <integer>15</integer>
+      <key>f_b</key>
+      <integer>15</integer>
       <key>f_f</key>
+      <integer>15</integer>
+      <key>f_f.short</key>
       <integer>15</integer>
       <key>f_f_b</key>
       <integer>15</integer>
@@ -4442,11 +4483,19 @@
       <integer>15</integer>
       <key>f_f_l</key>
       <integer>15</integer>
+      <key>f_h</key>
+      <integer>15</integer>
       <key>f_i</key>
       <integer>15</integer>
       <key>f_j</key>
       <integer>15</integer>
+      <key>f_k</key>
+      <integer>15</integer>
+      <key>f_l</key>
+      <integer>15</integer>
       <key>fi</key>
+      <integer>15</integer>
+      <key>fl</key>
       <integer>15</integer>
       <key>germandbls</key>
       <integer>50</integer>
@@ -5977,6 +6026,21 @@
       <key>thorn</key>
       <integer>25</integer>
     </dict>
+    <key>public.kern1.f.short</key>
+    <dict>
+      <key>braceright</key>
+      <integer>25</integer>
+      <key>comma</key>
+      <integer>-15</integer>
+      <key>d</key>
+      <integer>-15</integer>
+      <key>germandbls</key>
+      <integer>20</integer>
+      <key>public.kern2.f</key>
+      <integer>20</integer>
+      <key>q</key>
+      <integer>-15</integer>
+    </dict>
     <key>public.kern1.h</key>
     <dict>
       <key>asterisk</key>
@@ -7239,9 +7303,13 @@
       <integer>-25</integer>
       <key>f</key>
       <integer>-15</integer>
+      <key>f.short</key>
+      <integer>-15</integer>
       <key>f_b</key>
       <integer>-15</integer>
       <key>f_f</key>
+      <integer>-15</integer>
+      <key>f_f.short</key>
       <integer>-15</integer>
       <key>f_f_b</key>
       <integer>-15</integer>

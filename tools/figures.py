@@ -74,6 +74,21 @@ def lining_default(font):
         font[f"{n}.tf"].unicodes = unicodes[n]
 
 
+def level_tops(font, top=640, floor=560):
+    """ET Book's lining 7 topped out at 624 (and the 6, 8 and 9 at
+    637-639) against 640 for the rest, so after hinting the 7 rendered a
+    whole pixel short at body sizes.  Lift each figure's head (everything
+    above ``floor``) to the common top."""
+    for n in FIGURES:
+        glyph = font[f"{n}.tf"]
+        dy = round(top - glyph.getBounds(font).yMax)
+        if dy > 0:
+            for contour in glyph.contours:
+                for p in contour:
+                    if p.y > floor:
+                        p.y += dy
+
+
 def tabular_widths(font):
     """ET Book's eight.lining was 25 units narrower than the other
     tabular figures; centre every tabular figure on one common width."""
@@ -130,6 +145,7 @@ def main():
     path = ROOT / "sources" / "Bolex-Roman.ufo"
     font = ufoLib2.Font.open(path)
     lining_default(font)
+    level_tops(font)
     tabular_widths(font)
     proportional(font)
     font.save()

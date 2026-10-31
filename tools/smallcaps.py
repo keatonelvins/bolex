@@ -23,6 +23,8 @@ import ufoLib2
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.transformPen import TransformPen
 
+import outline
+
 ROOT = Path(__file__).resolve().parent.parent
 ACCENT_RAISE = 75
 
@@ -52,7 +54,7 @@ def new_glyph(font, name, path, width):
     if name in font:
         del font[name]
     glyph = font.newGlyph(name)
-    path.draw(glyph.getPen())
+    path.draw(outline.CubicPen(glyph.getPen()))
     glyph.width = width
     order = font.lib.setdefault("public.glyphOrder", [])
     if name not in order:

@@ -266,10 +266,14 @@
     <string>exclamdown.glif</string>
     <key>f</key>
     <string>f.glif</string>
+    <key>f.short</key>
+    <string>f.short.glif</string>
     <key>f_b</key>
     <string>f_b.glif</string>
     <key>f_f</key>
     <string>f_f.glif</string>
+    <key>f_f.short</key>
+    <string>f_f.short.glif</string>
     <key>f_f_b</key>
     <string>f_f_b.glif</string>
     <key>f_f_h</key>

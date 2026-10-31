@@ -14,6 +14,8 @@
     <string>Bolex</string>
     <key>italicAngle</key>
     <integer>0</integer>
+    <key>openTypeHeadCreated</key>
+    <string>2026/10/31 00:00:00</string>
     <key>openTypeHheaAscender</key>
     <integer>836</integer>
     <key>openTypeHheaDescender</key>

@@ -58,6 +58,36 @@ class _SegmentPen(BasePen):
     _endPath = _closePath
 
 
+class CubicPen(BasePen):
+    """Forward an outline to ``pen``, turning quadratic segments (which
+    pathops can emit) into cubics, so sources stay all-cubic."""
+
+    def __init__(self, pen):
+        super().__init__(None)
+        self.pen = pen
+
+    def _moveTo(self, p):
+        self.pen.moveTo(p)
+
+    def _lineTo(self, p):
+        self.pen.lineTo(p)
+
+    def _curveToOne(self, p1, p2, p3):
+        self.pen.curveTo(p1, p2, p3)
+
+    def _qCurveToOne(self, p1, p2):
+        p0 = self._getCurrentPoint()
+        c1 = (p0[0] + 2 / 3 * (p1[0] - p0[0]), p0[1] + 2 / 3 * (p1[1] - p0[1]))
+        c2 = (p2[0] + 2 / 3 * (p1[0] - p2[0]), p2[1] + 2 / 3 * (p1[1] - p2[1]))
+        self.pen.curveTo(c1, c2, p2)
+
+    def _closePath(self):
+        self.pen.closePath()
+
+    def _endPath(self):
+        self.pen.endPath()
+
+
 def slant(font):
     """tan of the font's italic angle (positive for a right-leaning italic)."""
     angle = font.info.italicAngle or 0

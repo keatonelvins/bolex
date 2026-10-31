@@ -115,6 +115,11 @@
       <string>f</string>
       <string>f_f</string>
     </array>
+    <key>public.kern1.f.short</key>
+    <array>
+      <string>f.short</string>
+      <string>f_f.short</string>
+    </array>
     <key>public.kern1.h</key>
     <array>
       <string>f_f_h</string>
@@ -300,8 +305,10 @@
     <key>public.kern2.f</key>
     <array>
       <string>f</string>
+      <string>f.short</string>
       <string>f_b</string>
       <string>f_f</string>
+      <string>f_f.short</string>
       <string>f_f_b</string>
       <string>f_f_h</string>
       <string>f_f_i</string>

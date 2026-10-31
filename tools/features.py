@@ -137,9 +137,18 @@ def build(font):
     if "f.short" in font:
         after = short_f_contexts(font)
         lines.append(f"@f_short_after = [{' '.join(after)}];")
-        calt.append("    sub f' @f_short_after by f.short;")
-        if "f_f.short" in font:
-            calt.append("    sub f_f' @f_short_after by f_f.short;")
+        fs = ["f"] + (["f_f"] if "f_f.short" in font else [])
+        if font.info.italicAngle:
+            # Italic: also at the end of every word (see tools/fshort.py).
+            letters = sorted(g.name for g in font if _is_letter(g))
+            lines.append(f"@letters = [{' '.join(letters)}];")
+            for f in fs:
+                calt.append(f"    ignore sub {f}' @letters;")
+            for f in fs:
+                calt.append(f"    sub {f}' by {f}.short;")
+        else:
+            for f in fs:
+                calt.append(f"    sub {f}' @f_short_after by {f}.short;")
     figs = "[@lf" + (" @tf" if has_tf else "") + "]"
     if "endash.case" in font and _have(font, FIGURES) and "zero.osf" in font:
         calt.append(f"    sub {figs} [hyphen endash]' {figs} "
@@ -213,6 +222,14 @@ def build(font):
                 lines += [f"}} {tag};", ""]
 
     return "\n".join(lines).rstrip() + "\n"
+
+
+def _is_letter(glyph):
+    import unicodedata
+    if glyph.name.startswith("f_") or glyph.name.endswith(".sc"):
+        return True
+    return any(unicodedata.category(chr(u)).startswith("L")
+               for u in glyph.unicodes)
 
 
 def short_f_contexts(font):

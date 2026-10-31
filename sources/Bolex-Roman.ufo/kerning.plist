@@ -268,8 +268,6 @@
       <key>uacute</key>
       <integer>-15</integer>
       <key>uacute.sc</key>
-      <integer>-20</integer>
-      <key>ugrave.sc</key>
       <integer>-15</integer>
       <key>v</key>
       <integer>-30</integer>
@@ -404,7 +402,7 @@
       <key>egrave</key>
       <integer>-15</integer>
       <key>icircumflex</key>
-      <integer>25</integer>
+      <integer>20</integer>
       <key>idieresis</key>
       <integer>30</integer>
       <key>oacute</key>
@@ -440,7 +438,7 @@
       <key>Oslash</key>
       <integer>-20</integer>
       <key>Otilde</key>
-      <integer>-20</integer>
+      <integer>-15</integer>
       <key>Uacute</key>
       <integer>-15</integer>
       <key>Yacute</key>
@@ -625,7 +623,7 @@
       <key>hyphen</key>
       <integer>-20</integer>
       <key>icircumflex</key>
-      <integer>30</integer>
+      <integer>35</integer>
       <key>icircumflex.sc</key>
       <integer>25</integer>
       <key>idieresis</key>
@@ -658,8 +656,6 @@
       <integer>-95</integer>
       <key>slash</key>
       <integer>-35</integer>
-      <key>uacute</key>
-      <integer>-15</integer>
     </dict>
     <key>G</key>
     <dict>
@@ -1083,8 +1079,6 @@
       <integer>-20</integer>
       <key>uacute</key>
       <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
     </dict>
     <key>N</key>
     <dict>
@@ -1133,7 +1127,7 @@
       <key>egrave</key>
       <integer>-15</integer>
       <key>icircumflex</key>
-      <integer>25</integer>
+      <integer>20</integer>
       <key>idieresis</key>
       <integer>30</integer>
       <key>oacute</key>
@@ -1181,7 +1175,7 @@
       <key>egrave</key>
       <integer>-15</integer>
       <key>icircumflex</key>
-      <integer>25</integer>
+      <integer>20</integer>
       <key>idieresis</key>
       <integer>30</integer>
       <key>oacute</key>
@@ -1202,7 +1196,7 @@
       <key>egrave</key>
       <integer>-15</integer>
       <key>icircumflex</key>
-      <integer>25</integer>
+      <integer>20</integer>
       <key>idieresis</key>
       <integer>30</integer>
       <key>oacute</key>
@@ -1223,7 +1217,7 @@
       <key>egrave</key>
       <integer>-15</integer>
       <key>icircumflex</key>
-      <integer>25</integer>
+      <integer>20</integer>
       <key>idieresis</key>
       <integer>30</integer>
       <key>oacute</key>
@@ -1244,7 +1238,7 @@
       <key>egrave</key>
       <integer>-15</integer>
       <key>icircumflex</key>
-      <integer>25</integer>
+      <integer>20</integer>
       <key>idieresis</key>
       <integer>30</integer>
       <key>oacute</key>
@@ -1318,13 +1312,13 @@
       <key>Eacute</key>
       <integer>-15</integer>
       <key>Egrave</key>
-      <integer>-20</integer>
+      <integer>-15</integer>
       <key>eacute</key>
       <integer>-20</integer>
       <key>egrave</key>
       <integer>-15</integer>
       <key>icircumflex</key>
-      <integer>25</integer>
+      <integer>20</integer>
       <key>idieresis</key>
       <integer>30</integer>
       <key>oacute</key>
@@ -1454,7 +1448,7 @@
       <key>ellipsis</key>
       <integer>-65</integer>
       <key>icircumflex</key>
-      <integer>25</integer>
+      <integer>20</integer>
       <key>idieresis</key>
       <integer>30</integer>
       <key>j</key>
@@ -1748,7 +1742,7 @@
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>30</integer>
+      <integer>35</integer>
       <key>icircumflex.sc</key>
       <integer>20</integer>
       <key>idieresis</key>
@@ -2279,7 +2273,7 @@
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>20</integer>
+      <integer>25</integer>
       <key>icircumflex.sc</key>
       <integer>20</integer>
       <key>idieresis</key>
@@ -2301,7 +2295,7 @@
       <key>m.sc</key>
       <integer>-25</integer>
       <key>ntilde</key>
-      <integer>-20</integer>
+      <integer>0</integer>
       <key>oacute</key>
       <integer>-65</integer>
       <key>ocircumflex</key>
@@ -2562,7 +2556,7 @@
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>20</integer>
+      <integer>25</integer>
       <key>icircumflex.sc</key>
       <integer>20</integer>
       <key>idieresis</key>
@@ -2584,7 +2578,7 @@
       <key>m.sc</key>
       <integer>-25</integer>
       <key>ntilde</key>
-      <integer>-20</integer>
+      <integer>-15</integer>
       <key>odieresis</key>
       <integer>-50</integer>
       <key>otilde</key>
@@ -2780,8 +2774,6 @@
       <integer>-15</integer>
       <key>uacute.sc</key>
       <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
       <key>ugrave.sc</key>
       <integer>-15</integer>
       <key>v</key>
@@ -2870,7 +2862,7 @@
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>20</integer>
+      <integer>25</integer>
       <key>icircumflex.sc</key>
       <integer>20</integer>
       <key>idieresis</key>
@@ -2882,7 +2874,7 @@
       <key>igrave.sc</key>
       <integer>0</integer>
       <key>ntilde</key>
-      <integer>-20</integer>
+      <integer>0</integer>
       <key>ntilde.sc</key>
       <integer>0</integer>
       <key>ocircumflex</key>
@@ -2904,7 +2896,7 @@
       <key>uacute</key>
       <integer>-45</integer>
       <key>ucircumflex</key>
-      <integer>-35</integer>
+      <integer>-30</integer>
       <key>udieresis</key>
       <integer>-25</integer>
       <key>ugrave</key>
@@ -2964,8 +2956,6 @@
       <integer>-60</integer>
       <key>f</key>
       <integer>-15</integer>
-      <key>f.short</key>
-      <integer>-15</integer>
       <key>f_b</key>
       <integer>-20</integer>
       <key>f_f</key>
@@ -2999,7 +2989,7 @@
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>20</integer>
+      <integer>25</integer>
       <key>icircumflex.sc</key>
       <integer>20</integer>
       <key>idieresis</key>
@@ -3011,7 +3001,7 @@
       <key>igrave.sc</key>
       <integer>0</integer>
       <key>ntilde</key>
-      <integer>-20</integer>
+      <integer>0</integer>
       <key>ocircumflex</key>
       <integer>-60</integer>
       <key>ocircumflex.sc</key>
@@ -3035,7 +3025,7 @@
       <key>uacute</key>
       <integer>-45</integer>
       <key>ucircumflex</key>
-      <integer>-35</integer>
+      <integer>-30</integer>
       <key>udieresis</key>
       <integer>-25</integer>
       <key>ugrave</key>
@@ -3118,7 +3108,7 @@
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>20</integer>
+      <integer>25</integer>
       <key>icircumflex.sc</key>
       <integer>20</integer>
       <key>idieresis</key>
@@ -3130,7 +3120,7 @@
       <key>igrave.sc</key>
       <integer>0</integer>
       <key>ntilde</key>
-      <integer>-20</integer>
+      <integer>0</integer>
       <key>ocircumflex</key>
       <integer>-60</integer>
       <key>ocircumflex.sc</key>
@@ -3154,7 +3144,7 @@
       <key>uacute</key>
       <integer>-45</integer>
       <key>ucircumflex</key>
-      <integer>-35</integer>
+      <integer>-30</integer>
       <key>udieresis</key>
       <integer>-25</integer>
       <key>ugrave</key>
@@ -3316,8 +3306,6 @@
       <integer>-15</integer>
       <key>four</key>
       <integer>-15</integer>
-      <key>icircumflex</key>
-      <integer>15</integer>
       <key>oacute</key>
       <integer>-20</integer>
       <key>ocircumflex</key>
@@ -3926,8 +3914,6 @@
       <integer>-15</integer>
       <key>oslash.sc</key>
       <integer>-15</integer>
-      <key>otilde.sc</key>
-      <integer>-15</integer>
       <key>quotedbl</key>
       <integer>-15</integer>
       <key>quotedblleft</key>
@@ -3973,6 +3959,8 @@
     <dict>
       <key>backslash</key>
       <integer>0</integer>
+      <key>icircumflex</key>
+      <integer>15</integer>
       <key>idieresis</key>
       <integer>20</integer>
       <key>parenright</key>
@@ -4322,7 +4310,7 @@
       <key>egrave</key>
       <integer>-15</integer>
       <key>icircumflex</key>
-      <integer>15</integer>
+      <integer>20</integer>
       <key>icircumflex.sc</key>
       <integer>20</integer>
       <key>idieresis</key>
@@ -4353,6 +4341,8 @@
       <key>public.kern2.Y</key>
       <integer>-45</integer>
       <key>q</key>
+      <integer>-15</integer>
+      <key>seven</key>
       <integer>-15</integer>
     </dict>
     <key>f</key>
@@ -4390,7 +4380,7 @@
       <key>egrave.sc</key>
       <integer>30</integer>
       <key>iacute</key>
-      <integer>35</integer>
+      <integer>40</integer>
       <key>icircumflex.sc</key>
       <integer>85</integer>
       <key>idieresis</key>
@@ -4398,15 +4388,17 @@
       <key>idieresis.sc</key>
       <integer>135</integer>
       <key>igrave</key>
-      <integer>145</integer>
+      <integer>150</integer>
       <key>igrave.sc</key>
       <integer>105</integer>
+      <key>ntilde</key>
+      <integer>25</integer>
       <key>scaron</key>
       <integer>135</integer>
       <key>scaron.sc</key>
       <integer>70</integer>
       <key>ucircumflex</key>
-      <integer>20</integer>
+      <integer>25</integer>
       <key>ugrave</key>
       <integer>15</integer>
       <key>ydieresis.sc</key>
@@ -4459,10 +4451,12 @@
       <integer>0</integer>
       <key>f.short</key>
       <integer>15</integer>
+      <key>idieresis</key>
+      <integer>15</integer>
       <key>idieresis.sc</key>
       <integer>55</integer>
       <key>igrave</key>
-      <integer>65</integer>
+      <integer>70</integer>
       <key>igrave.sc</key>
       <integer>25</integer>
       <key>scaron</key>
@@ -4512,7 +4506,7 @@
       <key>egrave.sc</key>
       <integer>25</integer>
       <key>iacute</key>
-      <integer>35</integer>
+      <integer>40</integer>
       <key>icircumflex.sc</key>
       <integer>85</integer>
       <key>idieresis</key>
@@ -4520,17 +4514,19 @@
       <key>idieresis.sc</key>
       <integer>135</integer>
       <key>igrave</key>
-      <integer>145</integer>
+      <integer>150</integer>
       <key>igrave.sc</key>
       <integer>100</integer>
+      <key>ntilde</key>
+      <integer>30</integer>
       <key>scaron</key>
       <integer>135</integer>
       <key>scaron.sc</key>
       <integer>65</integer>
       <key>ucircumflex</key>
-      <integer>20</integer>
+      <integer>25</integer>
       <key>ugrave</key>
-      <integer>15</integer>
+      <integer>20</integer>
       <key>ydieresis.sc</key>
       <integer>20</integer>
       <key>zcaron</key>
@@ -4557,13 +4553,17 @@
       <key>f</key>
       <integer>15</integer>
       <key>f.short</key>
+      <integer>20</integer>
+      <key>f_i</key>
+      <integer>15</integer>
+      <key>fi</key>
       <integer>15</integer>
       <key>idieresis</key>
       <integer>15</integer>
       <key>idieresis.sc</key>
       <integer>55</integer>
       <key>igrave</key>
-      <integer>65</integer>
+      <integer>70</integer>
       <key>igrave.sc</key>
       <integer>20</integer>
       <key>scaron</key>
@@ -4620,6 +4620,8 @@
     </dict>
     <key>f_f_l</key>
     <dict>
+      <key>icircumflex</key>
+      <integer>15</integer>
       <key>idieresis</key>
       <integer>20</integer>
     </dict>
@@ -4680,6 +4682,8 @@
     </dict>
     <key>f_l</key>
     <dict>
+      <key>icircumflex</key>
+      <integer>15</integer>
       <key>idieresis</key>
       <integer>20</integer>
     </dict>
@@ -4711,6 +4715,8 @@
     </dict>
     <key>fl</key>
     <dict>
+      <key>icircumflex</key>
+      <integer>15</integer>
       <key>idieresis</key>
       <integer>20</integer>
     </dict>
@@ -4959,7 +4965,7 @@
     <key>iacute</key>
     <dict>
       <key>idieresis</key>
-      <integer>20</integer>
+      <integer>15</integer>
       <key>igrave</key>
       <integer>20</integer>
     </dict>
@@ -5000,10 +5006,12 @@
     <dict>
       <key>asterisk</key>
       <integer>20</integer>
+      <key>bracketleft</key>
+      <integer>15</integer>
       <key>icircumflex</key>
       <integer>50</integer>
       <key>idieresis</key>
-      <integer>30</integer>
+      <integer>40</integer>
       <key>igrave</key>
       <integer>20</integer>
       <key>quotedbl</key>
@@ -5015,17 +5023,13 @@
       <key>quotesingle</key>
       <integer>15</integer>
       <key>seven</key>
-      <integer>15</integer>
-      <key>v.sc</key>
-      <integer>15</integer>
-      <key>w.sc</key>
-      <integer>15</integer>
+      <integer>20</integer>
       <key>y.sc</key>
-      <integer>30</integer>
+      <integer>20</integer>
       <key>yacute.sc</key>
-      <integer>30</integer>
+      <integer>20</integer>
       <key>ydieresis.sc</key>
-      <integer>30</integer>
+      <integer>20</integer>
     </dict>
     <key>icircumflex.sc</key>
     <dict>
@@ -5141,7 +5145,7 @@
       <key>iacute</key>
       <integer>20</integer>
       <key>icircumflex</key>
-      <integer>40</integer>
+      <integer>50</integer>
       <key>icircumflex.sc</key>
       <integer>45</integer>
       <key>idieresis</key>
@@ -5216,7 +5220,7 @@
       <key>idieresis.sc</key>
       <integer>50</integer>
       <key>igrave</key>
-      <integer>35</integer>
+      <integer>30</integer>
       <key>igrave.sc</key>
       <integer>15</integer>
       <key>ntilde.sc</key>
@@ -5249,7 +5253,7 @@
       <key>backslash</key>
       <integer>-15</integer>
       <key>parenright</key>
-      <integer>-20</integer>
+      <integer>-15</integer>
       <key>quotedblleft</key>
       <integer>-15</integer>
       <key>quotedblright</key>
@@ -5358,6 +5362,8 @@
     </dict>
     <key>l</key>
     <dict>
+      <key>icircumflex</key>
+      <integer>15</integer>
       <key>idieresis</key>
       <integer>20</integer>
     </dict>
@@ -5448,9 +5454,15 @@
       <integer>5</integer>
       <key>eth.sc</key>
       <integer>5</integer>
+      <key>f_f</key>
+      <integer>25</integer>
+      <key>f_f.short</key>
+      <integer>25</integer>
       <key>f_f_b</key>
       <integer>25</integer>
       <key>f_f_h</key>
+      <integer>25</integer>
+      <key>f_f_i</key>
       <integer>25</integer>
       <key>f_f_k</key>
       <integer>25</integer>
@@ -5522,11 +5534,6 @@
       <key>quoteright</key>
       <integer>-15</integer>
     </dict>
-    <key>n.sc</key>
-    <dict>
-      <key>icircumflex</key>
-      <integer>20</integer>
-    </dict>
     <key>nine</key>
     <dict>
       <key>comma</key>
@@ -5555,8 +5562,6 @@
     <dict>
       <key>backslash</key>
       <integer>0</integer>
-      <key>idieresis</key>
-      <integer>15</integer>
       <key>parenright</key>
       <integer>0</integer>
       <key>quotedbl</key>
@@ -5568,8 +5573,6 @@
     <dict>
       <key>backslash</key>
       <integer>0</integer>
-      <key>icircumflex</key>
-      <integer>20</integer>
       <key>idieresis.sc</key>
       <integer>20</integer>
       <key>parenright</key>
@@ -5811,8 +5814,6 @@
     <dict>
       <key>ae.sc</key>
       <integer>-35</integer>
-      <key>egrave.sc</key>
-      <integer>-15</integer>
       <key>quotedblright</key>
       <integer>-30</integer>
       <key>quoteright</key>
@@ -5861,6 +5862,8 @@
       <integer>-20</integer>
       <key>f.sc</key>
       <integer>-20</integer>
+      <key>f.short</key>
+      <integer>0</integer>
       <key>four</key>
       <integer>-20</integer>
       <key>g.sc</key>
@@ -6063,6 +6066,8 @@
       <integer>-15</integer>
       <key>q.sc</key>
       <integer>-30</integer>
+      <key>seven</key>
+      <integer>-15</integer>
       <key>seven.osf</key>
       <integer>-45</integer>
       <key>six</key>
@@ -6893,7 +6898,7 @@
       <key>quotesingle</key>
       <integer>95</integer>
       <key>seven</key>
-      <integer>85</integer>
+      <integer>95</integer>
       <key>thorn</key>
       <integer>115</integer>
     </dict>
@@ -6940,7 +6945,7 @@
       <key>exclam</key>
       <integer>35</integer>
       <key>germandbls</key>
-      <integer>20</integer>
+      <integer>15</integer>
       <key>h</key>
       <integer>45</integer>
       <key>j</key>
@@ -6978,7 +6983,7 @@
       <key>quotesingle</key>
       <integer>35</integer>
       <key>seven</key>
-      <integer>5</integer>
+      <integer>15</integer>
       <key>thorn</key>
       <integer>35</integer>
     </dict>
@@ -7575,7 +7580,7 @@
       <key>public.kern2.Y</key>
       <integer>-45</integer>
       <key>seven</key>
-      <integer>-15</integer>
+      <integer>-20</integer>
     </dict>
     <key>quotedbl</key>
     <dict>
@@ -7616,7 +7621,7 @@
       <key>idieresis.sc</key>
       <integer>30</integer>
       <key>igrave</key>
-      <integer>15</integer>
+      <integer>20</integer>
       <key>public.kern2.A</key>
       <integer>-55</integer>
       <key>public.kern2.Y</key>
@@ -7812,7 +7817,7 @@
       <key>ucircumflex</key>
       <integer>-20</integer>
       <key>ugrave</key>
-      <integer>-50</integer>
+      <integer>-55</integer>
       <key>ugrave.sc</key>
       <integer>-20</integer>
       <key>v.sc</key>
@@ -7983,7 +7988,7 @@
       <key>thorn.sc</key>
       <integer>-25</integer>
       <key>uacute</key>
-      <integer>-55</integer>
+      <integer>-50</integer>
       <key>uacute.sc</key>
       <integer>-35</integer>
       <key>ucircumflex</key>
@@ -8251,7 +8256,7 @@
       <key>thorn.sc</key>
       <integer>-25</integer>
       <key>uacute</key>
-      <integer>-55</integer>
+      <integer>-50</integer>
       <key>uacute.sc</key>
       <integer>-35</integer>
       <key>ucircumflex</key>
@@ -8516,7 +8521,7 @@
       <key>idieresis.sc</key>
       <integer>15</integer>
       <key>igrave</key>
-      <integer>25</integer>
+      <integer>30</integer>
       <key>parenright</key>
       <integer>0</integer>
     </dict>
@@ -8607,7 +8612,7 @@
       <key>endash</key>
       <integer>-20</integer>
       <key>hyphen</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>one</key>
       <integer>15</integer>
       <key>period</key>
@@ -8703,6 +8708,8 @@
       <integer>-20</integer>
       <key>f_f</key>
       <integer>-15</integer>
+      <key>f_f.short</key>
+      <integer>-15</integer>
       <key>f_f_b</key>
       <integer>-15</integer>
       <key>f_f_i</key>
@@ -8723,6 +8730,8 @@
       <integer>15</integer>
       <key>idieresis.sc</key>
       <integer>25</integer>
+      <key>igrave</key>
+      <integer>15</integer>
       <key>igrave.sc</key>
       <integer>0</integer>
       <key>j.sc</key>
@@ -8736,7 +8745,7 @@
       <key>m.sc</key>
       <integer>-25</integer>
       <key>ntilde</key>
-      <integer>-15</integer>
+      <integer>0</integer>
       <key>ntilde.sc</key>
       <integer>0</integer>
       <key>odieresis</key>
@@ -9035,8 +9044,6 @@
     </dict>
     <key>uacute</key>
     <dict>
-      <key>question</key>
-      <integer>-15</integer>
       <key>quotedbl</key>
       <integer>-20</integer>
       <key>quotedblleft</key>
@@ -9078,11 +9085,11 @@
       <key>quotedblleft</key>
       <integer>-35</integer>
       <key>quotedblright</key>
-      <integer>-45</integer>
+      <integer>-40</integer>
       <key>quoteleft</key>
       <integer>-35</integer>
       <key>quoteright</key>
-      <integer>-45</integer>
+      <integer>-40</integer>
       <key>quotesingle</key>
       <integer>-15</integer>
     </dict>
@@ -9125,18 +9132,16 @@
     </dict>
     <key>ugrave</key>
     <dict>
-      <key>question</key>
-      <integer>-15</integer>
       <key>quotedbl</key>
       <integer>-20</integer>
       <key>quotedblleft</key>
       <integer>-55</integer>
       <key>quotedblright</key>
-      <integer>-60</integer>
+      <integer>-55</integer>
       <key>quoteleft</key>
       <integer>-55</integer>
       <key>quoteright</key>
-      <integer>-60</integer>
+      <integer>-55</integer>
       <key>quotesingle</key>
       <integer>-20</integer>
     </dict>
@@ -9221,7 +9226,7 @@
       <key>hyphen</key>
       <integer>-20</integer>
       <key>icircumflex</key>
-      <integer>30</integer>
+      <integer>20</integer>
       <key>parenright</key>
       <integer>-25</integer>
       <key>period</key>
@@ -9296,8 +9301,6 @@
       <integer>-20</integer>
       <key>hyphen</key>
       <integer>-20</integer>
-      <key>icircumflex</key>
-      <integer>15</integer>
       <key>parenright</key>
       <integer>-25</integer>
       <key>period</key>
@@ -9395,7 +9398,7 @@
     <key>y.sc</key>
     <dict>
       <key>icircumflex</key>
-      <integer>30</integer>
+      <integer>20</integer>
     </dict>
     <key>yacute</key>
     <dict>
@@ -9435,7 +9438,7 @@
     <key>yacute.sc</key>
     <dict>
       <key>icircumflex</key>
-      <integer>30</integer>
+      <integer>20</integer>
     </dict>
     <key>ydieresis</key>
     <dict>
@@ -9453,7 +9456,7 @@
       <key>backslash</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>30</integer>
+      <integer>20</integer>
       <key>icircumflex.sc</key>
       <integer>20</integer>
       <key>idieresis.sc</key>

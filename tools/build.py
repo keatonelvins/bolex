@@ -45,10 +45,15 @@ def compile_ttf(ufo_path, win=None):
         hinting_range_max=50,
         hinting_limit=200,
         increase_x_height=14,
-        windows_compatibility=True,
+        # Win metrics already cover every glyph (win_metrics), so no -W:
+        # it adds blue zones at the win metrics that squeeze tall accents
+        # into the capitals.  Natural stem widths for DirectWrite and
+        # grayscale keep dashes and crossbars from thinning to 0.75 px.
+        dw_cleartype_stem_width_mode=ttfautohint.StemWidthMode.NATURAL,
+        gray_stem_width_mode=ttfautohint.StemWidthMode.NATURAL,
         no_info=True,
     )
-    font = TTFont(io.BytesIO(hinted))
+    font = TTFont(io.BytesIO(hinted), recalcTimestamp=False)
     # ttfautohint keeps the source's timestamps; make builds reproducible.
     font["head"].modified = font["head"].created
     font["head"].flags |= 1 << 3          # hinted: force integer ppem

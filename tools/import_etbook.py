@@ -231,6 +231,7 @@ def import_face(etbook, face):
     info.postscriptFullName = f"Bolex {spec['style']}"
     info.versionMajor = 1
     info.versionMinor = 0
+    info.openTypeHeadCreated = "2026/10/31 00:00:00"   # reproducible builds
     info.copyright = (
         f"ET Bembo designed for Edward Tufte / Graphics Press (c) "
         f"{spec['copyright_year']} Dmitry Krasny / Deka Design. "

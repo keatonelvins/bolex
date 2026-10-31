@@ -177,7 +177,7 @@ feature liga {
     sub f k by f_k;
 } liga;
 
-@f_short_after = [B D E Eacute Ecircumflex Edieresis Egrave Eth F H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde P R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron agrave aring atilde b backslash braceright bracketleft bracketright breve caron circumflex degree dieresis egrave eth exclam five grave greaterequal h hungarumlaut i iacute icircumflex igrave j k l ordfeminine ordmasculine paragraph parenright question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle ring scaron seven thorn threequarters threesuperior tilde trademark twosuperior uni02BB uni02BC uni2032 uni2033 uni2070 uni2075 uni2077 uni2078 uni2079 yen zcaron];
+@f_short_after = [B D E Eacute Ecircumflex Edieresis Egrave Eth F H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde P R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron agrave aring atilde b backslash braceright bracketleft bracketright breve caron circumflex degree dieresis egrave eth exclam five grave greaterequal h hungarumlaut i iacute icircumflex igrave j k l onesuperior ordfeminine ordmasculine paragraph parenright question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle ring scaron seven thorn threequarters threesuperior tilde trademark twosuperior uni02BB uni02BC uni2032 uni2033 uni2070 uni2075 uni2077 uni2078 uni2079 yen zcaron];
 
 feature calt {
     sub f' @f_short_after by f.short;

@@ -87,7 +87,7 @@ def build(font, base, letter, name):
     result = pathops.op(kept, lower, pathops.PathOp.UNION)
 
     glyph = font.newGlyph(name)
-    result.draw(glyph.getPen())
+    result.draw(outline.CubicPen(glyph.getPen()))
     glyph.width = dx + font[letter].width
     order = font.lib.setdefault("public.glyphOrder", [])
     if name not in order:

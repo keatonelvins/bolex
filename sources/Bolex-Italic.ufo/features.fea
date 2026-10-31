@@ -25,6 +25,16 @@ feature liga {
     sub f k by f_k;
 } liga;
 
+@f_short_after = [Icircumflex T b backslash braceright bracketright h igrave k l parenright trademark yen];
+@letters = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O OE Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron a aacute acircumflex adieresis ae agrave aring atilde b c caron ccedilla circumflex d dotlessi e eacute ecircumflex edieresis egrave eth f f_b f_f f_f.short f_f_b f_f_h f_f_i f_f_k f_f_l f_h f_i f_j f_k f_l fi fl g germandbls h i iacute icircumflex idieresis igrave j k l m mu n ntilde o oacute ocircumflex odieresis oe ograve ordfeminine ordmasculine oslash otilde p q r s scaron t thorn u uacute ucircumflex udieresis ugrave uni02BB uni02BC v w x y yacute ydieresis z zcaron];
+
+feature calt {
+    ignore sub f' @letters;
+    ignore sub f_f' @letters;
+    sub f' by f.short;
+    sub f_f' by f_f.short;
+} calt;
+
 feature case {
     sub braceleft by braceleft.case;
     sub braceright by braceright.case;

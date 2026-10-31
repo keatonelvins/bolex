@@ -75,7 +75,7 @@ def add(font, name, codepoint=None, path=None, width=0, components=()):
         del font[name]
     glyph = font.newGlyph(name)
     if path is not None:
-        path.draw(glyph.getPen())
+        path.draw(outline.CubicPen(glyph.getPen()))
     pen = glyph.getPointPen()
     for base, transform in components:
         pen.addComponent(base, transform)
@@ -177,8 +177,17 @@ def borrow_numerators(font, roman):
 
 
 def superiors(font):
+    """All ten superior figures from the numerators, so ¹ and ⁴ match
+    (ET Book's own ¹²³ were drawn smaller and narrower)."""
     if "zero.num" not in font:
         return
+    for name, fig in [("onesuperior", "one"), ("twosuperior", "two"),
+                      ("threesuperior", "three")]:
+        glyph = font[name]
+        if glyph.contours:
+            glyph.clearContours()
+            glyph.getPointPen().addComponent(f"{fig}.num", (1, 0, 0, 1, 0, 0))
+            glyph.width = font[f"{fig}.num"].width
     for name, (cp, fig) in SUPERIORS.items():
         if not has_codepoint(font, cp):
             add(font, name, cp, width=font[f"{fig}.num"].width,
@@ -211,10 +220,14 @@ def math_signs(font, log):
     axis = (my0 + my1) / 2
     stroke = my1 - my0
     if not has_codepoint(font, 0x2248) and "asciitilde" in font:
-        t = to_path(font, "asciitilde")
+        # Two tildes at 85%, as far apart as the bars of "=".
+        t = pathops.Path()
+        font["asciitilde"].draw(TransformPen(t.getPen(),
+                                             (0.85, 0, 0, 0.85, 0, 0)))
         tx0, ty0, tx1, ty1 = t.bounds
         dx = (w - (tx1 - tx0)) / 2 - tx0
-        gap = (ty1 - ty0) * 0.62
+        ex0, ey0, ex1, ey1 = bounds(font, font["equal"])
+        gap = (ey1 - ey0) - stroke
         cy = (ty0 + ty1) / 2
         path = union(moved(t, dx, axis - cy + gap / 2),
                      moved(t, dx, axis - cy - gap / 2))
