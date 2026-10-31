@@ -161,6 +161,21 @@ def components(font):
                 s, 0, 0, 1, round(30 - x0 * s), 0)
 
 
+def borrow_numerators(font, roman):
+    """The Italic has no numerator/superior figures of its own: use the
+    Roman's, sloped to the italic angle (at superior size the difference
+    from drawn italic figures is invisible)."""
+    tan = outline.slant(font)
+    for fig in ["zero", "one", "two", "three", "four", "five", "six",
+                "seven", "eight", "nine"]:
+        name = f"{fig}.num"
+        if name in font or name not in roman:
+            continue
+        path = pathops.Path()
+        roman[name].draw(TransformPen(path.getPen(), (1, 0, tan, 1, 0, 0)))
+        add(font, name, path=path, width=roman[name].width)
+
+
 def superiors(font):
     if "zero.num" not in font:
         return
@@ -178,7 +193,7 @@ def primes(font, log):
     x0, y0, x1, y1 = q.bounds
     p = sheared(q, 0.32, about_y=y0)
     px0, _, px1, _ = p.bounds
-    side = x0
+    side = min(x0, 50)          # the italic quote sits far right in its box
     p = moved(p, side - px0)
     width = round(px1 - px0 + 2 * side)
     add(font, "uni2032", 0x2032, path=p, width=width)
@@ -276,9 +291,10 @@ def arrows(font, log):
     down = rotated(right, cx, axis, -90)
 
     # ↩: a left arrow whose tail hooks up and back over the shaft.
-    r_out = 150
+    r_out = 120
     r_in = r_out - t
     hook_cx = x1 - r_out
+    axis = axis + 30                      # sit the hook on the x-height band
     low = axis - r_out + t / 2            # shaft centre line, lower run
     circle_out = _circle(hook_cx, axis, r_out)
     circle_in = _circle(hook_cx, axis, r_in)
@@ -373,6 +389,9 @@ def main():
         log = lambda msg, face=face: print(f"  {face}: {msg}")
         spaces(font)
         components(font)
+        if face == "Italic":
+            borrow_numerators(font, ufoLib2.Font.open(
+                ROOT / "sources" / "Bolex-Roman.ufo"))
         superiors(font)
         primes(font, log)
         math_signs(font, log)

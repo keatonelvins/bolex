@@ -244,6 +244,8 @@
     <string>egrave.glif</string>
     <key>eight</key>
     <string>eight.glif</string>
+    <key>eight.num</key>
+    <string>eight.num.glif</string>
     <key>ellipsis</key>
     <string>ellipsis.glif</string>
     <key>emdash</key>
@@ -292,10 +294,14 @@
     <string>fi.glif</string>
     <key>five</key>
     <string>five.glif</string>
+    <key>five.num</key>
+    <string>five.num.glif</string>
     <key>fl</key>
     <string>fl.glif</string>
     <key>four</key>
     <string>four.glif</string>
+    <key>four.num</key>
+    <string>four.num.glif</string>
     <key>fraction</key>
     <string>fraction.glif</string>
     <key>g</key>
@@ -368,6 +374,8 @@
     <string>n.glif</string>
     <key>nine</key>
     <string>nine.glif</string>
+    <key>nine.num</key>
+    <string>nine.num.glif</string>
     <key>notequal</key>
     <string>notequal.glif</string>
     <key>ntilde</key>
@@ -390,6 +398,8 @@
     <string>ograve.glif</string>
     <key>one</key>
     <string>one.glif</string>
+    <key>one.num</key>
+    <string>one.num.glif</string>
     <key>onehalf</key>
     <string>onehalf.glif</string>
     <key>onequarter</key>
@@ -466,8 +476,12 @@
     <string>semicolon.glif</string>
     <key>seven</key>
     <string>seven.glif</string>
+    <key>seven.num</key>
+    <string>seven.num.glif</string>
     <key>six</key>
     <string>six.glif</string>
+    <key>six.num</key>
+    <string>six.num.glif</string>
     <key>slash</key>
     <string>slash.glif</string>
     <key>space</key>
@@ -480,6 +494,8 @@
     <string>thorn.glif</string>
     <key>three</key>
     <string>three.glif</string>
+    <key>three.num</key>
+    <string>three.num.glif</string>
     <key>threequarters</key>
     <string>threequarters.glif</string>
     <key>threesuperior</key>
@@ -490,6 +506,8 @@
     <string>trademark.glif</string>
     <key>two</key>
     <string>two.glif</string>
+    <key>two.num</key>
+    <string>two.num.glif</string>
     <key>twosuperior</key>
     <string>twosuperior.glif</string>
     <key>u</key>
@@ -534,6 +552,20 @@
     <string>uni2032.glif</string>
     <key>uni2033</key>
     <string>uni2033.glif</string>
+    <key>uni2070</key>
+    <string>uni2070.glif</string>
+    <key>uni2074</key>
+    <string>uni2074.glif</string>
+    <key>uni2075</key>
+    <string>uni2075.glif</string>
+    <key>uni2076</key>
+    <string>uni2076.glif</string>
+    <key>uni2077</key>
+    <string>uni2077.glif</string>
+    <key>uni2078</key>
+    <string>uni2078.glif</string>
+    <key>uni2079</key>
+    <string>uni2079.glif</string>
     <key>uni21A9</key>
     <string>uni21A_9.glif</string>
     <key>v</key>
@@ -556,5 +588,7 @@
     <string>zcaron.glif</string>
     <key>zero</key>
     <string>zero.glif</string>
+    <key>zero.num</key>
+    <string>zero.num.glif</string>
   </dict>
 </plist>

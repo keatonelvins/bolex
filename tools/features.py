@@ -75,6 +75,15 @@ def build(font):
 
     # Small caps come first in the lookup list, so that liga and calt see
     # f.sc rather than f (no lowercase ffi inside a small-cap word).
+    # Superior figures (footnote markers) are the numerators.
+    if _have(font, num):
+        sups_from = ["@lf"] + (["@osf"] if has_osf else []) \
+            + (["@tf"] if has_tf else [])
+        lines.append(_class("sups_num", num))
+        lines.append("feature sups {")
+        lines += [f"    sub {c} by @sups_num;" for c in sups_from]
+        lines += ["} sups;", ""]
+
     sc = sorted(g.name for g in font if g.name.endswith(".sc"))
     if sc:
         lower = [n[:-3] for n in sc if n[:-3] in font]
@@ -195,10 +204,6 @@ def build(font):
         lines += [f"        sub [{slash} @den] {c}' by @den;"
                   for c in figure_classes]
         lines += ["    } FRAC_DNOM;", "} frac;", ""]
-        # Superior figures (footnote markers) are the numerators.
-        lines.append("feature sups {")
-        lines += [f"    sub {c} by @num;" for c in figure_classes]
-        lines += ["} sups;", ""]
         inferiors = [f"uni208{d}" for d in range(10)]
         if _have(font, inferiors):
             lines.append(_class("inf", inferiors))

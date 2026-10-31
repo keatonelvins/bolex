@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bolex specimen</title>
+<link rel="stylesheet" href="../fonts/bolex.css">
+<style>
+  :root { --ink: #1a1a18; --faint: #77756f; --rule: #dedbd2; --paper: #fdfcf8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #e9e6dd; --faint: #9a978e; --rule: #3a3833; --paper: #171714; }
+  }
+  html { background: var(--paper); color: var(--ink); }
+  body { margin: 0 auto; max-width: 40rem; padding: 3rem 1.25rem 6rem; font-size: 20px; line-height: 1.55; }
+  h1 { font-size: 3.2rem; line-height: 1.1; margin: 0 0 .2em; letter-spacing: -.005em; }
+  h2 { font-size: 1rem; font-variant-caps: all-small-caps; letter-spacing: .04em; color: var(--faint); margin: 3rem 0 .6rem; }
+  .big { font-size: 3rem; line-height: 1.25; }
+  .mid { font-size: 1.6rem; line-height: 1.35; }
+  .faint { color: var(--faint); }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(2.4em, 1fr)); font-size: 1.6rem; text-align: center; }
+  .sc { font-variant-caps: small-caps; } .asc { font-variant-caps: all-small-caps; }
+  .osf { font-variant-numeric: oldstyle-nums; } .tnum { font-variant-numeric: tabular-nums; }
+  .frac { font-variant-numeric: diagonal-fractions; } .case { font-feature-settings: "case"; }
+</style>
+</head>
+<body class="bolex">
+
+<h1>Bolex</h1>
+<p class="faint">Roman, Italic and small capitals for long-form reading. After ET&nbsp;Book.</p>
+
+<h2>Text</h2>
+<p>In the summer of 1914 the Western Front ran 440 miles, from the North Sea to the Swiss border. “Typography,” Tufte wrote, “exists to honor content.” It was, perhaps, an offhand remark — the kind the staff of <abbr>NASA</abbr> or the <abbr>BBC</abbr> might make between 9 a.m. and 5 p.m. — but it has lasted longer than most.<sup>1</sup></p>
+<p><i>Yesterday, Tom wrote: “Avoid the void (for the record, that was halfhearted).” Was it worth the effort? Of course it was; the effect was affirmative, if a little offbeat.</i></p>
+<p>In <span class="sc">Small Capitals</span>: <span class="sc">Œuvre, Ångström, Façade, Šumava, Žižek</span>. All small caps bring oldstyle figures: <span class="asc">WWII ENDED IN 1945</span>.</p>
+
+<h2>Display</h2>
+<p class="big">AVATAR Today, Very. <i>Yes! WAVY</i></p>
+<p class="big">off? (half) [just] <i>(for) of) egg</i></p>
+
+<h2>Figures</h2>
+<p class="mid">1914–1918 · 3 1/2 → <span class="frac">3 1/2</span> · <span class="osf">oldstyle 1914</span> · <i>italic 1914</i></p>
+<p class="mid tnum">tabular 1111.10<br>tabular 4096.75</p>
+<p class="mid case">“CASE (SENSITIVE) — FORMS” 9–5 <span class="faint">with case</span></p>
+
+<h2>Characters</h2>
+<div class="grid" id="chars"></div>
+<div class="grid" id="ichars" style="font-style: italic"></div>
+
+<script>
+  const set = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" +
+    "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŒœŠšŽžŸı" +
+    ".,:;…!¡?¿·•‘’“”‚„'\"‹›«»()[]{}/\\|¦-‐‑‒–—_*†‡§¶&@#%‰$¢£¥€¤©®™ªº°′″ʻʼ+−±×÷=≈≠<>≤≥¬µ←↑→↓↔↩¹²³⁴⁵⁶⁷⁸⁹⁰¼½¾⁄^~´`¨¯¸ˆˇ˘˙˚˛˜˝";
+  for (const id of ["chars", "ichars"]) {
+    const el = document.getElementById(id);
+    for (const ch of set) { const s = document.createElement("span"); s.textContent = ch; el.appendChild(s); }
+  }
+</script>
+</body>
+</html>

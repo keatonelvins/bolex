@@ -1,0 +1,50 @@
+/* Bolex: drop-in @font-face rules.
+ *
+ *   <link rel="preload" href="/fonts/Bolex-Roman.woff2" as="font" type="font/woff2" crossorigin>
+ *   <link rel="stylesheet" href="/fonts/bolex.css">
+ *
+ * Bolex has one weight: Roman and Italic, with real small capitals in
+ * the Roman.  There is no bold, so stop the browser from faking one, and
+ * give headings and <strong> another treatment (size, small caps, ...).
+ */
+
+@font-face {
+  font-family: "Bolex";
+  src: url("Bolex-Roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bolex";
+  src: url("Bolex-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Suggested defaults for long-form text. */
+.bolex {
+  font-family: "Bolex", Georgia, serif;
+  font-synthesis-weight: none;          /* no faux bold */
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+.bolex :is(h1, h2, h3, h4, h5, h6, b, strong, th) {
+  font-weight: 400;
+}
+
+/* Footnote markers: the font's own superior figures, no line-height bump. */
+.bolex sup {
+  font-variant-position: super;
+  vertical-align: baseline;
+  font-size: inherit;
+}
+
+/* Acronyms in small capitals (oldstyle figures come with them; the
+   small caps are already spaced a little open, so no letter-spacing). */
+.bolex abbr {
+  font-variant-caps: all-small-caps;
+}

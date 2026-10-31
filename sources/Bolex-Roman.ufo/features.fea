@@ -9,6 +9,13 @@ languagesystem latn dflt;
 @num = [zero.num one.num two.num three.num four.num five.num six.num seven.num eight.num nine.num];
 @den = [zero.den one.den two.den three.den four.den five.den six.den seven.den eight.den nine.den];
 
+@sups_num = [zero.num one.num two.num three.num four.num five.num six.num seven.num eight.num nine.num];
+feature sups {
+    sub @lf by @sups_num;
+    sub @osf by @sups_num;
+    sub @tf by @sups_num;
+} sups;
+
 feature smcp {
     sub a by a.sc;
     sub aacute by aacute.sc;
@@ -237,9 +244,3 @@ feature frac {
         sub [fraction.frac @den] @tf' by @den;
     } FRAC_DNOM;
 } frac;
-
-feature sups {
-    sub @lf by @num;
-    sub @osf by @num;
-    sub @tf by @num;
-} sups;
