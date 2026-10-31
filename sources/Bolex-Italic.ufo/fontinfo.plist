@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>ascender</key>
+    <integer>836</integer>
+    <key>capHeight</key>
+    <integer>648</integer>
+    <key>copyright</key>
+    <string>ET Bembo designed for Edward Tufte / Graphics Press (c) 2004 Dmitry Krasny / Deka Design. Bolex modifications (c) 2026 Keaton Elvins.</string>
+    <key>descender</key>
+    <integer>-364</integer>
+    <key>familyName</key>
+    <string>Bolex</string>
+    <key>italicAngle</key>
+    <real>-11.8</real>
+    <key>openTypeHheaAscender</key>
+    <integer>836</integer>
+    <key>openTypeHheaDescender</key>
+    <integer>-364</integer>
+    <key>openTypeHheaLineGap</key>
+    <integer>0</integer>
+    <key>openTypeNameDescription</key>
+    <string>Bolex is a clean, minimal cut of ET Book (ET Bembo) for long-form reading on the web.</string>
+    <key>openTypeNameDesigner</key>
+    <string>Dmitry Krasny, Bonnie Scranton, Edward Tufte</string>
+    <key>openTypeNameLicense</key>
+    <string>MIT License. See https://github.com/keatonelvins/bolex</string>
+    <key>openTypeNameLicenseURL</key>
+    <string>https://opensource.org/license/mit</string>
+    <key>openTypeOS2Selection</key>
+    <array>
+      <integer>7</integer>
+    </array>
+    <key>openTypeOS2Type</key>
+    <array/>
+    <key>openTypeOS2TypoAscender</key>
+    <integer>836</integer>
+    <key>openTypeOS2TypoDescender</key>
+    <integer>-364</integer>
+    <key>openTypeOS2TypoLineGap</key>
+    <integer>0</integer>
+    <key>openTypeOS2WeightClass</key>
+    <integer>400</integer>
+    <key>openTypeOS2WidthClass</key>
+    <integer>5</integer>
+    <key>postscriptFontName</key>
+    <string>Bolex-Italic</string>
+    <key>postscriptFullName</key>
+    <string>Bolex Italic</string>
+    <key>postscriptUnderlinePosition</key>
+    <integer>-111</integer>
+    <key>postscriptUnderlineThickness</key>
+    <integer>50</integer>
+    <key>styleMapFamilyName</key>
+    <string>Bolex</string>
+    <key>styleMapStyleName</key>
+    <string>italic</string>
+    <key>styleName</key>
+    <string>Italic</string>
+    <key>unitsPerEm</key>
+    <integer>1000</integer>
+    <key>versionMajor</key>
+    <integer>1</integer>
+    <key>versionMinor</key>
+    <integer>0</integer>
+    <key>xHeight</key>
+    <integer>429</integer>
+  </dict>
+</plist>

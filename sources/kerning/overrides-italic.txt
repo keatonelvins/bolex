@@ -1,0 +1,57 @@
+# Hand-set values for the pairs that matter most in prose and headings.
+# Each value also moves the accented forms of the same letters by the
+# same amount (tools/kerning.py).  Values come from a measured audit of
+# the italic, checked in before/after proofs.  Format: LEFT RIGHT VALUE
+
+# Open capitals before lowercase.
+T a -75
+T o -65
+T n -55
+T v -60
+V a -100
+V o -90
+V n -65
+W a -80
+W o -70
+W n -60
+Y a -70
+Y o -65
+Y n -60
+P a -50
+P o -30
+F a -25
+
+# Sentence ends: the italic is much looser before . and , than the roman.
+T period -55
+T comma -55
+V period -120
+V comma -120
+W period -100
+W comma -100
+P period -80
+P comma -80
+F period -40
+F comma -40
+f period -60
+f comma -60
+r period -60
+r comma -60
+
+# Capitals beside capitals.
+A V -60
+A W -45
+A Y -70
+A T -60
+V A -125
+W A -110
+Y A -80
+T A -90
+P A -80
+F A -70
+L T -90
+L V -45
+L W -30
+L Y -85
+
+# The lower loops of gg touch.
+g g 30

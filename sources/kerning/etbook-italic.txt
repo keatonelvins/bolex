@@ -1,0 +1,15 @@
+# Kerning pairs from the original ET Book Italic (Krasny / Tufte), kept as
+# the designer's reference.  tools/kerning.py blends these with the
+# model for the same pairs.  Small-cap pairs from ET Book are not
+# included (see README).  Format: LEFT RIGHT VALUE
+
+T a -42
+T e -42
+T u -32
+T y -32
+Y a -21
+Y e -37
+Y o -16
+Y u -21
+Y v -21
+e guilsinglleft -12

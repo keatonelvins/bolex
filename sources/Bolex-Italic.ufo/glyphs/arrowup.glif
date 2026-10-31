@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arrowup" format="2">
+  <advance width="839"/>
+  <unicode hex="2191"/>
+  <outline>
+    <contour>
+      <point x="445.1499938964844" y="-16.0" type="line"/>
+      <point x="445.1499938964844" y="559.1304931640625" type="line"/>
+      <point x="542.1366577148438" y="546.0117797851562" type="line"/>
+      <point x="569.5" y="515.0" type="line"/>
+      <point x="543.8499755859375" y="545.780029296875" type="line"/>
+      <point x="542.1366577148438" y="546.0117797851562" type="line"/>
+      <point x="419.5" y="685.0" type="line"/>
+      <point x="296.86334228515625" y="546.0117797851562" type="line"/>
+      <point x="393.8500061035156" y="559.1304931640625" type="line"/>
+      <point x="393.8500061035156" y="-16.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="296.86334228515625" y="546.0117797851562" type="line"/>
+      <point x="295.1499938964844" y="545.780029296875" type="line"/>
+      <point x="269.5" y="515.0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

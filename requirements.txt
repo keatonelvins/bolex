@@ -1,0 +1,7 @@
+# Build: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+fonttools[woff,ufo]==4.68.0
+ufo2ft==3.10.0
+ufoLib2==0.19.1
+skia-pathops==0.9.2
+ttfautohint-py==0.6.1
+numpy==2.5.4

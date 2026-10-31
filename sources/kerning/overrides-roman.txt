@@ -1,0 +1,56 @@
+# Hand-set values for the pairs that matter most in prose and headings.
+# Each value also moves the accented forms of the same letters by the
+# same amount (tools/kerning.py).  Values come from two independent
+# measured audits, checked in before/after proofs.  Format: LEFT RIGHT VALUE
+
+# Capitals before period and comma: close the hole, but keep the period
+# clear of the arm of T, P and F.
+T period -60
+T comma -60
+P period -80
+P comma -80
+F period -70
+F comma -70
+V period -90
+V comma -90
+W period -80
+W comma -80
+Y period -80
+Y comma -80
+
+# Diagonal and open capitals (headings, acronyms, small runs of caps).
+A V -90
+A W -85
+A Y -75
+A T -55
+V A -90
+W A -85
+Y A -75
+T A -55
+L T -80
+L V -80
+L W -70
+L Y -85
+P A -60
+F A -50
+
+# Quotes beside A and L.
+quoteleft A -60
+quotedblleft A -60
+A quoteright -60
+A quotedblright -60
+L quoteright -80
+L quotedblright -80
+
+# Dashes beside open capitals (T-shirt, X-ray, anti-Western).
+T hyphen -50
+hyphen T -50
+T endash -50
+endash T -50
+Y hyphen -50
+hyphen Y -50
+V hyphen -30
+hyphen V -30
+W hyphen -30
+hyphen W -30
+L hyphen -60
