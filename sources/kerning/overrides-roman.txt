@@ -56,3 +56,23 @@ hyphen V -30
 W hyphen -30
 hyphen W -30
 L hyphen -60
+
+# Dashes beside open capitals, en dash as hyphen.
+Y endash -50
+endash Y -50
+V endash -30
+endash V -30
+W endash -30
+endash W -30
+L endash -60
+
+# The proportional 4's crossbars nearly meet in 44 (1944).
+four four 25
+
+# Ascender beside ascender: the model reads the empty rows above x-height
+# as white, but h k b p O spaced against d q need nothing.
+h d 0
+k d 0
+b d 0
+p q 0
+O d 0

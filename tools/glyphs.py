@@ -61,15 +61,6 @@ def to_path(font, name, transform=(1, 0, 0, 1, 0, 0)):
     return path
 
 
-def upright_center(font, name_or_path, tan):
-    """Horizontal centre, measured upright (deslanted)."""
-    pen = BoundsPen(font)
-    target = font[name_or_path] if isinstance(name_or_path, str) else name_or_path
-    target.draw(TransformPen(pen, (1, 0, -tan, 1, 0, 0)))
-    x0, y0, x1, y1 = pen.bounds
-    return (x0 + x1) / 2
-
-
 def add(font, name, codepoint=None, path=None, width=0, components=()):
     if name in font:
         del font[name]
@@ -148,12 +139,13 @@ def components(font, face):
             add(font, name, cp, width=font[base].width,
                 components=[(base, (1, 0, 0, 1, 0, dy))])
     # Figure dash: the en dash drawn to the tabular figure width and
-    # raised, like the case dashes, to the figures' centre.
+    # raised, like the case dashes, to the lining figures' centre.
     if not has_codepoint(font, 0x2012) and "endash" in font:
         fig = font["zero.tf" if "zero.tf" in font else "zero"].width
         x0, _, x1, _ = bounds(font, font["endash"])
         s = min(1.0, (fig - 60) / (x1 - x0))
-        dy = CASE_SHIFT[face]["dash"]
+        # Raised only where the default figures are lining.
+        dy = CASE_SHIFT[face]["dash"] if "zero.tf" in font else 0
         path = pathops.Path()
         font["endash"].draw(TransformPen(path.getPen(), (
             s, 0, 0, 1, round(30 - x0 * s + dy * outline.slant(font)), dy)))
@@ -269,16 +261,12 @@ def arrows(font, log):
     axis = (my0 + my1) / 2
     t = (my1 - my0) * 0.9                 # shaft stroke
     side = mx0
-    head_len, head_half = 170, 150
+    head_len, head_half = 140, 85
 
     def head(tip_x, direction):
-        """A chevron-shaped arrowhead pointing in +x (1) or -x (-1)."""
+        """A plain triangular arrowhead pointing in +x (1) or -x (-1)."""
         back = tip_x - direction * head_len
-        inner = tip_x - direction * head_len * 0.72
         return polygon([(tip_x, axis), (back, axis + head_half),
-                        (back + direction * t * 0.6, axis + head_half - t * 0.5),
-                        (inner, axis),
-                        (back + direction * t * 0.6, axis - head_half + t * 0.5),
                         (back, axis - head_half)])
 
     x0, x1 = side, w - side
@@ -370,6 +358,14 @@ def case_forms(font, face):
                     components=[(name, (1, 0, 0, 1, round(dy * tan), dy))])
 
 
+def ligature_codepoints(font):
+    """The ff, ffi and ffl presentation forms map to the ligatures (fi and
+    fl already do)."""
+    for name, cp in [("f_f", 0xFB00), ("f_f_i", 0xFB03), ("f_f_l", 0xFB04)]:
+        if name in font and not has_codepoint(font, cp):
+            font[name].unicodes = [cp]
+
+
 def notdef(font):
     """A visible box, so a missing character is obvious in testing."""
     cap = font.info.capHeight
@@ -409,6 +405,7 @@ def main():
         math_signs(font, log)
         arrows(font, log)
         case_forms(font, face)
+        ligature_codepoints(font)
         notdef(font)
         math_widths(font, log)
         font.save()

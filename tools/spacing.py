@@ -115,8 +115,8 @@ def accent_clearance(font, log, names, gap):
 
 def lengthen_emdash(font, log, ink):
     """ET Book's em dash was only 1.27x its en dash, so the two read as
-    the same mark in prose.  Stretch its middle to ``ink`` units (1.5x the
-    en dash), keeping the rounded ends and the sidebearings."""
+    the same mark in prose.  Stretch its middle to ``ink`` units (about
+    1.5x the en dash), keeping the rounded ends and the sidebearings."""
     glyph = font["emdash"]
     b = glyph.getBounds(font)
     d = round(ink - (b.xMax - b.xMin))
@@ -175,6 +175,13 @@ def roman(font, log):
         ("ucircumflex", "u"), ("ntilde", "n")], gap=45)
     accent_clearance(font, log, [
         ("Atilde", "A"), ("Ntilde", "N"), ("Otilde", "O")], gap=35)
+    # The period's right sidebearing was 20 (its left 65): with lining
+    # figures a decimal point sat against the next digit (1.25), and
+    # run-in abbreviations were lopsided (a.m., Ph.D.).
+    lsb, rsb = sidebearings(font, "period", tan=0)
+    if rsb < 45:
+        set_rsb(font, "period", 50, tan=0)
+        log(f"period: right sidebearing {rsb:.0f} -> 50")
     lengthen_emdash(font, log, 820)
     align_f_ligatures(font, log)
 

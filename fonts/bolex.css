@@ -6,6 +6,7 @@
  * Bolex has one weight: Roman and Italic, with real small capitals in
  * the Roman.  There is no bold, so stop the browser from faking one, and
  * give headings and <strong> another treatment (size, small caps, ...).
+ * The defaults below apply inside class="bolex" (e.g. <body class="bolex">).
  */
 
 @font-face {
@@ -50,6 +51,7 @@
    small caps are already spaced a little open, so no letter-spacing). */
 .bolex abbr {
   font-variant-caps: all-small-caps;
+  font-synthesis-small-caps: none;
 }
 
 /* The Italic has no small capitals (nor did Bembo's); rather than let

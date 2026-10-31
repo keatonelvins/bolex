@@ -3,7 +3,6 @@
 #   make            build fonts/Bolex-Roman.woff2 and fonts/Bolex-Italic.woff2
 #   make sources    regenerate sources/ from an ET Book checkout
 #                   (ETBOOK=path/to/et-book, default ../et-book)
-#   make specimen   render specimen/index.html to specimen/specimen.png
 #
 # Python tools run from .venv:  python3 -m venv .venv &&
 #   .venv/bin/pip install -r requirements.txt
@@ -29,6 +28,7 @@ sources:
 	$(PY) tools/smallcaps.py
 	$(PY) tools/features.py
 	$(PY) tools/kerning.py
+	# sources/kerning/etbb-*.txt come from tools/etbb_kerning.py (CTAN etbb)
 
 clean:
 	rm -rf build

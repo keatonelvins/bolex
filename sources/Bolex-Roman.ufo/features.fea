@@ -82,6 +82,9 @@ feature smcp {
     sub dotlessi by i.sc;
     sub fi by f.sc i.sc;
     sub fl by f.sc l.sc;
+    sub f_f by f.sc f.sc;
+    sub f_f_i by f.sc f.sc i.sc;
+    sub f_f_l by f.sc f.sc l.sc;
 } smcp;
 
 feature c2sc {
@@ -198,11 +201,13 @@ feature pnum {
     sub @tosf by @osf;
 } pnum;
 
-@f_short_after = [B D E Eacute Ecircumflex Edieresis Egrave Eth F H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde P R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron agrave aring atilde b backslash braceright bracketleft bracketright breve caron circumflex degree dieresis egrave eth exclam five grave greaterequal h hungarumlaut i iacute icircumflex idieresis igrave j k l onesuperior ordfeminine ordmasculine paragraph parenright question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle ring scaron seven thorn threequarters threesuperior tilde trademark twosuperior uni02BB uni02BC uni2032 uni2033 uni2070 uni2075 uni2077 uni2078 uni2079 yen zcaron];
+@f_full_before = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde C Ccedilla G O OE Oacute Ocircumflex Odieresis Ograve Oslash Otilde Q a a.sc aacute aacute.sc acircumflex acircumflex.sc adieresis adieresis.sc ae ae.sc agrave.sc aring.sc atilde.sc b.sc c c.sc ccedilla ccedilla.sc d d.sc dotlessi e e.sc eacute eacute.sc ecircumflex ecircumflex.sc edieresis edieresis.sc egrave.sc eth.sc f f.sc f_b f_f f_f.short f_f_b f_f_h f_f_i f_f_k f_f_l f_h f_i f_j f_k f_l fi fl g g.sc germandbls h.sc i.sc iacute.sc icircumflex.sc idieresis.sc igrave.sc j.sc k.sc l.sc m m.sc mu n n.sc ntilde ntilde.sc o o.sc oacute oacute.sc ocircumflex ocircumflex.sc odieresis odieresis.sc oe oe.sc ograve ograve.sc oslash oslash.sc otilde otilde.sc p p.sc q q.sc r r.sc s s.sc scaron.sc t t.sc thorn.sc u u.sc uacute uacute.sc ucircumflex ucircumflex.sc udieresis udieresis.sc ugrave ugrave.sc v v.sc w w.sc x x.sc y y.sc yacute yacute.sc ydieresis ydieresis.sc z z.sc zcaron.sc];
 
 feature calt {
-    sub f' @f_short_after by f.short;
-    sub f_f' @f_short_after by f_f.short;
+    ignore sub f' @f_full_before;
+    ignore sub f_f' @f_full_before;
+    sub f' by f.short;
+    sub f_f' by f_f.short;
     sub [@lf @tf] [hyphen endash]' [@lf @tf] by [hyphen.case endash.case];
 } calt;
 

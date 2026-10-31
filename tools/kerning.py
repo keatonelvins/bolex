@@ -16,10 +16,11 @@ Inputs (all under sources/kerning/):
                           (tools/etbb_kerning.py); together the
                           designers' opinion, blended 50/50 with the
                           model, which also smooths their noise
-    overrides-<face>.txt  final say: "LEFT RIGHT VALUE" per line.  The
-                          named pair gets VALUE and every pair in the same
-                          two kerning groups moves by the same amount
+    overrides-<face>.txt  "LEFT RIGHT VALUE" per line.  The named pair
+                          gets VALUE and every pair in the same two
+                          kerning groups moves by the same amount
                           (accented forms follow their base letter)
+    exact-<face>.txt      final say for single pairs, no propagation
 
 Usage: tools/kerning.py [roman|italic ...]
 """
@@ -78,7 +79,9 @@ SCALE = defaultdict(float, {
     (SMALLCAP, LOWPUNCT): 0.8, (SMALLCAP, PUNCT): 0.6,
     (SMALLCAP, QUOTE): 0.6, (LOWPUNCT, SMALLCAP): 0.4,
     (PUNCT, SMALLCAP): 0.6, (QUOTE, SMALLCAP): 0.6,
-    (FIGURE, FIGURE): 0.6, (FIGURE, LOWPUNCT): 0.6, (LOWPUNCT, FIGURE): 0.6,
+    # After a decimal point every figure should sit at about the same
+    # distance, so period-figure pairs get only a light touch.
+    (FIGURE, FIGURE): 0.6, (FIGURE, LOWPUNCT): 0.6, (LOWPUNCT, FIGURE): 0.3,
     (FIGURE, PUNCT): 0.5, (PUNCT, FIGURE): 0.5,
     (OLDSTYLE, OLDSTYLE): 0.6, (OLDSTYLE, LOWPUNCT): 0.6,
     (LOWPUNCT, OLDSTYLE): 0.6,
@@ -126,6 +129,8 @@ def category(font, name):
         return DASH if name[:-5] in DASH_NAMES else PUNCT
     if name.endswith(".csc"):
         return category(font, name[:-4])
+    if name == "uni2012" and "zero.tf" not in font:
+        return DASH                 # not raised where figures are oldstyle
     if name in ALIASES:
         return category(font, ALIASES[name])
     if "." in name:
@@ -174,6 +179,22 @@ def base_letter(font, name):
     if suffix:
         left, right = f"{left}.{suffix}", f"{right}.{suffix}"
     return left, right
+
+
+def accent_base(font, name):
+    """The base letter of an accented letter (eacute -> e, eacute.sc ->
+    e.sc), or None.  Dotless i and ligatures are not accented letters."""
+    stem, _, suffix = name.partition(".")
+    if suffix not in ("", "sc") or stem not in font or not font[stem].unicodes:
+        return None
+    parts = unicodedata.normalize("NFD", chr(font[stem].unicodes[0]))
+    if len(parts) != 2:
+        return None
+    for g in font:
+        if ord(parts[0]) in g.unicodes:
+            base = g.name + (f".{suffix}" if suffix else "")
+            return base if base in font else None
+    return None
 
 
 def names_sc(kerner):
@@ -337,6 +358,25 @@ def build(face):
                     values[(m1, m2)] = v
                 else:
                     values.pop((m1, m2), None)
+
+    # 4. An accented letter is never kerned tighter than its base letter
+    #    (the model sees an accent's rows as extra white: Dé, Hé, ké).
+    for (left, right), v in list(values.items()):
+        for glyph, side in ((left, 0), (right, 1)):
+            base = accent_base(font, glyph)
+            if base:
+                pair = (base, right) if side == 0 else (left, base)
+                floor = values.get(pair, 0)
+                if v < floor:
+                    v = floor
+        if v:
+            values[(left, right)] = v
+        else:
+            values.pop((left, right), None)
+
+    # 5. Exact pairs: one pair only, no group propagation.
+    for (left, right), v in read_pairs(KERN_DIR / f"exact-{face}.txt").items():
+        values[(left, right)] = v
 
     # Small caps are capitals drawn smaller: kern a pair of them like the
     # same two capitals, scaled by the small-cap/cap height ratio.

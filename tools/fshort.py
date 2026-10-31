@@ -96,6 +96,11 @@ def narrow(font, src, dst, scale):
     _insert(font, glyph, dst)
 
 
+def overhang(font, name):
+    b = font[name].getBounds(font)
+    return b.xMax - font[name].width
+
+
 def _insert(font, glyph, dst):
     glyph._name = dst
     if dst in font:
@@ -116,8 +121,17 @@ def main():
                 continue
             if face in SHORTEN:
                 shorten(font, src, dst, SHORTEN[face])
-            else:
+            elif src == "f":
                 narrow(font, src, dst, HOOK_SCALE[face])
+            else:
+                # ff's hook overhangs further than f's: narrow it until its
+                # overhang matches f.short's.
+                target = overhang(font, "f.short")
+                scale = HOOK_SCALE[face]
+                narrow(font, src, dst, scale)
+                while overhang(font, dst) > target + 3 and scale > 0.05:
+                    scale -= 0.02
+                    narrow(font, src, dst, scale)
         font.save()
         print(f"{path.relative_to(ROOT)}: f.short, f_f.short")
 

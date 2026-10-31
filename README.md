@@ -18,13 +18,13 @@ fonts/bolex.css                    @font-face rules and suggested defaults
 <link rel="stylesheet" href="/fonts/bolex.css">
 ```
 
-```css
-body { font-family: "Bolex", Georgia, serif; font-synthesis-weight: none; }
+```html
+<body class="bolex">
 ```
 
-There is one weight, so `bolex.css` turns off faux bold and sets
-headings, `<strong>` and `<th>` back to 400. Give them size, small caps
-or colour instead.
+There is one weight, so inside `.bolex` the kit turns off faux bold and
+sets headings, `<strong>` and `<th>` back to 400 (give them size, small
+caps or colour instead), and sets `<abbr>` in small capitals.
 
 What the fonts do by default, and what CSS switches on:
 
@@ -34,20 +34,28 @@ What the fonts do by default, and what CSS switches on:
 | Figures (Italic) | oldstyle (the Italic's own) | |
 | Small capitals | | `font-variant-caps: small-caps` or `all-small-caps` |
 | Figures in all-small-caps | oldstyle, to match small-cap height | `lining-nums` to override |
-| Ligatures | fi fl ff ffi ffl fj fb fh fk ffb ffh ffk | `font-variant-ligatures: none` |
-| f before ) ? ! ’ ” etc. | short-hook f, no collision | |
+| Ligatures | fi fl ff ffi ffl fj fb fh fk ffb ffh ffk | `font-variant-ligatures: no-common-ligatures` (not `none`, which also turns off the two rows below) |
+| f at the end of a word | short-hook f, so ) ? ! ’ ” and footnote markers don't collide | |
 | Dash between figures | raised to figure height: 1914–1918 | |
-| Fractions | | `font-variant-numeric: diagonal-fractions` (3 1/2 → 3 ½) |
-| Superior figures | ¹²³⁴⁵⁶⁷⁸⁹⁰ | `font-variant-position: super` |
+| Fractions (Roman) | | `font-variant-numeric: diagonal-fractions` on the fraction itself (3 1/2 → 3 ½) |
+| Superior figures | ¹²³⁴⁵⁶⁷⁸⁹⁰ | `font-variant-position: super`; `bolex.css` applies it to `<sup class="fn">` |
 | Punctuation for all caps | | `font-feature-settings: "case"` |
 
-Small caps exist in the Roman only (the Italic has none, as in Bembo), so
-`small-caps` inside italics is synthesized by the browser.
+Small caps exist in the Roman only (the Italic has none, as in Bembo);
+the kit sets italic abbreviations in full capitals instead of letting the
+browser synthesize small caps.
+
+Kerning can't act between two fonts, so where an italic word meets roman
+punctuation the word-final short f is the only protection: an italic
+capital or descender (J, f, g, j) can still touch a roman ( [ before it
+or ) ? ” after it. Put such punctuation inside the `<i>`, or add a hair
+space (U+200A) in headings.
 
 ### Character set
 
-Western European: ASCII, Latin-1, the Windows-1252 additions (Œ œ Š š Ž ž
-Ÿ € ‰ ‹ › „ …), plus what web writing tends to produce: thin, hair,
+Western European: ASCII, Latin-1 (the soft hyphen is drawn by the
+browser), the Windows-1252 additions except ƒ (Œ œ Š š Ž ž Ÿ € ‰ ‹ › „ …),
+the ﬀ ﬁ ﬂ ﬃ ﬄ presentation forms, plus what web writing tends to produce: thin, hair,
 figure, en/em and narrow no-break spaces, non-breaking hyphen, figure
 dash, primes ′ ″, ʻ ʼ, ← ↑ → ↓ ↔ and the footnote back-link ↩, ≈ ≠ ≤ ≥ −,
 and superior figures. Central European letters were dropped to keep the

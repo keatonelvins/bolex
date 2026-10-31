@@ -47,9 +47,11 @@ def compile_ttf(ufo_path, win=None):
         increase_x_height=14,
         # Win metrics already cover every glyph (win_metrics), so no -W:
         # it adds blue zones at the win metrics that squeeze tall accents
-        # into the capitals.  Natural stem widths for DirectWrite and
-        # grayscale keep dashes and crossbars from thinning to 0.75 px.
-        dw_cleartype_stem_width_mode=ttfautohint.StemWidthMode.NATURAL,
+        # into the capitals.  Strong stems for DirectWrite: dashes and
+        # crossbars snap to a solid pixel (the default thinned them to
+        # 0.75 px) and accents clear the capitals (Ë Ñ at 20-21 px);
+        # natural for grayscale.
+        dw_cleartype_stem_width_mode=ttfautohint.StemWidthMode.STRONG,
         gray_stem_width_mode=ttfautohint.StemWidthMode.NATURAL,
         no_info=True,
     )

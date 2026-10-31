@@ -106,7 +106,9 @@ def build(font):
             lines.append("    sub germandbls by s.sc s.sc;")
         if "dotlessi" in font and "i.sc" in font:
             lines.append("    sub dotlessi by i.sc;")
-        for lig, parts in [("fi", "f.sc i.sc"), ("fl", "f.sc l.sc")]:
+        for lig, parts in [("fi", "f.sc i.sc"), ("fl", "f.sc l.sc"),
+                           ("f_f", "f.sc f.sc"), ("f_f_i", "f.sc f.sc i.sc"),
+                           ("f_f_l", "f.sc f.sc l.sc")]:
             if lig in font:
                 lines.append(f"    sub {lig} by {parts};")
         lines += ["} smcp;", ""]
@@ -158,20 +160,20 @@ def build(font):
     #   figures' centre (1914-1918, 9-5).
     calt = []
     if "f.short" in font:
-        after = short_f_contexts(font)
-        lines.append(f"@f_short_after = [{' '.join(after)}];")
+        # f.short wherever the full hook would collide, and at the end of
+        # every word: before punctuation, a space, or the end of a run
+        # (a footnote <sup>, an <em>, roman punctuation after an italic
+        # word), which no rule can see across.  Before any other letter
+        # the f keeps its full hook.
+        after = set(short_f_contexts(font))
+        letters = sorted(g.name for g in font if _is_letter(g)
+                         and g.name not in after)
+        lines.append(f"@f_full_before = [{' '.join(letters)}];")
         fs = ["f"] + (["f_f"] if "f_f.short" in font else [])
-        if font.info.italicAngle:
-            # Italic: also at the end of every word (see tools/fshort.py).
-            letters = sorted(g.name for g in font if _is_letter(g))
-            lines.append(f"@letters = [{' '.join(letters)}];")
-            for f in fs:
-                calt.append(f"    ignore sub {f}' @letters;")
-            for f in fs:
-                calt.append(f"    sub {f}' by {f}.short;")
-        else:
-            for f in fs:
-                calt.append(f"    sub {f}' @f_short_after by {f}.short;")
+        for f in fs:
+            calt.append(f"    ignore sub {f}' @f_full_before;")
+        for f in fs:
+            calt.append(f"    sub {f}' by {f}.short;")
     figs = "[@lf" + (" @tf" if has_tf else "") + "]"
     if "endash.case" in font and _have(font, FIGURES) and "zero.osf" in font:
         calt.append(f"    sub {figs} [hyphen endash]' {figs} "

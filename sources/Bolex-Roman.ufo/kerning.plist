@@ -37,6 +37,8 @@
       <integer>0</integer>
       <key>y.sc</key>
       <integer>0</integer>
+      <key>yacute</key>
+      <integer>0</integer>
       <key>yacute.sc</key>
       <integer>0</integer>
       <key>ydieresis</key>
@@ -46,12 +48,8 @@
     </dict>
     <key>Aacute</key>
     <dict>
-      <key>Igrave</key>
-      <integer>-15</integer>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>parenleft.case</key>
-      <integer>-15</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
     </dict>
@@ -59,8 +57,6 @@
     <dict>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>parenleft.case</key>
-      <integer>-15</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
     </dict>
@@ -73,12 +69,8 @@
     </dict>
     <key>Agrave</key>
     <dict>
-      <key>Igrave</key>
-      <integer>-15</integer>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>parenleft.case</key>
-      <integer>-15</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
     </dict>
@@ -86,8 +78,6 @@
     <dict>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>parenleft.case</key>
-      <integer>-15</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
     </dict>
@@ -148,8 +138,6 @@
       <integer>-25</integer>
       <key>x</key>
       <integer>-15</integer>
-      <key>yacute</key>
-      <integer>-20</integer>
     </dict>
     <key>C</key>
     <dict>
@@ -166,51 +154,16 @@
     </dict>
     <key>Ccedilla</key>
     <dict>
-      <key>Ccedilla</key>
-      <integer>-20</integer>
       <key>OE</key>
       <integer>-15</integer>
       <key>Oslash</key>
-      <integer>-20</integer>
-      <key>Q</key>
-      <integer>-20</integer>
+      <integer>-15</integer>
       <key>atilde.sc</key>
       <integer>0</integer>
-      <key>braceleft.case</key>
-      <integer>-15</integer>
-      <key>ccedilla</key>
-      <integer>-25</integer>
-      <key>ccedilla.sc</key>
-      <integer>-20</integer>
-      <key>comma</key>
-      <integer>-25</integer>
-      <key>f_j</key>
-      <integer>-20</integer>
-      <key>g</key>
-      <integer>-20</integer>
-      <key>p</key>
-      <integer>-20</integer>
-      <key>q</key>
-      <integer>-30</integer>
-      <key>quotedblbase</key>
-      <integer>-20</integer>
-      <key>quotesinglbase</key>
-      <integer>-20</integer>
-      <key>semicolon</key>
-      <integer>-25</integer>
+      <key>ydieresis</key>
+      <integer>0</integer>
       <key>zcaron</key>
       <integer>0</integer>
-    </dict>
-    <key>D</key>
-    <dict>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
     </dict>
     <key>E</key>
     <dict>
@@ -223,41 +176,15 @@
     <dict>
       <key>OE</key>
       <integer>-20</integer>
-      <key>Oacute</key>
-      <integer>-20</integer>
-      <key>Ocircumflex</key>
-      <integer>-20</integer>
-      <key>Odieresis</key>
-      <integer>-15</integer>
-      <key>Ograve</key>
-      <integer>-15</integer>
       <key>Oslash</key>
       <integer>-20</integer>
-      <key>Otilde</key>
-      <integer>-15</integer>
-      <key>Uacute</key>
-      <integer>-15</integer>
-      <key>d</key>
-      <integer>-15</integer>
     </dict>
     <key>Ecircumflex</key>
     <dict>
       <key>OE</key>
       <integer>-20</integer>
-      <key>Oacute</key>
-      <integer>-15</integer>
-      <key>Ocircumflex</key>
-      <integer>-15</integer>
-      <key>Odieresis</key>
-      <integer>-15</integer>
-      <key>Ograve</key>
-      <integer>-15</integer>
       <key>Oslash</key>
       <integer>-20</integer>
-      <key>Otilde</key>
-      <integer>-15</integer>
-      <key>d</key>
-      <integer>-15</integer>
     </dict>
     <key>Edieresis</key>
     <dict>
@@ -270,20 +197,8 @@
     <dict>
       <key>OE</key>
       <integer>-20</integer>
-      <key>Oacute</key>
-      <integer>-15</integer>
-      <key>Ocircumflex</key>
-      <integer>-15</integer>
-      <key>Odieresis</key>
-      <integer>-15</integer>
-      <key>Ograve</key>
-      <integer>-15</integer>
       <key>Oslash</key>
       <integer>-20</integer>
-      <key>Otilde</key>
-      <integer>-15</integer>
-      <key>d</key>
-      <integer>-15</integer>
     </dict>
     <key>Eth</key>
     <dict>
@@ -422,10 +337,6 @@
       <integer>-20</integer>
       <key>d</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
       <key>g.sc</key>
       <integer>-20</integer>
       <key>oe.sc</key>
@@ -453,77 +364,35 @@
     <dict>
       <key>AE</key>
       <integer>-15</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-15</integer>
     </dict>
     <key>Iacute</key>
     <dict>
       <key>AE</key>
-      <integer>-15</integer>
-      <key>Aacute</key>
-      <integer>-15</integer>
-      <key>Agrave</key>
-      <integer>-15</integer>
-      <key>aacute.sc</key>
-      <integer>-15</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>ograve</key>
       <integer>-15</integer>
     </dict>
     <key>Icircumflex</key>
     <dict>
       <key>AE</key>
       <integer>-15</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-15</integer>
     </dict>
     <key>Idieresis</key>
     <dict>
       <key>AE</key>
-      <integer>-15</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>ograve</key>
       <integer>-15</integer>
     </dict>
     <key>Igrave</key>
     <dict>
       <key>AE</key>
       <integer>-15</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-15</integer>
     </dict>
     <key>J</key>
     <dict>
-      <key>Ccedilla</key>
-      <integer>-20</integer>
       <key>OE</key>
       <integer>-15</integer>
       <key>Oslash</key>
       <integer>-15</integer>
       <key>Q</key>
       <integer>-15</integer>
-      <key>ccedilla</key>
-      <integer>-20</integer>
       <key>d</key>
       <integer>-25</integer>
       <key>f_j</key>
@@ -674,6 +543,8 @@
       <integer>-50</integer>
       <key>dagger.csc</key>
       <integer>-35</integer>
+      <key>endash</key>
+      <integer>-60</integer>
       <key>guillemotleft.case</key>
       <integer>-30</integer>
       <key>guilsinglleft.case</key>
@@ -733,10 +604,6 @@
       <integer>-30</integer>
       <key>d</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
       <key>eth</key>
       <integer>-15</integer>
       <key>g.sc</key>
@@ -769,12 +636,6 @@
       <integer>-20</integer>
       <key>t.sc</key>
       <integer>-30</integer>
-      <key>uacute</key>
-      <integer>-20</integer>
-      <key>ucircumflex</key>
-      <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-20</integer>
       <key>v</key>
       <integer>-15</integer>
       <key>v.sc</key>
@@ -784,36 +645,6 @@
       <key>w.sc</key>
       <integer>-25</integer>
     </dict>
-    <key>N</key>
-    <dict>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>oacute.sc</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-15</integer>
-      <key>ograve.sc</key>
-      <integer>-15</integer>
-    </dict>
-    <key>Ntilde</key>
-    <dict>
-      <key>Zcaron</key>
-      <integer>-15</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>oacute.sc</key>
-      <integer>-20</integer>
-      <key>ocircumflex.sc</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-15</integer>
-      <key>ograve.sc</key>
-      <integer>-15</integer>
-    </dict>
     <key>O</key>
     <dict>
       <key>OE</key>
@@ -822,14 +653,6 @@
       <integer>-15</integer>
       <key>Thorn</key>
       <integer>0</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
     </dict>
     <key>OE</key>
     <dict>
@@ -859,6 +682,8 @@
       <integer>0</integer>
       <key>y.sc</key>
       <integer>0</integer>
+      <key>yacute</key>
+      <integer>0</integer>
       <key>yacute.sc</key>
       <integer>0</integer>
       <key>ydieresis</key>
@@ -868,159 +693,39 @@
     </dict>
     <key>Oacute</key>
     <dict>
-      <key>Eacute</key>
-      <integer>-15</integer>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>OE</key>
-      <integer>-15</integer>
-      <key>Oacute</key>
-      <integer>-15</integer>
-      <key>Ocircumflex</key>
-      <integer>-15</integer>
-      <key>Odieresis</key>
-      <integer>-15</integer>
-      <key>Ograve</key>
       <integer>-15</integer>
       <key>Oslash</key>
       <integer>-15</integer>
-      <key>Otilde</key>
-      <integer>-15</integer>
       <key>Thorn</key>
       <integer>0</integer>
-      <key>Uacute</key>
-      <integer>-20</integer>
-      <key>Ucircumflex</key>
-      <integer>-20</integer>
-      <key>Udieresis</key>
-      <integer>-20</integer>
-      <key>Ugrave</key>
-      <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
     </dict>
     <key>Ocircumflex</key>
     <dict>
-      <key>Eacute</key>
-      <integer>-15</integer>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>OE</key>
-      <integer>-15</integer>
-      <key>Oacute</key>
-      <integer>-15</integer>
-      <key>Ocircumflex</key>
-      <integer>-15</integer>
-      <key>Odieresis</key>
-      <integer>-15</integer>
-      <key>Ograve</key>
       <integer>-15</integer>
       <key>Oslash</key>
       <integer>-15</integer>
-      <key>Otilde</key>
-      <integer>-15</integer>
       <key>Thorn</key>
       <integer>0</integer>
-      <key>Uacute</key>
-      <integer>-20</integer>
-      <key>Ucircumflex</key>
-      <integer>-20</integer>
-      <key>Udieresis</key>
-      <integer>-20</integer>
-      <key>Ugrave</key>
-      <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
     </dict>
     <key>Odieresis</key>
     <dict>
-      <key>Eacute</key>
-      <integer>-15</integer>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>OE</key>
-      <integer>-15</integer>
-      <key>Oacute</key>
-      <integer>-15</integer>
-      <key>Ocircumflex</key>
-      <integer>-15</integer>
-      <key>Odieresis</key>
-      <integer>-15</integer>
-      <key>Ograve</key>
       <integer>-15</integer>
       <key>Oslash</key>
       <integer>-15</integer>
-      <key>Otilde</key>
-      <integer>-15</integer>
       <key>Thorn</key>
       <integer>0</integer>
-      <key>Uacute</key>
-      <integer>-20</integer>
-      <key>Ucircumflex</key>
-      <integer>-20</integer>
-      <key>Udieresis</key>
-      <integer>-20</integer>
-      <key>Ugrave</key>
-      <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
     </dict>
     <key>Ograve</key>
     <dict>
-      <key>Eacute</key>
-      <integer>-15</integer>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>OE</key>
-      <integer>-15</integer>
-      <key>Oacute</key>
-      <integer>-15</integer>
-      <key>Ocircumflex</key>
-      <integer>-15</integer>
-      <key>Odieresis</key>
-      <integer>-15</integer>
-      <key>Ograve</key>
       <integer>-15</integer>
       <key>Oslash</key>
       <integer>-15</integer>
-      <key>Otilde</key>
-      <integer>-15</integer>
       <key>Thorn</key>
       <integer>0</integer>
-      <key>Uacute</key>
-      <integer>-20</integer>
-      <key>Ucircumflex</key>
-      <integer>-20</integer>
-      <key>Udieresis</key>
-      <integer>-20</integer>
-      <key>Ugrave</key>
-      <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
     </dict>
     <key>Oslash</key>
     <dict>
@@ -1041,7 +746,7 @@
       <key>Ydieresis</key>
       <integer>-20</integer>
       <key>d</key>
-      <integer>0</integer>
+      <integer>20</integer>
       <key>ellipsis</key>
       <integer>-50</integer>
       <key>j</key>
@@ -1065,42 +770,12 @@
     </dict>
     <key>Otilde</key>
     <dict>
-      <key>Eacute</key>
-      <integer>-15</integer>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>OE</key>
-      <integer>-15</integer>
-      <key>Oacute</key>
-      <integer>-15</integer>
-      <key>Ocircumflex</key>
-      <integer>-15</integer>
-      <key>Odieresis</key>
-      <integer>-15</integer>
-      <key>Ograve</key>
       <integer>-15</integer>
       <key>Oslash</key>
       <integer>-15</integer>
-      <key>Otilde</key>
-      <integer>-15</integer>
       <key>Thorn</key>
       <integer>0</integer>
-      <key>Uacute</key>
-      <integer>-20</integer>
-      <key>Ucircumflex</key>
-      <integer>-20</integer>
-      <key>Udieresis</key>
-      <integer>-15</integer>
-      <key>Ugrave</key>
-      <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
     </dict>
     <key>P</key>
     <dict>
@@ -1223,15 +898,9 @@
       <integer>-40</integer>
       <key>backslash</key>
       <integer>-25</integer>
-      <key>ccedilla</key>
-      <integer>-20</integer>
       <key>comma</key>
       <integer>-65</integer>
       <key>d</key>
-      <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>egrave</key>
       <integer>-20</integer>
       <key>ellipsis</key>
       <integer>-65</integer>
@@ -1239,10 +908,6 @@
       <integer>120</integer>
       <key>j.sc</key>
       <integer>30</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>period</key>
       <integer>-65</integer>
       <key>public.kern2.A</key>
@@ -1320,12 +985,8 @@
       <integer>-30</integer>
       <key>guilsinglright.case</key>
       <integer>-20</integer>
-      <key>oacute</key>
-      <integer>-45</integer>
       <key>oe.sc</key>
       <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-45</integer>
       <key>p</key>
       <integer>-15</integer>
       <key>parenright</key>
@@ -1376,10 +1037,6 @@
       <integer>-20</integer>
       <key>t.sc</key>
       <integer>-40</integer>
-      <key>uacute</key>
-      <integer>-30</integer>
-      <key>ugrave</key>
-      <integer>-30</integer>
       <key>uni02BB</key>
       <integer>-25</integer>
       <key>uni02BC</key>
@@ -1399,8 +1056,6 @@
       <integer>0</integer>
       <key>atilde.sc</key>
       <integer>0</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>Scaron</key>
     <dict>
@@ -1408,10 +1063,6 @@
       <integer>0</integer>
       <key>atilde.sc</key>
       <integer>0</integer>
-      <key>d</key>
-      <integer>-15</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>T</key>
     <dict>
@@ -1680,12 +1331,6 @@
       <integer>-100</integer>
       <key>d</key>
       <integer>-35</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>ecircumflex</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
       <key>ellipsis</key>
       <integer>-100</integer>
       <key>g</key>
@@ -1735,160 +1380,56 @@
     <dict>
       <key>atilde</key>
       <integer>0</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-15</integer>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>scaron</key>
       <integer>0</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
-      <key>uacute</key>
-      <integer>-15</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
     </dict>
     <key>Uacute</key>
     <dict>
-      <key>Eacute</key>
-      <integer>-15</integer>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>atilde</key>
       <integer>0</integer>
-      <key>f</key>
-      <integer>-15</integer>
-      <key>f_b</key>
-      <integer>-15</integer>
-      <key>f_f_b</key>
-      <integer>-15</integer>
-      <key>fl</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-15</integer>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>scaron</key>
       <integer>0</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
-      <key>uacute</key>
-      <integer>-15</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
     </dict>
     <key>Ucircumflex</key>
     <dict>
-      <key>Eacute</key>
-      <integer>-15</integer>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>atilde</key>
       <integer>0</integer>
-      <key>f</key>
-      <integer>-15</integer>
-      <key>fl</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-15</integer>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>scaron</key>
       <integer>0</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
-      <key>uacute</key>
-      <integer>-15</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
     </dict>
     <key>Udieresis</key>
     <dict>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>atilde</key>
       <integer>0</integer>
-      <key>f</key>
-      <integer>-15</integer>
-      <key>fl</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-15</integer>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>scaron</key>
       <integer>0</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
-      <key>uacute</key>
-      <integer>-15</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
     </dict>
     <key>Ugrave</key>
     <dict>
-      <key>Eacute</key>
-      <integer>-15</integer>
-      <key>Egrave</key>
-      <integer>-15</integer>
       <key>atilde</key>
       <integer>0</integer>
-      <key>f</key>
-      <integer>-15</integer>
-      <key>fl</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-15</integer>
       <key>oe.sc</key>
       <integer>0</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>scaron</key>
       <integer>0</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
-      <key>uacute</key>
-      <integer>-15</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
     </dict>
     <key>V</key>
     <dict>
@@ -1938,10 +1479,10 @@
       <integer>-30</integer>
       <key>daggerdbl</key>
       <integer>-15</integer>
-      <key>dotlessi</key>
-      <integer>-40</integer>
       <key>ellipsis</key>
       <integer>-95</integer>
+      <key>endash</key>
+      <integer>-30</integer>
       <key>eth</key>
       <integer>-55</integer>
       <key>eth.sc</key>
@@ -1975,19 +1516,19 @@
       <key>hyphen</key>
       <integer>-30</integer>
       <key>iacute</key>
-      <integer>-25</integer>
+      <integer>0</integer>
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>-20</integer>
+      <integer>0</integer>
       <key>icircumflex.sc</key>
       <integer>0</integer>
       <key>idieresis</key>
-      <integer>-20</integer>
+      <integer>0</integer>
       <key>idieresis.sc</key>
       <integer>10</integer>
       <key>igrave</key>
-      <integer>-15</integer>
+      <integer>0</integer>
       <key>igrave.sc</key>
       <integer>0</integer>
       <key>j.sc</key>
@@ -2042,6 +1583,8 @@
       <integer>-40</integer>
       <key>public.kern2.f</key>
       <integer>-25</integer>
+      <key>public.kern2.i</key>
+      <integer>-40</integer>
       <key>public.kern2.i.sc</key>
       <integer>-20</integer>
       <key>public.kern2.n</key>
@@ -2159,14 +1702,14 @@
       <integer>-30</integer>
       <key>daggerdbl</key>
       <integer>-15</integer>
-      <key>dotlessi</key>
-      <integer>-40</integer>
       <key>ecircumflex</key>
       <integer>-70</integer>
       <key>edieresis</key>
       <integer>-65</integer>
       <key>ellipsis</key>
       <integer>-95</integer>
+      <key>endash</key>
+      <integer>-30</integer>
       <key>eth</key>
       <integer>-55</integer>
       <key>eth.sc</key>
@@ -2202,19 +1745,19 @@
       <key>hyphen</key>
       <integer>-30</integer>
       <key>iacute</key>
-      <integer>-25</integer>
+      <integer>0</integer>
       <key>iacute.sc</key>
       <integer>0</integer>
       <key>icircumflex</key>
-      <integer>-20</integer>
+      <integer>0</integer>
       <key>icircumflex.sc</key>
       <integer>0</integer>
       <key>idieresis</key>
-      <integer>-20</integer>
+      <integer>0</integer>
       <key>idieresis.sc</key>
       <integer>10</integer>
       <key>igrave</key>
-      <integer>-15</integer>
+      <integer>0</integer>
       <key>igrave.sc</key>
       <integer>0</integer>
       <key>j.sc</key>
@@ -2267,6 +1810,8 @@
       <integer>-40</integer>
       <key>public.kern2.f</key>
       <integer>-30</integer>
+      <key>public.kern2.i</key>
+      <integer>-40</integer>
       <key>public.kern2.i.sc</key>
       <integer>-20</integer>
       <key>public.kern2.n</key>
@@ -2402,12 +1947,6 @@
       <integer>-20</integer>
       <key>t.sc</key>
       <integer>-40</integer>
-      <key>uacute</key>
-      <integer>-15</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
       <key>v</key>
       <integer>-45</integer>
       <key>v.sc</key>
@@ -2512,10 +2051,12 @@
       <integer>-55</integer>
       <key>adieresis.sc</key>
       <integer>-70</integer>
+      <key>agrave.sc</key>
+      <integer>-80</integer>
       <key>aring</key>
       <integer>-60</integer>
       <key>aring.sc</key>
-      <integer>-80</integer>
+      <integer>-75</integer>
       <key>atilde</key>
       <integer>-55</integer>
       <key>atilde.sc</key>
@@ -2533,19 +2074,19 @@
       <key>f_b</key>
       <integer>-20</integer>
       <key>f_f</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f.short</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_b</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_h</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_i</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_k</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_l</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_h</key>
       <integer>-20</integer>
       <key>f_i</key>
@@ -2570,14 +2111,10 @@
       <integer>-40</integer>
       <key>oe.sc</key>
       <integer>-55</integer>
-      <key>q</key>
-      <integer>-100</integer>
       <key>scaron</key>
       <integer>15</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
-      <key>t</key>
-      <integer>-55</integer>
       <key>udieresis</key>
       <integer>-25</integer>
       <key>ydieresis</key>
@@ -2600,7 +2137,7 @@
       <key>aring</key>
       <integer>-60</integer>
       <key>aring.sc</key>
-      <integer>-80</integer>
+      <integer>-75</integer>
       <key>atilde</key>
       <integer>-55</integer>
       <key>atilde.sc</key>
@@ -2622,15 +2159,15 @@
       <key>f_f.short</key>
       <integer>-20</integer>
       <key>f_f_b</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_h</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_i</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_k</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_f_l</key>
-      <integer>-25</integer>
+      <integer>-20</integer>
       <key>f_h</key>
       <integer>-20</integer>
       <key>f_i</key>
@@ -2655,14 +2192,10 @@
       <integer>-40</integer>
       <key>oe.sc</key>
       <integer>-55</integer>
-      <key>q</key>
-      <integer>-100</integer>
       <key>scaron</key>
       <integer>15</integer>
       <key>scaron.sc</key>
       <integer>0</integer>
-      <key>t</key>
-      <integer>-55</integer>
       <key>udieresis</key>
       <integer>-25</integer>
       <key>ydieresis</key>
@@ -2670,29 +2203,10 @@
       <key>zcaron</key>
       <integer>-40</integer>
     </dict>
-    <key>Zcaron</key>
-    <dict>
-      <key>aacute.sc</key>
-      <integer>-15</integer>
-      <key>d</key>
-      <integer>-15</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
-    </dict>
     <key>aacute</key>
     <dict>
       <key>backslash</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-15</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>aacute.sc</key>
     <dict>
@@ -2709,8 +2223,6 @@
     <dict>
       <key>backslash</key>
       <integer>-20</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>acircumflex.sc</key>
     <dict>
@@ -2839,19 +2351,6 @@
       <key>ydieresis.sc</key>
       <integer>0</integer>
     </dict>
-    <key>agrave</key>
-    <dict>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-15</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
-    </dict>
     <key>ampersand</key>
     <dict>
       <key>T</key>
@@ -2860,20 +2359,10 @@
       <integer>-25</integer>
       <key>W</key>
       <integer>-25</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
       <key>eth</key>
       <integer>-15</integer>
       <key>four</key>
       <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>public.kern2.Y</key>
       <integer>-35</integer>
       <key>public.kern2.y.sc</key>
@@ -2896,12 +2385,8 @@
     <dict>
       <key>backslash</key>
       <integer>0</integer>
-      <key>oacute</key>
-      <integer>-15</integer>
       <key>parenright.csc</key>
       <integer>0</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>aring.sc</key>
     <dict>
@@ -2934,16 +2419,8 @@
       <integer>0</integer>
       <key>d</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
       <key>eth</key>
       <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>public.kern2.A</key>
       <integer>-35</integer>
       <key>public.kern2.a.sc</key>
@@ -2959,27 +2436,9 @@
       <integer>0</integer>
       <key>d</key>
       <integer>-30</integer>
-      <key>eacute</key>
-      <integer>-25</integer>
-      <key>ecircumflex</key>
-      <integer>-15</integer>
-      <key>edieresis</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-25</integer>
       <key>eth</key>
       <integer>-20</integer>
-      <key>oacute</key>
-      <integer>-25</integer>
-      <key>ocircumflex</key>
-      <integer>-20</integer>
-      <key>odieresis</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-25</integer>
       <key>oslash</key>
-      <integer>-15</integer>
-      <key>otilde</key>
       <integer>-15</integer>
       <key>public.kern2.A</key>
       <integer>-40</integer>
@@ -3088,24 +2547,10 @@
       <integer>-65</integer>
       <key>d</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
       <key>eth</key>
       <integer>-15</integer>
       <key>nine</key>
       <integer>-20</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>oacute.sc</key>
-      <integer>-15</integer>
-      <key>ocircumflex</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
-      <key>ograve.sc</key>
-      <integer>-15</integer>
       <key>public.kern2.C</key>
       <integer>-25</integer>
       <key>public.kern2.O</key>
@@ -3133,22 +2578,10 @@
     <dict>
       <key>J</key>
       <integer>20</integer>
-      <key>ccedilla</key>
-      <integer>-15</integer>
-      <key>ccedilla.sc</key>
-      <integer>-15</integer>
       <key>d</key>
-      <integer>-15</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
       <integer>-15</integer>
       <key>j</key>
       <integer>20</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>q</key>
       <integer>-15</integer>
       <key>q.sc</key>
@@ -3162,8 +2595,6 @@
     <key>braceright</key>
     <dict>
       <key>W</key>
-      <integer>-15</integer>
-      <key>Yacute</key>
       <integer>-15</integer>
     </dict>
     <key>bracketleft</key>
@@ -3205,14 +2636,8 @@
       <integer>-15</integer>
       <key>W</key>
       <integer>-20</integer>
-      <key>four</key>
-      <integer>-15</integer>
-      <key>one</key>
-      <integer>-15</integer>
       <key>public.kern2.Y</key>
       <integer>-25</integer>
-      <key>seven</key>
-      <integer>-20</integer>
     </dict>
     <key>comma</key>
     <dict>
@@ -3237,15 +2662,13 @@
       <key>f_j</key>
       <integer>-25</integer>
       <key>four</key>
-      <integer>-60</integer>
+      <integer>-30</integer>
       <key>g.sc</key>
       <integer>-15</integer>
       <key>nine</key>
-      <integer>-40</integer>
+      <integer>-20</integer>
       <key>nine.osf</key>
       <integer>-45</integer>
-      <key>one</key>
-      <integer>-15</integer>
       <key>one.osf</key>
       <integer>-15</integer>
       <key>oslash</key>
@@ -3280,8 +2703,6 @@
       <integer>-25</integer>
       <key>seven.osf</key>
       <integer>-35</integer>
-      <key>six</key>
-      <integer>-20</integer>
       <key>six.osf</key>
       <integer>-25</integer>
       <key>t.sc</key>
@@ -3295,7 +2716,7 @@
       <key>w.sc</key>
       <integer>-30</integer>
       <key>zero</key>
-      <integer>-30</integer>
+      <integer>-15</integer>
       <key>zero.osf</key>
       <integer>-20</integer>
     </dict>
@@ -3386,14 +2807,6 @@
       <integer>-40</integer>
       <key>d</key>
       <integer>-25</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>ecircumflex</key>
-      <integer>-20</integer>
-      <key>edieresis</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-20</integer>
       <key>eth</key>
       <integer>-20</integer>
       <key>oslash</key>
@@ -3454,20 +2867,8 @@
       <integer>-15</integer>
       <key>W</key>
       <integer>-20</integer>
-      <key>ccedilla</key>
-      <integer>-15</integer>
       <key>d</key>
       <integer>-15</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
       <key>public.kern2.Y</key>
       <integer>-30</integer>
       <key>q</key>
@@ -3494,37 +2895,6 @@
       <integer>-15</integer>
       <key>parenright.case</key>
       <integer>0</integer>
-      <key>uacute</key>
-      <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
-    </dict>
-    <key>eacute.sc</key>
-    <dict>
-      <key>odieresis.sc</key>
-      <integer>-10</integer>
-      <key>ograve.sc</key>
-      <integer>-10</integer>
-      <key>otilde.sc</key>
-      <integer>-10</integer>
-      <key>quotedbl</key>
-      <integer>-15</integer>
-      <key>quotedblleft</key>
-      <integer>-25</integer>
-      <key>quotedblright</key>
-      <integer>-25</integer>
-      <key>quoteleft</key>
-      <integer>-25</integer>
-      <key>quoteright</key>
-      <integer>-25</integer>
-      <key>quotesingle</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
-      <key>uni02BB</key>
-      <integer>-25</integer>
-      <key>uni02BC</key>
-      <integer>-25</integer>
     </dict>
     <key>ecircumflex</key>
     <dict>
@@ -3534,33 +2904,6 @@
       <integer>0</integer>
       <key>parenright.csc</key>
       <integer>0</integer>
-    </dict>
-    <key>ecircumflex.sc</key>
-    <dict>
-      <key>oacute.sc</key>
-      <integer>-10</integer>
-      <key>ocircumflex.sc</key>
-      <integer>-10</integer>
-      <key>odieresis.sc</key>
-      <integer>-10</integer>
-      <key>ograve.sc</key>
-      <integer>-10</integer>
-      <key>otilde.sc</key>
-      <integer>-10</integer>
-      <key>quotedblleft</key>
-      <integer>-20</integer>
-      <key>quotedblright</key>
-      <integer>-20</integer>
-      <key>quoteleft</key>
-      <integer>-20</integer>
-      <key>quoteright</key>
-      <integer>-20</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
-      <key>uni02BB</key>
-      <integer>-20</integer>
-      <key>uni02BC</key>
-      <integer>-20</integer>
     </dict>
     <key>edieresis</key>
     <dict>
@@ -3581,50 +2924,6 @@
       <integer>0</integer>
       <key>parenright.csc</key>
       <integer>0</integer>
-    </dict>
-    <key>egrave</key>
-    <dict>
-      <key>uacute</key>
-      <integer>-15</integer>
-      <key>ugrave</key>
-      <integer>-15</integer>
-    </dict>
-    <key>egrave.sc</key>
-    <dict>
-      <key>aacute.sc</key>
-      <integer>-15</integer>
-      <key>oacute.sc</key>
-      <integer>-10</integer>
-      <key>ocircumflex.sc</key>
-      <integer>-10</integer>
-      <key>odieresis.sc</key>
-      <integer>-10</integer>
-      <key>ograve.sc</key>
-      <integer>-10</integer>
-      <key>otilde.sc</key>
-      <integer>-10</integer>
-      <key>quotedbl</key>
-      <integer>-15</integer>
-      <key>quotedblleft</key>
-      <integer>-30</integer>
-      <key>quotedblright</key>
-      <integer>-30</integer>
-      <key>quoteleft</key>
-      <integer>-30</integer>
-      <key>quoteright</key>
-      <integer>-30</integer>
-      <key>quotesingle</key>
-      <integer>-15</integer>
-      <key>uacute.sc</key>
-      <integer>-25</integer>
-      <key>ucircumflex.sc</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-20</integer>
-      <key>uni02BB</key>
-      <integer>-30</integer>
-      <key>uni02BC</key>
-      <integer>-30</integer>
     </dict>
     <key>eight</key>
     <dict>
@@ -3652,13 +2951,11 @@
       <key>five.osf</key>
       <integer>-50</integer>
       <key>four</key>
-      <integer>-65</integer>
+      <integer>-30</integer>
       <key>nine</key>
-      <integer>-40</integer>
+      <integer>-20</integer>
       <key>nine.osf</key>
       <integer>-35</integer>
-      <key>one</key>
-      <integer>-15</integer>
       <key>one.osf</key>
       <integer>-15</integer>
       <key>oslash</key>
@@ -3685,8 +2982,6 @@
       <integer>-15</integer>
       <key>seven.osf</key>
       <integer>-45</integer>
-      <key>six</key>
-      <integer>-15</integer>
       <key>six.osf</key>
       <integer>-20</integer>
       <key>t.sc</key>
@@ -3701,14 +2996,18 @@
       <integer>-40</integer>
       <key>w.sc</key>
       <integer>-25</integer>
-      <key>zero</key>
-      <integer>-25</integer>
       <key>zero.osf</key>
       <integer>-15</integer>
     </dict>
     <key>endash</key>
     <dict>
       <key>T</key>
+      <integer>-50</integer>
+      <key>V</key>
+      <integer>-30</integer>
+      <key>W</key>
+      <integer>-30</integer>
+      <key>public.kern2.Y</key>
       <integer>-50</integer>
     </dict>
     <key>eth</key>
@@ -3795,14 +3094,6 @@
     <dict>
       <key>d</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-15</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ograve</key>
-      <integer>-15</integer>
     </dict>
     <key>exclam.csc</key>
     <dict>
@@ -3854,10 +3145,6 @@
       <integer>15</integer>
       <key>egrave.sc</key>
       <integer>30</integer>
-      <key>iacute</key>
-      <integer>20</integer>
-      <key>icircumflex</key>
-      <integer>35</integer>
       <key>icircumflex.sc</key>
       <integer>85</integer>
       <key>idieresis</key>
@@ -3976,10 +3263,6 @@
       <integer>15</integer>
       <key>egrave.sc</key>
       <integer>25</integer>
-      <key>iacute</key>
-      <integer>20</integer>
-      <key>icircumflex</key>
-      <integer>35</integer>
       <key>icircumflex.sc</key>
       <integer>85</integer>
       <key>idieresis.sc</key>
@@ -4097,24 +3380,6 @@
       <integer>-20</integer>
       <key>Oslash</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>ecircumflex</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-20</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-20</integer>
-      <key>odieresis</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
-      <key>otilde</key>
-      <integer>-15</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>f_h</key>
     <dict>
@@ -4227,24 +3492,6 @@
       <integer>-20</integer>
       <key>Oslash</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>ecircumflex</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-20</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-20</integer>
-      <key>odieresis</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
-      <key>otilde</key>
-      <integer>-15</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>four</key>
     <dict>
@@ -4254,6 +3501,8 @@
       <integer>-20</integer>
       <key>ellipsis</key>
       <integer>-20</integer>
+      <key>four</key>
+      <integer>25</integer>
       <key>nine</key>
       <integer>-15</integer>
       <key>parenright</key>
@@ -4537,13 +3786,6 @@
       <key>parenright.csc</key>
       <integer>15</integer>
     </dict>
-    <key>igrave</key>
-    <dict>
-      <key>backslash</key>
-      <integer>-15</integer>
-      <key>parenright</key>
-      <integer>-15</integer>
-    </dict>
     <key>igrave.sc</key>
     <dict>
       <key>backslash</key>
@@ -4557,8 +3799,6 @@
     <dict>
       <key>backslash</key>
       <integer>-20</integer>
-      <key>ccedilla.sc</key>
-      <integer>-15</integer>
       <key>public.kern2.a.sc</key>
       <integer>-20</integer>
       <key>q.sc</key>
@@ -4570,24 +3810,6 @@
       <integer>-20</integer>
       <key>Oslash</key>
       <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>ecircumflex</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-20</integer>
-      <key>oacute</key>
-      <integer>-20</integer>
-      <key>ocircumflex</key>
-      <integer>-20</integer>
-      <key>odieresis</key>
-      <integer>-15</integer>
-      <key>ograve</key>
-      <integer>-20</integer>
-      <key>otilde</key>
-      <integer>-15</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>k.sc</key>
     <dict>
@@ -4784,66 +4006,15 @@
     <dict>
       <key>backslash</key>
       <integer>0</integer>
-      <key>oacute.sc</key>
-      <integer>-20</integer>
-      <key>ocircumflex.sc</key>
-      <integer>-15</integer>
-      <key>odieresis.sc</key>
-      <integer>-15</integer>
-      <key>ograve.sc</key>
-      <integer>-20</integer>
-      <key>otilde.sc</key>
-      <integer>-15</integer>
       <key>parenright</key>
       <integer>0</integer>
       <key>parenright.csc</key>
       <integer>0</integer>
-      <key>quotedblright</key>
-      <integer>-15</integer>
-      <key>quoteleft</key>
-      <integer>-15</integer>
-      <key>quoteright</key>
-      <integer>-15</integer>
-      <key>uni02BB</key>
-      <integer>-15</integer>
-      <key>uni02BC</key>
-      <integer>-15</integer>
     </dict>
     <key>oacute</key>
     <dict>
-      <key>asterisk.csc</key>
-      <integer>-20</integer>
       <key>backslash</key>
       <integer>-30</integer>
-      <key>braceright</key>
-      <integer>-15</integer>
-      <key>dagger</key>
-      <integer>-20</integer>
-      <key>slash</key>
-      <integer>-15</integer>
-    </dict>
-    <key>oacute.sc</key>
-    <dict>
-      <key>braceright</key>
-      <integer>-15</integer>
-      <key>scaron.sc</key>
-      <integer>-15</integer>
-      <key>slash</key>
-      <integer>-20</integer>
-    </dict>
-    <key>ocircumflex</key>
-    <dict>
-      <key>asterisk.csc</key>
-      <integer>-15</integer>
-      <key>dagger</key>
-      <integer>-20</integer>
-    </dict>
-    <key>ocircumflex.sc</key>
-    <dict>
-      <key>braceright</key>
-      <integer>-15</integer>
-      <key>slash</key>
-      <integer>-15</integer>
     </dict>
     <key>odieresis</key>
     <dict>
@@ -4860,8 +4031,6 @@
       <integer>-35</integer>
       <key>quoteright</key>
       <integer>-35</integer>
-      <key>slash</key>
-      <integer>-15</integer>
       <key>uni02BB</key>
       <integer>-35</integer>
       <key>uni02BC</key>
@@ -4951,26 +4120,6 @@
       <key>ydieresis.sc</key>
       <integer>0</integer>
     </dict>
-    <key>ograve</key>
-    <dict>
-      <key>asterisk.csc</key>
-      <integer>-20</integer>
-      <key>braceright</key>
-      <integer>-15</integer>
-      <key>dagger</key>
-      <integer>-20</integer>
-      <key>slash</key>
-      <integer>-15</integer>
-    </dict>
-    <key>ograve.sc</key>
-    <dict>
-      <key>braceright</key>
-      <integer>-15</integer>
-      <key>scaron.sc</key>
-      <integer>-15</integer>
-      <key>slash</key>
-      <integer>-20</integer>
-    </dict>
     <key>oslash</key>
     <dict>
       <key>semicolon</key>
@@ -4999,8 +4148,6 @@
     <dict>
       <key>backslash</key>
       <integer>-20</integer>
-      <key>dagger</key>
-      <integer>-15</integer>
     </dict>
     <key>otilde.sc</key>
     <dict>
@@ -5008,10 +4155,6 @@
       <integer>-30</integer>
       <key>quoteright</key>
       <integer>-30</integer>
-      <key>slash</key>
-      <integer>-15</integer>
-      <key>udieresis.sc</key>
-      <integer>-10</integer>
       <key>uni02BC</key>
       <integer>-30</integer>
     </dict>
@@ -5413,22 +4556,10 @@
     </dict>
     <key>parenright.case</key>
     <dict>
-      <key>Aacute</key>
-      <integer>-15</integer>
-      <key>Acircumflex</key>
-      <integer>-15</integer>
-      <key>Adieresis</key>
-      <integer>-15</integer>
-      <key>Agrave</key>
-      <integer>-15</integer>
-      <key>Aring</key>
-      <integer>-15</integer>
       <key>V</key>
       <integer>-20</integer>
       <key>W</key>
       <integer>-20</integer>
-      <key>Zcaron</key>
-      <integer>-15</integer>
       <key>public.kern2.Y</key>
       <integer>-15</integer>
     </dict>
@@ -5446,7 +4577,7 @@
     <key>period</key>
     <dict>
       <key>Eth</key>
-      <integer>-5</integer>
+      <integer>-30</integer>
       <key>G</key>
       <integer>-20</integer>
       <key>OE</key>
@@ -5459,20 +4590,16 @@
       <integer>-40</integer>
       <key>W</key>
       <integer>-40</integer>
-      <key>ccedilla</key>
-      <integer>-15</integer>
       <key>eth</key>
       <integer>-20</integer>
       <key>five.osf</key>
       <integer>-50</integer>
       <key>four</key>
-      <integer>-65</integer>
+      <integer>-30</integer>
       <key>nine</key>
-      <integer>-40</integer>
+      <integer>-20</integer>
       <key>nine.osf</key>
       <integer>-35</integer>
-      <key>one</key>
-      <integer>-15</integer>
       <key>one.osf</key>
       <integer>-15</integer>
       <key>oslash</key>
@@ -5495,12 +4622,8 @@
       <integer>-25</integer>
       <key>q</key>
       <integer>-15</integer>
-      <key>seven</key>
-      <integer>-15</integer>
       <key>seven.osf</key>
       <integer>-45</integer>
-      <key>six</key>
-      <integer>-15</integer>
       <key>six.osf</key>
       <integer>-20</integer>
       <key>t.sc</key>
@@ -5514,8 +4637,6 @@
       <key>w</key>
       <integer>-40</integer>
       <key>w.sc</key>
-      <integer>-25</integer>
-      <key>zero</key>
       <integer>-25</integer>
       <key>zero.osf</key>
       <integer>-15</integer>
@@ -5804,8 +4925,6 @@
       <integer>-25</integer>
       <key>comma</key>
       <integer>-70</integer>
-      <key>d</key>
-      <integer>-20</integer>
       <key>ellipsis</key>
       <integer>-65</integer>
       <key>j</key>
@@ -6031,6 +5150,8 @@
       <integer>-25</integer>
       <key>ellipsis</key>
       <integer>-85</integer>
+      <key>endash</key>
+      <integer>-50</integer>
       <key>eth</key>
       <integer>-55</integer>
       <key>eth.sc</key>
@@ -6319,8 +5440,6 @@
       <integer>-20</integer>
       <key>comma</key>
       <integer>-25</integer>
-      <key>d</key>
-      <integer>-15</integer>
       <key>dagger</key>
       <integer>-15</integer>
       <key>daggerdbl</key>
@@ -6642,8 +5761,6 @@
       <integer>-35</integer>
       <key>braceright</key>
       <integer>-15</integer>
-      <key>d</key>
-      <integer>-15</integer>
       <key>parenright</key>
       <integer>-30</integer>
       <key>parenright.case</key>
@@ -6712,8 +5829,6 @@
       <integer>-35</integer>
       <key>braceleft</key>
       <integer>-15</integer>
-      <key>d</key>
-      <integer>-20</integer>
       <key>dagger</key>
       <integer>-15</integer>
       <key>dagger.csc</key>
@@ -6915,8 +6030,6 @@
       <integer>-30</integer>
       <key>period</key>
       <integer>-25</integer>
-      <key>q</key>
-      <integer>-15</integer>
       <key>questiondown</key>
       <integer>-25</integer>
       <key>quotedblbase</key>
@@ -7438,8 +6551,6 @@
       <integer>-20</integer>
       <key>q.sc</key>
       <integer>-25</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
     </dict>
     <key>quotedblbase</key>
     <dict>
@@ -7560,10 +6671,6 @@
       <integer>-30</integer>
       <key>q.sc</key>
       <integer>-45</integer>
-      <key>uacute.sc</key>
-      <integer>-25</integer>
-      <key>ugrave.sc</key>
-      <integer>-20</integer>
     </dict>
     <key>quotedblright</key>
     <dict>
@@ -7665,11 +6772,7 @@
       <integer>0</integer>
       <key>thorn.sc</key>
       <integer>-25</integer>
-      <key>uacute.sc</key>
-      <integer>-35</integer>
       <key>x.sc</key>
-      <integer>-20</integer>
-      <key>yacute.sc</key>
       <integer>-20</integer>
     </dict>
     <key>quoteleft</key>
@@ -7710,10 +6813,6 @@
       <integer>-30</integer>
       <key>q.sc</key>
       <integer>-45</integer>
-      <key>uacute.sc</key>
-      <integer>-25</integer>
-      <key>ugrave.sc</key>
-      <integer>-20</integer>
     </dict>
     <key>quoteright</key>
     <dict>
@@ -7815,11 +6914,7 @@
       <integer>0</integer>
       <key>thorn.sc</key>
       <integer>-25</integer>
-      <key>uacute.sc</key>
-      <integer>-35</integer>
       <key>x.sc</key>
-      <integer>-20</integer>
-      <key>yacute.sc</key>
       <integer>-20</integer>
     </dict>
     <key>quotesinglbase</key>
@@ -7927,8 +7022,6 @@
       <integer>-25</integer>
       <key>q.sc</key>
       <integer>-25</integer>
-      <key>uacute.sc</key>
-      <integer>-15</integer>
     </dict>
     <key>r</key>
     <dict>
@@ -8086,12 +7179,8 @@
       <integer>-20</integer>
       <key>f_j</key>
       <integer>-15</integer>
-      <key>four</key>
-      <integer>-20</integer>
       <key>nine.osf</key>
       <integer>-20</integer>
-      <key>one</key>
-      <integer>-15</integer>
       <key>oslash</key>
       <integer>0</integer>
       <key>public.kern2.Y</key>
@@ -8104,8 +7193,6 @@
       <integer>-20</integer>
       <key>q</key>
       <integer>-30</integer>
-      <key>seven</key>
-      <integer>-20</integer>
     </dict>
     <key>seven</key>
     <dict>
@@ -8441,8 +7528,6 @@
       <integer>-15</integer>
       <key>slash</key>
       <integer>-20</integer>
-      <key>yacute</key>
-      <integer>-15</integer>
     </dict>
     <key>thorn.sc</key>
     <dict>
@@ -8487,107 +7572,14 @@
       <key>four</key>
       <integer>-20</integer>
     </dict>
-    <key>uacute.sc</key>
-    <dict>
-      <key>oacute.sc</key>
-      <integer>-25</integer>
-      <key>ocircumflex.sc</key>
-      <integer>-20</integer>
-      <key>odieresis.sc</key>
-      <integer>-20</integer>
-      <key>ograve.sc</key>
-      <integer>-20</integer>
-      <key>otilde.sc</key>
-      <integer>-20</integer>
-      <key>quotedblleft</key>
-      <integer>-20</integer>
-      <key>quotedblright</key>
-      <integer>-25</integer>
-      <key>quoteleft</key>
-      <integer>-20</integer>
-      <key>quoteright</key>
-      <integer>-25</integer>
-      <key>uacute.sc</key>
-      <integer>-20</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
-      <key>uni02BB</key>
-      <integer>-20</integer>
-      <key>uni02BC</key>
-      <integer>-25</integer>
-    </dict>
-    <key>ucircumflex.sc</key>
-    <dict>
-      <key>oacute.sc</key>
-      <integer>-20</integer>
-      <key>ograve.sc</key>
-      <integer>-15</integer>
-      <key>quotedblleft</key>
-      <integer>-15</integer>
-      <key>quotedblright</key>
-      <integer>-20</integer>
-      <key>quoteleft</key>
-      <integer>-20</integer>
-      <key>quoteright</key>
-      <integer>-20</integer>
-      <key>uacute.sc</key>
-      <integer>-20</integer>
-      <key>ugrave.sc</key>
-      <integer>-15</integer>
-      <key>uni02BB</key>
-      <integer>-20</integer>
-      <key>uni02BC</key>
-      <integer>-20</integer>
-    </dict>
     <key>udieresis.sc</key>
     <dict>
-      <key>oacute.sc</key>
-      <integer>-20</integer>
-      <key>ocircumflex.sc</key>
-      <integer>-15</integer>
-      <key>odieresis.sc</key>
-      <integer>-15</integer>
-      <key>ograve.sc</key>
-      <integer>-20</integer>
-      <key>otilde.sc</key>
-      <integer>-15</integer>
       <key>parenright</key>
       <integer>0</integer>
       <key>parenright.case</key>
       <integer>0</integer>
       <key>parenright.csc</key>
       <integer>0</integer>
-    </dict>
-    <key>ugrave.sc</key>
-    <dict>
-      <key>oacute.sc</key>
-      <integer>-25</integer>
-      <key>ocircumflex.sc</key>
-      <integer>-20</integer>
-      <key>odieresis.sc</key>
-      <integer>-20</integer>
-      <key>ograve.sc</key>
-      <integer>-25</integer>
-      <key>otilde.sc</key>
-      <integer>-20</integer>
-      <key>quotedblleft</key>
-      <integer>-25</integer>
-      <key>quotedblright</key>
-      <integer>-25</integer>
-      <key>quoteleft</key>
-      <integer>-25</integer>
-      <key>quoteright</key>
-      <integer>-25</integer>
-      <key>uacute.sc</key>
-      <integer>-25</integer>
-      <key>ucircumflex.sc</key>
-      <integer>-15</integer>
-      <key>ugrave.sc</key>
-      <integer>-20</integer>
-      <key>uni02BB</key>
-      <integer>-25</integer>
-      <key>uni02BC</key>
-      <integer>-25</integer>
     </dict>
     <key>uni02BB</key>
     <dict>
@@ -8617,10 +7609,6 @@
       <integer>-40</integer>
       <key>q.sc</key>
       <integer>-45</integer>
-      <key>uacute.sc</key>
-      <integer>-25</integer>
-      <key>ugrave.sc</key>
-      <integer>-20</integer>
     </dict>
     <key>uni02BC</key>
     <dict>
@@ -8722,11 +7710,7 @@
       <integer>0</integer>
       <key>thorn.sc</key>
       <integer>-25</integer>
-      <key>uacute.sc</key>
-      <integer>-35</integer>
       <key>x.sc</key>
-      <integer>-20</integer>
-      <key>yacute.sc</key>
       <integer>-20</integer>
     </dict>
     <key>v</key>
@@ -8967,30 +7951,6 @@
       <key>q.sc</key>
       <integer>-25</integer>
     </dict>
-    <key>y</key>
-    <dict>
-      <key>ccedilla</key>
-      <integer>-20</integer>
-    </dict>
-    <key>yacute</key>
-    <dict>
-      <key>AE</key>
-      <integer>-40</integer>
-      <key>ampersand</key>
-      <integer>-15</integer>
-      <key>ccedilla</key>
-      <integer>-20</integer>
-      <key>eacute</key>
-      <integer>-20</integer>
-      <key>ecircumflex</key>
-      <integer>-15</integer>
-      <key>egrave</key>
-      <integer>-20</integer>
-      <key>eth</key>
-      <integer>-15</integer>
-      <key>question</key>
-      <integer>-15</integer>
-    </dict>
     <key>yacute.sc</key>
     <dict>
       <key>parenright.case</key>
@@ -9002,8 +7962,6 @@
       <integer>0</integer>
       <key>braceleft</key>
       <integer>0</integer>
-      <key>ccedilla</key>
-      <integer>-20</integer>
       <key>parenright.csc</key>
       <integer>0</integer>
     </dict>
@@ -9028,25 +7986,6 @@
       <integer>0</integer>
       <key>parenright.csc</key>
       <integer>0</integer>
-    </dict>
-    <key>zcaron.sc</key>
-    <dict>
-      <key>asterisk</key>
-      <integer>-15</integer>
-      <key>oacute.sc</key>
-      <integer>-15</integer>
-      <key>quotedblleft</key>
-      <integer>-20</integer>
-      <key>quotedblright</key>
-      <integer>-20</integer>
-      <key>quoteleft</key>
-      <integer>-20</integer>
-      <key>quoteright</key>
-      <integer>-20</integer>
-      <key>uni02BB</key>
-      <integer>-20</integer>
-      <key>uni02BC</key>
-      <integer>-20</integer>
     </dict>
     <key>zero</key>
     <dict>
