@@ -2779,8 +2779,6 @@
       <integer>-45</integer>
       <key>d</key>
       <integer>-15</integer>
-      <key>eight</key>
-      <integer>-20</integer>
       <key>eth</key>
       <integer>-20</integer>
       <key>g</key>
@@ -2797,8 +2795,6 @@
       <integer>-20</integer>
       <key>q</key>
       <integer>-20</integer>
-      <key>zero</key>
-      <integer>-15</integer>
     </dict>
     <key>comma</key>
     <dict>
@@ -2816,8 +2812,6 @@
       <integer>-15</integer>
       <key>germandbls</key>
       <integer>55</integer>
-      <key>nine</key>
-      <integer>-25</integer>
       <key>public.kern2.A</key>
       <integer>20</integer>
       <key>public.kern2.C</key>
@@ -2831,10 +2825,6 @@
       <key>public.kern2.y</key>
       <integer>-30</integer>
       <key>q</key>
-      <integer>-25</integer>
-      <key>seven</key>
-      <integer>-15</integer>
-      <key>six</key>
       <integer>-25</integer>
     </dict>
     <key>dagger</key>
@@ -2958,7 +2948,7 @@
       <key>V</key>
       <integer>-15</integer>
       <key>five</key>
-      <integer>-50</integer>
+      <integer>-25</integer>
       <key>g</key>
       <integer>-20</integer>
       <key>public.kern2.C</key>
@@ -2971,12 +2961,8 @@
       <integer>-35</integer>
       <key>public.kern2.y</key>
       <integer>-30</integer>
-      <key>seven</key>
-      <integer>-25</integer>
-      <key>six</key>
-      <integer>-20</integer>
       <key>three</key>
-      <integer>-45</integer>
+      <integer>-25</integer>
     </dict>
     <key>eth</key>
     <dict>
@@ -4172,7 +4158,7 @@
       <key>V</key>
       <integer>-15</integer>
       <key>five</key>
-      <integer>-50</integer>
+      <integer>-25</integer>
       <key>g</key>
       <integer>-20</integer>
       <key>public.kern2.A</key>
@@ -4187,12 +4173,8 @@
       <integer>-35</integer>
       <key>public.kern2.y</key>
       <integer>-30</integer>
-      <key>seven</key>
-      <integer>-25</integer>
-      <key>six</key>
-      <integer>-20</integer>
       <key>three</key>
-      <integer>-45</integer>
+      <integer>-25</integer>
     </dict>
     <key>public.kern1.A</key>
     <dict>
@@ -5718,14 +5700,10 @@
       <integer>-45</integer>
       <key>d</key>
       <integer>-20</integer>
-      <key>eight</key>
-      <integer>-20</integer>
       <key>eth</key>
       <integer>-20</integer>
       <key>germandbls</key>
       <integer>20</integer>
-      <key>nine</key>
-      <integer>-20</integer>
       <key>public.kern2.Y</key>
       <integer>-25</integer>
       <key>public.kern2.a</key>
@@ -5738,8 +5716,6 @@
       <integer>-20</integer>
       <key>q</key>
       <integer>-30</integer>
-      <key>zero</key>
-      <integer>-15</integer>
     </dict>
     <key>seven</key>
     <dict>
