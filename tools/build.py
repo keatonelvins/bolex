@@ -4,7 +4,7 @@
     sources/Bolex-*.ufo
       -> ufo2ft (TrueType outlines, overlaps removed, kern/liga/smcp... GSUB/GPOS)
       -> ttfautohint
-      -> build/ttf/Bolex-*.ttf  and  fonts/Bolex-*.woff2
+      -> build/ttf/Bolex-*.ttf (desktop)  and  fonts/Bolex-*.woff2 (web)
 
 Usage: tools/build.py [sources/Bolex-Roman.ufo ...]
 """
@@ -59,7 +59,6 @@ def compile_ttf(ufo_path, win=None):
     # ttfautohint keeps the source's timestamps; make builds reproducible.
     font["head"].modified = font["head"].created
     font["head"].flags |= 1 << 3          # hinted: force integer ppem
-    font["post"].formatType = 3.0         # no glyph names in the webfont
     return ufo, font
 
 
@@ -86,7 +85,10 @@ def main(paths):
         ufo, font = compile_ttf(path, win)
         name = ufo.info.postscriptFontName
         ttf_path = BUILD / "ttf" / f"{name}.ttf"
+        # The desktop TTF keeps glyph names: apps use them to map
+        # ligatures and small caps back to text (PDF copy/search).
         font.save(ttf_path)
+        font["post"].formatType = 3.0     # no glyph names in the webfont
         font.flavor = "woff2"
         woff2_path = FONTS / f"{name}.woff2"
         font.save(woff2_path)
