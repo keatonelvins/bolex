@@ -1,0 +1,78 @@
+# Hand-set values for the pairs that matter most in prose and headings.
+# Each value also moves the accented forms of the same letters by the
+# same amount (kerning.py).  Values come from two independent
+# measured audits, checked in before/after proofs, with the diagonal
+# capitals and opening quotes moved toward ETbb's and EB Garamond's
+# stronger settings.  Format: LEFT RIGHT VALUE
+
+# Capitals before period and comma: close the hole, but keep the period
+# clear of the arm of T, P and F.
+T period -60
+T comma -60
+P period -80
+P comma -80
+F period -70
+F comma -70
+V period -90
+V comma -90
+W period -80
+W comma -80
+Y period -80
+Y comma -80
+
+# Diagonal and open capitals (headings, acronyms, small runs of caps).
+A V -140
+A W -130
+A Y -120
+A T -80
+V A -140
+W A -130
+Y A -120
+T A -80
+L T -80
+L V -80
+L W -70
+L Y -85
+P A -60
+F A -50
+
+# Quotes beside A and L.
+quoteleft A -120
+quotedblleft A -120
+A quoteright -60
+A quotedblright -60
+L quoteright -80
+L quotedblright -80
+
+# Dashes beside open capitals (T-shirt, X-ray, anti-Western).
+T hyphen -50
+hyphen T -50
+T endash -50
+endash T -50
+Y hyphen -50
+hyphen Y -50
+V hyphen -30
+hyphen V -30
+W hyphen -30
+hyphen W -30
+L hyphen -60
+
+# Dashes beside open capitals, en dash as hyphen.
+Y endash -50
+endash Y -50
+V endash -30
+endash V -30
+W endash -30
+endash W -30
+L endash -60
+
+# The proportional 4's crossbars nearly meet in 44 (1944).
+four four 25
+
+# Ascender beside ascender: the model reads the empty rows above x-height
+# as white, but h k b p O spaced against d q need nothing.
+h d 0
+k d 0
+b d 0
+p q 0
+O d 0

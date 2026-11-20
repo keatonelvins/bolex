@@ -1,0 +1,6 @@
+# Single pairs, applied last and not propagated to kerning groups
+# (an override on V i would also move V ı and V í).  Format: LEFT RIGHT VALUE
+
+# The i's dot made the model read V i / W i as unkerned; match V ı.
+V i -40
+W i -40
